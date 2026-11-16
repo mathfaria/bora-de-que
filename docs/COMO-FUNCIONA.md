@@ -538,6 +538,10 @@ Conceito visual: **"a lupa procurando o seu prato"**.
 
 ## 14. Deploy
 
+**Demo ao vivo:** [bora-de-que.onrender.com](https://bora-de-que.onrender.com). Ela roda no plano gratuito do Render (512 MB) com uma versão enxuta: os pesos int8 oficiais do mesmo modelo de embeddings e o tokenizer SentencePiece, que levam o pico de memória de ~810 MB para ~470 MB. Na busca, só "prato citado aparece" muda (de 89,6% para 89,1%). O README detalha a comparação.
+
+Para publicar o projeto completo (Hugging Face Space do tipo Docker, que hoje exige o plano PRO):
+
 1. **Banco:** projeto no Neon (Postgres com pgvector).
 2. **App:** Hugging Face Space do tipo Docker (`python scripts/publicar_space.py --space USUARIO/bora-de-que`).
 3. **Segredos** no Space: `DATABASE_URL` e `GEMINI_API_KEY`; variável `REPO_URL` com o link do repositório.

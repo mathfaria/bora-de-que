@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 92" width="420" height="92" role="img" aria-labelledby="t">
+<title id="t">Abrir a demo ao vivo</title>
+<defs>
+  <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#FF3D97"/>
+    <stop offset=".55" stop-color="#FF087E"/>
+    <stop offset="1" stop-color="#D6006A"/>
+  </linearGradient>
+  <linearGradient id="brilho" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#fff" stop-opacity=".45"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="pilula"><rect x="10" y="10" width="400" height="66" rx="33"/></clipPath>
+  <filter id="sombra" x="-10%" y="-30%" width="120%" height="180%">
+    <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#FF087E" flood-opacity=".35"/>
+  </filter>
+</defs>
+<style>
+  .t { font-family: Outfit, 'Avenir Next', Avenir, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; font-weight: 800; }
+  .anel { transform-box: fill-box; transform-origin: center; animation: pulso 2.4s ease-out infinite; }
+  @keyframes pulso { from { transform: scale(1); opacity: .6; } to { transform: scale(1.12, 1.35); opacity: 0; } }
+  .reflexo { animation: passa 3.2s cubic-bezier(.4,0,.2,1) infinite; }
+  @keyframes passa { 0% { transform: translateX(-160px); } 55%, 100% { transform: translateX(520px); } }
+  .seta { animation: empurra 1.6s ease-in-out infinite; }
+  @keyframes empurra { 50% { transform: translateX(5px); } }
+  .vivo { transform-box: fill-box; transform-origin: center; animation: vivo 1.4s ease-in-out infinite; }
+  @keyframes vivo { 50% { opacity: .35; transform: scale(1.6); } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+</style>
+<rect class="anel" x="10" y="10" width="400" height="66" rx="33" fill="none" stroke="#FF087E" stroke-width="3"/>
+<rect x="10" y="10" width="400" height="66" rx="33" fill="url(#fundo)" filter="url(#sombra)"/>
+<g clip-path="url(#pilula)"><rect class="reflexo" x="0" y="0" width="110" height="92" fill="url(#brilho)" transform="skewX(-20)"/></g>
+<circle class="vivo" cx="46" cy="43" r="5" fill="#D9FF43"/>
+<circle cx="46" cy="43" r="5" fill="#D9FF43"/>
+<text class="t" x="64" y="51" font-size="23" fill="#FFF9F3" letter-spacing="-.3">Abrir a demo ao vivo</text>
+<g class="seta">
+  <circle cx="366" cy="43" r="21" fill="#FFF9F3"/>
+  <path d="M357 43h17m-6-6 6 6-6 6" fill="none" stroke="#FF087E" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

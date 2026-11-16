@@ -14,7 +14,14 @@
 <h3 align="center">Você conta a vontade. O agente sugere o prato.<br>Você escolhe e vê onde comer perto do seu CEP, em lugares que existem.</h3>
 
 <p align="center">
-  <a href="#-veja-funcionando"><b>Demo</b></a> ·
+  <a href="https://bora-de-que.onrender.com"><img src="docs/readme/botao-demo.svg" alt="Abrir a demo ao vivo" width="340"></a>
+  <br>
+  <sub>Versão enxuta num servidor gratuito. Se ela estiver dormindo, a primeira carga leva até 1 minuto.</sub>
+</p>
+
+<p align="center">
+  <a href="https://bora-de-que.onrender.com"><b>Demo ao vivo</b></a> ·
+  <a href="#-veja-funcionando"><b>Vídeo</b></a> ·
   <a href="#-do-cep-ao-prato"><b>Passo a passo</b></a> ·
   <a href="#-por-dentro"><b>Por dentro</b></a> ·
   <a href="#-números"><b>Números</b></a> ·
@@ -34,6 +41,8 @@
 </p>
 
 <p align="center"><sub>Gravação real do app em Belo Horizonte (CEP 30140-071). Encurtei só a espera da resposta do Gemini, de 3,4 s para 2,6 s.</sub></p>
+
+<p align="center">Quer testar com o seu CEP? <a href="https://bora-de-que.onrender.com"><b>Abra a demo ao vivo</b></a>.</p>
 
 ## 🧭 Do CEP ao prato
 
@@ -272,12 +281,25 @@ python finetune/publicar_modelo.py --repo SEU_USUARIO/bocado-extrator
 </details>
 
 <details>
-<summary><b>Deploy gratuito</b></summary>
+<summary><b>Deploy</b></summary>
 <br>
 
+**A demo ao vivo** roda no plano gratuito do [Render](https://render.com), que dá 512 MB de memória. O app completo usa ~810 MB, quase tudo do modelo de embeddings, então a demo usa uma versão enxuta:
+
+| | Projeto completo | Demo ao vivo |
+|---|---|---|
+| Pesos do modelo de embeddings | fp16 via fastembed | int8, publicados no repositório oficial do modelo, direto no onnxruntime |
+| Tokenizer | `tokenizer.json` (~380 MB carregado) | SentencePiece original do XLM-R (~70 MB), com os mesmos IDs |
+| Pico de memória | ~810 MB | ~470 MB |
+| Busca: prato citado aparece (400 buscas) | 89,6% | 89,1% |
+
+Categoria, restrições e itens a evitar seguem em 100% nas duas. Os vetores ficam a cosseno ~0,99 dos originais, então a demo usa o mesmo banco.
+
+**Para publicar o projeto completo**, use um host de contêiner com ~1 GB de memória. Um Hugging Face Space do tipo Docker funciona, mas hoje exige o plano PRO:
+
 1. **Banco:** um projeto no [Neon](https://neon.tech), Postgres com pgvector.
-2. **App:** um Hugging Face Space do tipo Docker: `python scripts/publicar_space.py --space SEU_USUARIO/bora-de-que`.
-3. **Segredos:** configure `DATABASE_URL` e `GEMINI_API_KEY` nas Settings do Space, e a variável `REPO_URL` com o link deste repositório (vai no User-Agent enviado ao Nominatim). Na primeira subida, o app cria as tabelas e carrega os recortes de 23 capitais.
+2. **App:** `python scripts/publicar_space.py --space SEU_USUARIO/bora-de-que`.
+3. **Segredos:** `DATABASE_URL` e `GEMINI_API_KEY`, e a variável `REPO_URL` com o link deste repositório (vai no User-Agent enviado ao Nominatim). Na primeira subida, o app cria as tabelas e carrega os recortes de 23 capitais.
 4. **Manter acordado:** a variável `DEMO_URL` no GitHub ativa o workflow que acessa a demo uma vez por dia.
 
 </details>
@@ -312,6 +334,7 @@ Por ser um projeto de estudo:
 - **A demo roda no plano gratuito do Gemini.** Quando a cota acaba, o app passa para o modo simples.
 - **Eu escrevi o catálogo de pratos e as regras de dieta.** Eles servem para testar o agente e a busca, não como referência nutricional.
 - **Horários e dietas vêm do OpenStreetMap** e podem estar desatualizados. Se você tem alergia ou restrição alimentar, confirme com o restaurante.
+- **A demo pública é uma versão enxuta** num servidor gratuito (detalhes em *Deploy*, mais abaixo). Ela dorme sem uso e pode levar até 1 minuto para acordar.
 - **Não há pedidos, pagamentos, contas de usuário nem garantia de disponibilidade.** A demo pode estar fora do ar quando você abrir.
 
 O que levei a sério foi o processo: avaliações reproduzíveis, testes que rodam sem internet, decisões registradas e os erros contados na seção [O que deu errado](#-o-que-deu-errado-e-o-que-mudei).
