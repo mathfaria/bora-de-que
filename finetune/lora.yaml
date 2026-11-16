@@ -1,0 +1,22 @@
+# LoRA do extrator de filtros (mlx-lm, Apple Silicon)
+model: Qwen/Qwen2.5-0.5B-Instruct
+train: true
+data: finetune/data
+fine_tune_type: lora
+mask_prompt: true          # perda só na resposta (o JSON), não no prompt
+num_layers: -1             # adaptadores em todas as 24 camadas
+batch_size: 16
+iters: 700                 # continua a v1 (500 iterações) por mais ~4 épocas
+learning_rate: 3.0e-5      # v1: 2e-5 subtreinou; v2: 1e-4 divergiu (val 3,2 na iteração 100)
+resume_adapter_file: finetune/adapters_v1/adapters.safetensors
+steps_per_report: 25
+steps_per_eval: 100
+val_batches: -1
+max_seq_length: 256
+adapter_path: finetune/adapters
+save_every: 100
+seed: 7
+lora_parameters:
+  rank: 16
+  scale: 20.0
+  dropout: 0.05

@@ -1,0 +1,42 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.cache/
+
+# Segredos: só o .env.example vai para o git
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Artefatos de treino (grandes demais para o git; o modelo vai para o Hugging Face Hub).
+# Do LoRA v1 fica só o adaptador final, de onde o treino atual continua.
+finetune/data/
+finetune/adapters/
+finetune/fused/
+finetune/adapters_v1/0*_adapters.safetensors
+models/
+evals/.cache/
+
+# Ferramentas locais (Neon CLI, editor, agente)
+.neon
+neon.ts
+package.json
+package-lock.json
+node_modules/
+.claude/
+.vscode/
+.idea/
+
+# Anotações pessoais
+ESTUDO.md
+*.privado.md
+
+.DS_Store

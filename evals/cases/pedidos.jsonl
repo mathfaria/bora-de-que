@@ -1,0 +1,100 @@
+{"id": "c001", "usuario_id": "u010", "texto": "quero algo leve e barato, perto de casa, nada de fritura", "filtros": {"evitar": ["fritura"], "atributos": ["leve"], "distancia_max_km": 3, "ordenar_por": "menor_preco"}, "tags": ["multi"]}
+{"id": "c002", "usuario_id": "u001", "texto": "to com vontade de sushi, até 60 reais", "filtros": {"categorias": ["japonesa"], "preco_max": 60}, "tags": ["memoria"]}
+{"id": "c003", "usuario_id": "u011", "texto": "me indica uma pizza boa pra dividir com minha namorada", "filtros": {"categorias": ["pizza"], "atributos": ["para_compartilhar"]}, "tags": []}
+{"id": "c004", "usuario_id": "u012", "texto": "sou vegano, quero um hambúrguer", "filtros": {"categorias": ["hamburguer"], "restricoes": ["vegano"]}, "tags": []}
+{"id": "c005", "usuario_id": "u014", "texto": "alguma coisa com camarão", "filtros": {}, "alvo": ["camarao"], "tags": ["semantico"]}
+{"id": "c006", "usuario_id": "u015", "texto": "qual o lanche mais barato que chega em meia hora?", "filtros": {"categorias": ["lanches"], "tempo_max_min": 30, "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "c007", "usuario_id": "u004", "texto": "comida árabe bem avaliada", "filtros": {"categorias": ["arabe"], "ordenar_por": "avaliacao"}, "tags": ["memoria"]}
+{"id": "c008", "usuario_id": "u016", "texto": "preciso de um almoço proteico pós treino, sem lactose", "filtros": {"restricoes": ["sem_lactose"], "atributos": ["proteico"]}, "tags": []}
+{"id": "c009", "usuario_id": "u018", "texto": "tô com muita pressa, qualquer coisa serve", "filtros": {"tempo_max_min": 30}, "tags": []}
+{"id": "c010", "usuario_id": "u019", "texto": "um açaí de 500", "filtros": {"categorias": ["acai"]}, "alvo": ["500"], "tags": ["armadilha_numero"]}
+{"id": "c011", "usuario_id": "u020", "texto": "algo apimentado tailandês", "filtros": {"categorias": ["tailandesa"], "atributos": ["apimentado"]}, "tags": []}
+{"id": "c012", "usuario_id": "u021", "texto": "sem glúten e sem lactose, algo pra jantar até 45 reais", "filtros": {"preco_max": 45, "restricoes": ["sem_gluten", "sem_lactose"]}, "tags": ["multi"]}
+{"id": "c013", "usuario_id": "u023", "texto": "nao como carne, me sugere uma massa", "filtros": {"categorias": ["italiana"], "restricoes": ["vegetariano"]}, "tags": ["sem_acento"]}
+{"id": "c014", "usuario_id": "u005", "texto": "quero uma feijoada", "filtros": {"categorias": ["brasileira"]}, "alvo": ["feijoada"], "tags": ["memoria"]}
+{"id": "c015", "usuario_id": "u025", "texto": "um ramen bem quentinho", "filtros": {"categorias": ["japonesa"]}, "alvo": ["ramen"], "tags": []}
+{"id": "c016", "usuario_id": "u003", "texto": "salada com salmão", "filtros": {"categorias": ["saladas"]}, "alvo": ["salmao"], "tags": ["memoria"]}
+{"id": "c017", "usuario_id": "u026", "texto": "doce sem lactose", "filtros": {"categorias": ["doces"], "restricoes": ["sem_lactose"]}, "tags": []}
+{"id": "c018", "usuario_id": "u027", "texto": "café da manhã reforçado com ovos", "filtros": {"categorias": ["cafe"]}, "alvo": ["ovo"], "tags": []}
+{"id": "c019", "usuario_id": "u028", "texto": "o que chega mais rápido aqui? to morrendo de fome", "filtros": {"ordenar_por": "entrega_rapida"}, "tags": []}
+{"id": "c020", "usuario_id": "u029", "texto": "yakisoba de legumes", "filtros": {"categorias": ["chinesa"]}, "alvo": ["yakisoba", "legumes"], "tags": []}
+{"id": "c021", "usuario_id": "u030", "texto": "quero comer um churrasco com a família no domingo, uns 150 reais", "filtros": {"categorias": ["churrasco"], "preco_max": 150, "atributos": ["para_compartilhar"]}, "tags": ["multi"]}
+{"id": "c022", "usuario_id": "u031", "texto": "algo saudável num raio de 2 km", "filtros": {"atributos": ["leve"], "distancia_max_km": 2}, "tags": []}
+{"id": "c023", "usuario_id": "u033", "texto": "me vê um poke sem frutos do mar", "filtros": {"categorias": ["poke"], "evitar": ["frutos_do_mar"]}, "tags": []}
+{"id": "c024", "usuario_id": "u034", "texto": "estou com intolerância a lactose e queria pizza", "filtros": {"categorias": ["pizza"], "restricoes": ["sem_lactose"]}, "tags": []}
+{"id": "c025", "usuario_id": "u035", "texto": "tacos mas sem pimenta pfv", "filtros": {"categorias": ["mexicana"], "evitar": ["pimenta"]}, "tags": ["girias"]}
+{"id": "c026", "usuario_id": "u037", "texto": "sobremesa vegana", "filtros": {"categorias": ["doces"], "restricoes": ["vegano"]}, "tags": []}
+{"id": "c027", "usuario_id": "u040", "texto": "comida nordestina, tem baião de dois?", "filtros": {"categorias": ["nordestina"]}, "alvo": ["baiao"], "tags": []}
+{"id": "c028", "usuario_id": "u041", "texto": "quero gastar no máximo 25 conto", "filtros": {"preco_max": 25}, "tags": ["girias"]}
+{"id": "c029", "usuario_id": "u042", "texto": "algo leve pro jantar, mas que tenha bastante proteína", "filtros": {"atributos": ["leve", "proteico"]}, "tags": []}
+{"id": "c030", "usuario_id": "u043", "texto": "esfiha de carne", "filtros": {"categorias": ["arabe"]}, "alvo": ["esfiha", "carne"], "tags": []}
+{"id": "c031", "usuario_id": "u044", "texto": "pastel de queijo bem baratinho", "filtros": {"categorias": ["lanches"], "ordenar_por": "menor_preco"}, "alvo": ["pastel", "queijo"], "tags": []}
+{"id": "c032", "usuario_id": "u045", "texto": "risoto", "filtros": {"categorias": ["italiana"]}, "alvo": ["risoto"], "tags": ["curto"]}
+{"id": "c033", "usuario_id": "u046", "texto": "algo com cogumelo, sou vegetariana", "filtros": {"restricoes": ["vegetariano"]}, "alvo": ["cogumelo"], "tags": ["semantico"]}
+{"id": "c034", "usuario_id": "u047", "texto": "almoço caseiro até R$ 30 que chegue em 40 min", "filtros": {"categorias": ["brasileira"], "preco_max": 30, "tempo_max_min": 40}, "tags": ["multi"]}
+{"id": "c035", "usuario_id": "u052", "texto": "hamburguer sem pao", "filtros": {"categorias": ["hamburguer"]}, "alvo": ["sem pao"], "tags": ["sem_acento", "armadilha_negacao"]}
+{"id": "c036", "usuario_id": "u002", "texto": "uma pizza grande pra galera, calabresa", "filtros": {"categorias": ["pizza"], "atributos": ["para_compartilhar"]}, "alvo": ["calabresa"], "tags": ["memoria"]}
+{"id": "c037", "usuario_id": "u054", "texto": "mexicano vegano", "filtros": {"categorias": ["mexicana"], "restricoes": ["vegano"]}, "tags": ["curto"]}
+{"id": "c038", "usuario_id": "u055", "texto": "algo pra beliscar enquanto vejo o jogo, pra dividir", "filtros": {"atributos": ["para_compartilhar"]}, "tags": ["semantico"]}
+{"id": "c039", "usuario_id": "u006", "texto": "frango grelhado com legumes", "filtros": {}, "alvo": ["frango", "grelhad"], "tags": ["semantico"]}
+{"id": "c040", "usuario_id": "u010", "texto": "quero o japa mais bem avaliado da região", "filtros": {"categorias": ["japonesa"], "distancia_max_km": 3, "ordenar_por": "avaliacao"}, "tags": ["girias"]}
+{"id": "c041", "usuario_id": "u011", "texto": "sem porco e sem frutos do mar, quero algo de churrasco", "filtros": {"categorias": ["churrasco"], "evitar": ["frutos_do_mar", "porco"]}, "tags": ["multi"]}
+{"id": "c042", "usuario_id": "u012", "texto": "celíaca aqui 🙋‍♀️ alguma massa sem gluten?", "filtros": {"categorias": ["italiana"], "restricoes": ["sem_gluten"]}, "tags": ["emoji"]}
+{"id": "c043", "usuario_id": "u014", "texto": "to afim de um curry", "filtros": {}, "alvo": ["curry"], "tags": ["ambiguo"]}
+{"id": "c044", "usuario_id": "u015", "texto": "bowl vegano", "filtros": {"restricoes": ["vegano"]}, "alvo": ["bowl"], "tags": ["curto"]}
+{"id": "c045", "usuario_id": "u016", "texto": "pão de queijo quentinho", "filtros": {}, "alvo": ["pao de queijo"], "tags": ["ambiguo"]}
+{"id": "c046", "usuario_id": "u018", "texto": "quero uma tapioca doce", "filtros": {"categorias": ["nordestina"]}, "alvo": ["tapioca"], "tags": ["armadilha_doce"]}
+{"id": "c047", "usuario_id": "u019", "texto": "nada muito pesado, to de dieta", "filtros": {"atributos": ["leve"]}, "tags": []}
+{"id": "c048", "usuario_id": "u020", "texto": "jantar romântico pra dois, italiano, até 120", "filtros": {"categorias": ["italiana"], "preco_max": 120, "atributos": ["para_compartilhar"]}, "tags": ["multi"]}
+{"id": "c049", "usuario_id": "u021", "texto": "o que tem de bom e barato no bairro?", "filtros": {"distancia_max_km": 3, "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "c050", "usuario_id": "u023", "texto": "Quero uma moqueca de camarão pra 2", "filtros": {"categorias": ["nordestina"], "atributos": ["para_compartilhar"]}, "alvo": ["moqueca", "camarao"], "tags": []}
+{"id": "c051", "usuario_id": "u025", "texto": "chinês sem fritura", "filtros": {"categorias": ["chinesa"], "evitar": ["fritura"]}, "tags": []}
+{"id": "c052", "usuario_id": "u026", "texto": "me sugere algo picante", "filtros": {"atributos": ["apimentado"]}, "tags": []}
+{"id": "c053", "usuario_id": "u027", "texto": "não gosto de pimenta, quero comida tailandesa", "filtros": {"categorias": ["tailandesa"], "evitar": ["pimenta"]}, "tags": []}
+{"id": "c054", "usuario_id": "u028", "texto": "um combinado de sushi pra 2 pessoas", "filtros": {"categorias": ["japonesa"], "atributos": ["para_compartilhar"]}, "alvo": ["combinado"], "tags": []}
+{"id": "c055", "usuario_id": "u029", "texto": "brownie", "filtros": {"categorias": ["doces"]}, "alvo": ["brownie"], "tags": ["curto"]}
+{"id": "c056", "usuario_id": "u030", "texto": "quero um x-salada", "filtros": {"categorias": ["lanches"]}, "alvo": ["x-salada"], "tags": ["armadilha_categoria"]}
+{"id": "c057", "usuario_id": "u031", "texto": "qual a opção vegetariana mais barata?", "filtros": {"restricoes": ["vegetariano"], "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "c058", "usuario_id": "u033", "texto": "açaí fit", "filtros": {"categorias": ["acai"], "atributos": ["leve"]}, "alvo": ["fit"], "tags": ["curto"]}
+{"id": "c059", "usuario_id": "u034", "texto": "to liso, mas com fome. algo até 20 reais", "filtros": {"preco_max": 20, "ordenar_por": "menor_preco"}, "tags": ["girias"]}
+{"id": "c060", "usuario_id": "u035", "texto": "almoço sem glúten perto do trabalho", "filtros": {"restricoes": ["sem_gluten"], "distancia_max_km": 3}, "tags": []}
+{"id": "c061", "usuario_id": "u037", "texto": "quero comer peixe", "filtros": {}, "alvo": ["peixe"], "tags": ["semantico"]}
+{"id": "c062", "usuario_id": "u040", "texto": "lasanha vegetariana", "filtros": {"categorias": ["italiana"], "restricoes": ["vegetariano"]}, "alvo": ["lasanha"], "tags": []}
+{"id": "c063", "usuario_id": "u041", "texto": "burrito de frango", "filtros": {"categorias": ["mexicana"]}, "alvo": ["burrito", "frango"], "tags": []}
+{"id": "c064", "usuario_id": "u042", "texto": "pf com bife", "filtros": {"categorias": ["brasileira"]}, "alvo": ["bife"], "tags": ["girias", "curto"]}
+{"id": "c065", "usuario_id": "u043", "texto": "quero um pad thai", "filtros": {"categorias": ["tailandesa"]}, "alvo": ["pad thai"], "tags": []}
+{"id": "c066", "usuario_id": "u044", "texto": "Algo quente e reconfortante pra um dia frio, tipo sopa ou caldo", "filtros": {}, "alvo": ["sopa|caldo"], "tags": ["semantico"]}
+{"id": "c067", "usuario_id": "u045", "texto": "hot roll", "filtros": {"categorias": ["japonesa"]}, "alvo": ["hot roll"], "tags": ["curto"]}
+{"id": "c068", "usuario_id": "u046", "texto": "quero uma salada sem carne nenhuma", "filtros": {"categorias": ["saladas"], "restricoes": ["vegetariano"]}, "tags": []}
+{"id": "c069", "usuario_id": "u047", "texto": "frango frito não, prefiro grelhado", "filtros": {"evitar": ["fritura"]}, "alvo": ["frango", "grelhad"], "tags": ["armadilha_negacao"]}
+{"id": "c070", "usuario_id": "u052", "texto": "manda um açaí de 300 ml puro", "filtros": {"categorias": ["acai"]}, "alvo": ["300"], "tags": ["armadilha_numero"]}
+{"id": "c071", "usuario_id": "u054", "texto": "bora de hambúrguer? até 40 conto, entrega em até 35 minutos", "filtros": {"categorias": ["hamburguer"], "preco_max": 40, "tempo_max_min": 35}, "tags": ["girias", "multi"]}
+{"id": "c072", "usuario_id": "u055", "texto": "algo bem avaliado e que não demore", "filtros": {"tempo_max_min": 30, "ordenar_por": "avaliacao"}, "tags": []}
+{"id": "c073", "usuario_id": "u006", "texto": "quero comida mexicana pra 4 pessoas", "filtros": {"categorias": ["mexicana"], "atributos": ["para_compartilhar"]}, "tags": []}
+{"id": "c074", "usuario_id": "u010", "texto": "me indica uma esfirra de queijo", "filtros": {"categorias": ["arabe"]}, "alvo": ["esfiha", "queijo"], "tags": ["grafia"]}
+{"id": "c075", "usuario_id": "u011", "texto": "estou de dieta, quero algo light até 35 reais", "filtros": {"preco_max": 35, "atributos": ["leve"]}, "tags": []}
+{"id": "c076", "usuario_id": "u012", "texto": "quero algo doce e barato", "filtros": {"categorias": ["doces"], "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "c077", "usuario_id": "u014", "texto": "um prato vegano com bastante proteína", "filtros": {"restricoes": ["vegano"], "atributos": ["proteico"]}, "tags": []}
+{"id": "c078", "usuario_id": "u015", "texto": "to querendo frutos do mar hoje", "filtros": {}, "alvo": ["camarao|peixe|salmao|atum|tilapia"], "tags": ["armadilha_negacao", "semantico"]}
+{"id": "c079", "usuario_id": "u016", "texto": "nhoque", "filtros": {"categorias": ["italiana"]}, "alvo": ["nhoque"], "tags": ["curto"]}
+{"id": "c080", "usuario_id": "u018", "texto": "comida de padaria pro café da manhã, sem lactose", "filtros": {"categorias": ["cafe"], "restricoes": ["sem_lactose"]}, "tags": []}
+{"id": "c081", "usuario_id": "u019", "texto": "me ve uma coxinha", "filtros": {"categorias": ["lanches"]}, "alvo": ["coxinha"], "tags": ["sem_acento"]}
+{"id": "c082", "usuario_id": "u020", "texto": "algo para comer em 20 min no máximo", "filtros": {"tempo_max_min": 20}, "tags": []}
+{"id": "c083", "usuario_id": "u021", "texto": "kibe", "filtros": {"categorias": ["arabe"]}, "alvo": ["kibe"], "tags": ["curto"]}
+{"id": "c084", "usuario_id": "u023", "texto": "quero um poke de salmão sem glúten", "filtros": {"categorias": ["poke"], "restricoes": ["sem_gluten"]}, "alvo": ["salmao"], "tags": []}
+{"id": "c085", "usuario_id": "u001", "texto": "jantar leve, tipo uma salada ou sopa", "filtros": {"categorias": ["saladas"], "atributos": ["leve"]}, "alvo": ["salada|sopa"], "tags": ["memoria"]}
+{"id": "c086", "usuario_id": "u025", "texto": "quero picanha", "filtros": {"categorias": ["churrasco"]}, "alvo": ["picanha"], "tags": []}
+{"id": "c087", "usuario_id": "u026", "texto": "pizza meio a meio, calabresa e quatro queijos, no máximo 70 reais", "filtros": {"categorias": ["pizza"], "preco_max": 70}, "alvo": ["calabresa|quatro queijos"], "tags": []}
+{"id": "c088", "usuario_id": "u027", "texto": "comida chinesa ou japonesa, tanto faz, o que chegar mais rápido", "filtros": {"categorias": ["chinesa", "japonesa"], "ordenar_por": "entrega_rapida"}, "tags": ["multi"]}
+{"id": "c089", "usuario_id": "u028", "texto": "algum lanche natural", "filtros": {"categorias": ["lanches"]}, "alvo": ["natural"], "tags": []}
+{"id": "c090", "usuario_id": "u029", "texto": "evito carne vermelha, quero um prato brasileiro", "filtros": {"categorias": ["brasileira"], "evitar": ["carne_vermelha"]}, "tags": []}
+{"id": "c091", "usuario_id": "u030", "texto": "mousse de maracujá", "filtros": {"categorias": ["doces"]}, "alvo": ["maracuja"], "tags": ["ambiguo"]}
+{"id": "c092", "usuario_id": "u031", "texto": "Oi! O que você me recomenda hoje?", "filtros": {}, "tags": ["aberto"]}
+{"id": "c093", "usuario_id": "u033", "texto": "quero repetir algo parecido com o que pedi semana passada", "filtros": {}, "tags": ["aberto", "historico"]}
+{"id": "c094", "usuario_id": "u034", "texto": "bem barato e bem rápido", "filtros": {"tempo_max_min": 30, "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "c095", "usuario_id": "u035", "texto": "uma marmita fit com batata doce", "filtros": {"categorias": ["brasileira"], "atributos": ["leve"]}, "alvo": ["batata-doce|batata doce"], "tags": []}
+{"id": "c096", "usuario_id": "u037", "texto": "quesadilla", "filtros": {"categorias": ["mexicana"]}, "alvo": ["quesadilla"], "tags": ["curto"]}
+{"id": "c097", "usuario_id": "u040", "texto": "falafel, sou vegana", "filtros": {"categorias": ["arabe"], "restricoes": ["vegano"]}, "alvo": ["falafel"], "tags": []}
+{"id": "c098", "usuario_id": "u041", "texto": "algo com tofu", "filtros": {}, "alvo": ["tofu"], "tags": ["semantico"]}
+{"id": "c099", "usuario_id": "u042", "texto": "PRECISO DE UM CHURRASCO PRA 10 PESSOAS ATÉ 300 REAIS", "filtros": {"categorias": ["churrasco"], "preco_max": 300, "atributos": ["para_compartilhar"]}, "tags": ["caixa_alta", "multi"]}
+{"id": "c100", "usuario_id": "u043", "texto": "algo sem lactose e sem glúten, de preferência japonês, e que não seja frito", "filtros": {"categorias": ["japonesa"], "restricoes": ["sem_gluten", "sem_lactose"], "evitar": ["fritura"]}, "tags": ["multi"]}

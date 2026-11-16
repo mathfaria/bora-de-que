@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>bora de quê? · bateu a fome, achou o prato</title>
+  <meta name="description" content="Diga o que bateu vontade: eu sugiro pratos e mostro lugares reais perto do seu CEP. Projeto de portfólio.">
+  <meta name="theme-color" content="#FF087E">
+  <meta name="color-scheme" content="only light">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%23FF087E'/><circle cx='28' cy='28' r='14' fill='none' stroke='%23FFF9F3' stroke-width='6'/><path d='M21 30a7 7 0 0 0 14 0' fill='none' stroke='%23FFF9F3' stroke-width='3.5' stroke-linecap='round'/><path d='M39 39l11 11' stroke='%23FFF9F3' stroke-width='7' stroke-linecap='round'/></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="lupa" viewBox="0 0 64 64">
+        <circle cx="27" cy="27" r="18" fill="none" stroke="currentColor" stroke-width="7"/>
+        <path d="M18 29a9 9 0 0 0 18 0" fill="none" stroke="currentColor" stroke-width="4.5" stroke-linecap="round"/>
+        <path d="M41 41l14 14" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="seta" viewBox="0 0 24 24">
+        <path d="M4 12h15m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="pino" viewBox="0 0 24 24">
+        <path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <circle cx="12" cy="10" r="2.6" fill="currentColor"/>
+      </symbol>
+      <symbol id="externo" viewBox="0 0 24 24">
+        <path d="M14 4h6v6m0-6L10 14M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="relogio" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.2"/>
+        <path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="brilho" viewBox="0 0 24 24">
+        <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z" fill="currentColor"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- fundo vivo: manchas de cor que se movem devagar -->
+  <div class="fundo" aria-hidden="true"><i class="m1"></i><i class="m2"></i><i class="m3"></i></div>
+
+  <!-- Entrada: nome + CEP -->
+  <main id="entrada-cep" class="entrada" hidden>
+    <section class="entrada-texto">
+      <a class="marca marca-rosa" href="/" aria-label="bora de quê?">
+        <svg class="marca-lupa" aria-hidden="true"><use href="#lupa"/></svg><span>bora de quê?</span>
+      </a>
+      <span class="sobrelinha"><svg aria-hidden="true"><use href="#brilho"/></svg> agente de comida com IA · lugares reais do mapa</span>
+      <h1 class="titulo-revela">
+        <span class="linha"><span class="palavra" style="--i:0">Bateu</span> <span class="palavra" style="--i:1">a</span> <span class="palavra" style="--i:2">fome.</span></span>
+        <span class="linha destaque"><span class="palavra" style="--i:3">Achou</span> <span class="palavra" style="--i:4">o</span> <span class="palavra" style="--i:5">prato.</span>
+          <svg class="rabisco" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 4, 120 22, 180 10 S 270 6, 296 14" /></svg>
+        </span>
+      </h1>
+      <p class="entrada-sub">Me conta seu nome e seu CEP. Eu sugiro pratos do seu jeito e, quando bater a vontade, mostro <b>lugares reais</b> perto de você.</p>
+
+      <form id="form-cep" class="cartao-form" autocomplete="off" novalidate>
+        <label class="campo-flutuante">
+          <input id="nome" maxlength="40" placeholder=" " aria-label="Seu nome" autocomplete="given-name">
+          <span>Como posso te chamar?</span>
+        </label>
+        <div class="linha-cep">
+          <label class="campo-flutuante campo-cep">
+            <svg aria-hidden="true"><use href="#pino"/></svg>
+            <input id="cep" inputmode="numeric" maxlength="9" placeholder=" " aria-label="Seu CEP" required>
+            <span>Seu CEP</span>
+          </label>
+          <button id="btn-cep" class="btn-primario" type="submit"><span>Bora</span><svg aria-hidden="true"><use href="#seta"/></svg></button>
+        </div>
+        <p id="cep-status" class="cep-status" role="status" aria-live="polite"></p>
+      </form>
+      <p class="privacidade">Guardo só seu nome e seu CEP, para lembrar de você na próxima visita. Dá para apagar quando quiser.</p>
+    </section>
+
+    <section class="entrada-arte" aria-hidden="true">
+      <div class="orbita">
+        <div class="anel anel-1">
+          <span class="item" style="--a:0deg"><b>🍣</b></span>
+          <span class="item" style="--a:120deg"><b>🥘</b></span>
+          <span class="item" style="--a:240deg"><b>🍕</b></span>
+        </div>
+        <div class="anel anel-2">
+          <span class="item" style="--a:30deg"><b>🧆</b></span>
+          <span class="item" style="--a:102deg"><b>🥗</b></span>
+          <span class="item" style="--a:174deg"><b>🍔</b></span>
+          <span class="item" style="--a:246deg"><b>🌮</b></span>
+          <span class="item" style="--a:318deg"><b>🫐</b></span>
+        </div>
+        <div class="prato-central"><svg aria-hidden="true"><use href="#lupa"/></svg></div>
+        <div class="flutuante f1"><i class="ponto-vivo"></i> aberto agora · 450 m</div>
+        <div class="flutuante f2">🌱 vegano <b>✓ confirmado</b></div>
+        <div class="flutuante f3">📍 típico de MG · pão de queijo</div>
+      </div>
+    </section>
+
+    <div class="faixa" aria-hidden="true">
+      <div class="faixa-trilho">
+        <span>pão de queijo · MG</span><span>acarajé · BA</span><span>barreado · PR</span><span>tacacá · PA</span>
+        <span>baião de dois · CE</span><span>moqueca capixaba · ES</span><span>galeto · RS</span><span>pastel de feira · SP</span>
+        <span>bolo de rolo · PE</span><span>empadão goiano · GO</span><span>tambaqui · AM</span><span>feijoada · RJ</span>
+        <span>pão de queijo · MG</span><span>acarajé · BA</span><span>barreado · PR</span><span>tacacá · PA</span>
+        <span>baião de dois · CE</span><span>moqueca capixaba · ES</span><span>galeto · RS</span><span>pastel de feira · SP</span>
+        <span>bolo de rolo · PE</span><span>empadão goiano · GO</span><span>tambaqui · AM</span><span>feijoada · RJ</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- App -->
+  <div id="app" class="casca" hidden>
+    <header class="topo">
+      <a class="marca" href="/" aria-label="bora de quê? início">
+        <svg class="marca-lupa" aria-hidden="true"><use href="#lupa"/></svg><span>bora de quê?</span>
+      </a>
+      <button id="trocar-local" class="chip-local" type="button" title="Trocar CEP">
+        <svg aria-hidden="true"><use href="#pino"/></svg><span id="rotulo-local">—</span><small>trocar</small>
+      </button>
+      <span id="status" class="status"><i></i><b>conectando…</b></span>
+    </header>
+
+    <main class="app">
+      <aside class="lateral" aria-label="Sua região">
+        <section class="cartao-lateral regiao">
+          <div id="radar" class="radar" aria-hidden="true"><i class="onda"></i><i class="onda o2"></i><div class="pontos"></div><span class="centro"></span></div>
+          <div class="regiao-texto">
+            <p class="rotulo">sua região</p>
+            <h2 id="regiao-nome">—</h2>
+            <p id="regiao-info" class="regiao-info"></p>
+          </div>
+          <p id="regiao-mapa" class="regiao-mapa"><b id="contador">0</b> <span id="contador-texto">procurando lugares…</span></p>
+        </section>
+        <section class="cartao-lateral">
+          <p class="rotulo" id="rotulo-regionais">típicos daqui</p>
+          <div id="regionais" class="chips chips-regionais"></div>
+        </section>
+        <section class="cartao-lateral">
+          <p class="rotulo">o que o assistente lembra</p>
+          <div id="memoria" class="chips"></div>
+        </section>
+        <div class="acoes">
+          <button id="nova" class="btn-contorno" type="button">Nova conversa</button>
+          <button id="esquecer" class="btn-contorno" type="button" title="Apaga seu nome, CEP, memória e conversas">Esquecer meus dados</button>
+        </div>
+      </aside>
+
+      <section class="chat" aria-label="Conversa">
+        <div id="mensagens" class="mensagens" aria-live="polite"></div>
+        <form id="form" class="composer" autocomplete="off">
+          <label class="composer-campo">
+            <svg class="composer-lupa" aria-hidden="true"><use href="#lupa"/></svg>
+            <textarea id="entrada" rows="1" maxlength="500" placeholder="O que você quer comer?" aria-label="O que você quer comer?"></textarea>
+          </label>
+          <button id="enviar" class="btn-primario" type="submit"><span>Bora</span><svg aria-hidden="true"><use href="#seta"/></svg></button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <footer class="rodape">
+    Lugares © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">colaboradores do OpenStreetMap</a> (ODbL) ·
+    pratos sugeridos são típicos da cozinha, não o cardápio da casa · projeto de portfólio, nenhum pedido é enviado
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

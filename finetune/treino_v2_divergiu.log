@@ -1,0 +1,24 @@
+Loading configuration file finetune/lora.yaml
+Loading pretrained model
+
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]
+Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 5902.72it/s]
+Loading datasets
+Training
+╭─ mlx_lm.lora ────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│    model           Qwen/Qwen2.5-0.5B-Instruct                                                                        │
+│    type            lora · -1 layers · rank 16                                                                        │
+│    dataset         finetune/data                                                                                     │
+│    optimizer       adam · lr 1.0e-04                                                                                 │
+│    batch · iters   16 · 800                                                                                          │
+│    max seq         256                                                                                               │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Trainable parameters: 1.781% (8.798M/494.033M)
+  iter   train_loss     tok/s     tokens
+     1    val 3.297    17.82s
+    25    6.180 ▼      103     11.4k
+    50    4.881 ▼      107     22.6k
+    75    4.426 ▼      123     33.8k
+   100    val 3.215    19.52s
+   100    3.977 ▼      113     45.1k
+  save  0000100_adapters.safetensors

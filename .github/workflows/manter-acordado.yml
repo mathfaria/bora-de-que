@@ -1,0 +1,25 @@
+name: manter-acordado
+
+# Acessa a demo uma vez por dia para o Space gratuito não hibernar (48 h sem uso).
+# Configure a variável DEMO_URL no repositório.
+on:
+  schedule:
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    if: ${{ vars.DEMO_URL != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          DEMO_URL: ${{ vars.DEMO_URL }}
+        run: |
+          for i in 1 2 3 4 5 6; do
+            curl -sf --max-time 120 "$DEMO_URL/api/saude" && exit 0
+            sleep 60
+          done
+          exit 1

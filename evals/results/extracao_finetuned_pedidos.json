@@ -1,0 +1,2116 @@
+{
+  "meta": {
+    "extrator": "finetuned",
+    "casos": "pedidos",
+    "quando": "2026-11-14T03:21:39+00:00",
+    "modelo": "models/bocado-extrator"
+  },
+  "metricas": {
+    "n": 100,
+    "acerto_exato": 0.58,
+    "acerto_por_campo": {
+      "categorias": 0.76,
+      "preco_max": 0.99,
+      "restricoes": 0.94,
+      "evitar": 0.94,
+      "atributos": 0.91,
+      "distancia_max_km": 0.99,
+      "tempo_max_min": 0.99,
+      "ordenar_por": 0.91
+    },
+    "acerto_medio_campos": 0.92875,
+    "json_valido": 0.98,
+    "latencia_ms": {
+      "p50": 517.0771670000249,
+      "p95": 831.1032909987262
+    },
+    "tokens_entrada_medio": 40.19,
+    "tokens_saida_medio": 16.18,
+    "custo_usd_por_1000": 0.0
+  },
+  "casos": [
+    {
+      "id": "c001",
+      "texto": "quero algo leve e barato, perto de casa, nada de fritura",
+      "gold": {
+        "evitar": [
+          "fritura"
+        ],
+        "atributos": [
+          "leve"
+        ],
+        "distancia_max_km": 3,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "evitar": [
+          "fritura"
+        ],
+        "atributos": [
+          "leve"
+        ],
+        "distancia_max_km": 3,
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"evitar\": [\"fritura\"], \"atributos\": [\"leve\"], \"distancia_max_km\": 3, \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 1316.5
+    },
+    {
+      "id": "c002",
+      "texto": "to com vontade de sushi, até 60 reais",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "preco_max": 60
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ],
+        "preco_max": 60
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"], \"preco_max\": 60}",
+      "erros": [],
+      "latencia_ms": 503.3
+    },
+    {
+      "id": "c003",
+      "texto": "me indica uma pizza boa pra dividir com minha namorada",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [],
+      "latencia_ms": 499.0
+    },
+    {
+      "id": "c004",
+      "texto": "sou vegano, quero um hambúrguer",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\"categorias\": [\"vegano\"]}",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 314.0
+    },
+    {
+      "id": "c005",
+      "texto": "alguma coisa com camarão",
+      "gold": {},
+      "pred": {
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "ordenar_por"
+      ],
+      "latencia_ms": 513.1
+    },
+    {
+      "id": "c006",
+      "texto": "qual o lanche mais barato que chega em meia hora?",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ],
+        "tempo_max_min": 30,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ],
+        "tempo_max_min": 30,
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"], \"tempo_max_min\": 30, \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 1124.9
+    },
+    {
+      "id": "c007",
+      "texto": "comida árabe bem avaliada",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ],
+        "ordenar_por": "avaliacao"
+      },
+      "pred": {
+        "categorias": [
+          "arabe"
+        ],
+        "ordenar_por": "avaliacao"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\"], \"ordenar_por\": \"avaliacao\"}",
+      "erros": [],
+      "latencia_ms": 523.2
+    },
+    {
+      "id": "c008",
+      "texto": "preciso de um almoço proteico pós treino, sem lactose",
+      "gold": {
+        "restricoes": [
+          "sem_lactose"
+        ],
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "pred": {
+        "restricoes": [
+          "sem_lactose"
+        ],
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"restricoes\": [\"sem_lactose\"], \"atributos\": [\"proteico\"]}",
+      "erros": [],
+      "latencia_ms": 600.4
+    },
+    {
+      "id": "c009",
+      "texto": "tô com muita pressa, qualquer coisa serve",
+      "gold": {
+        "tempo_max_min": 30
+      },
+      "pred": {
+        "tempo_max_min": 30
+      },
+      "valido": true,
+      "bruto": "{\"tempo_max_min\": 30}",
+      "erros": [],
+      "latencia_ms": 324.8
+    },
+    {
+      "id": "c010",
+      "texto": "um açaí de 500",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\"]}",
+      "erros": [],
+      "latencia_ms": 258.9
+    },
+    {
+      "id": "c011",
+      "texto": "algo apimentado tailandês",
+      "gold": {
+        "categorias": [
+          "tailandesa"
+        ],
+        "atributos": [
+          "apimentado"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "tailandesa"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"tailandesa\"]}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 280.7
+    },
+    {
+      "id": "c012",
+      "texto": "sem glúten e sem lactose, algo pra jantar até 45 reais",
+      "gold": {
+        "preco_max": 45,
+        "restricoes": [
+          "sem_gluten",
+          "sem_lactose"
+        ]
+      },
+      "pred": {
+        "preco_max": 45,
+        "restricoes": [
+          "sem_lactose"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"preco_max\": 45, \"restricoes\": [\"sem_lactose\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [
+        "restricoes",
+        "atributos"
+      ],
+      "latencia_ms": 893.1
+    },
+    {
+      "id": "c013",
+      "texto": "nao como carne, me sugere uma massa",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "italiana"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "restricoes",
+        "ordenar_por"
+      ],
+      "latencia_ms": 578.9
+    },
+    {
+      "id": "c014",
+      "texto": "quero uma feijoada",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"]}",
+      "erros": [],
+      "latencia_ms": 330.9
+    },
+    {
+      "id": "c015",
+      "texto": "um ramen bem quentinho",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"]}",
+      "erros": [],
+      "latencia_ms": 337.1
+    },
+    {
+      "id": "c016",
+      "texto": "salada com salmão",
+      "gold": {
+        "categorias": [
+          "saladas"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "saladas"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"saladas\"]}",
+      "erros": [],
+      "latencia_ms": 282.9
+    },
+    {
+      "id": "c017",
+      "texto": "doce sem lactose",
+      "gold": {
+        "categorias": [
+          "doces"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "doces"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\"], \"restricoes\": [\"sem_lactose\"]}",
+      "erros": [],
+      "latencia_ms": 585.8
+    },
+    {
+      "id": "c018",
+      "texto": "café da manhã reforçado com ovos",
+      "gold": {
+        "categorias": [
+          "cafe"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "cafe"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"cafe\"]}",
+      "erros": [],
+      "latencia_ms": 273.0
+    },
+    {
+      "id": "c019",
+      "texto": "o que chega mais rápido aqui? to morrendo de fome",
+      "gold": {
+        "ordenar_por": "entrega_rapida"
+      },
+      "pred": {
+        "categorias": [
+          "italiana"
+        ],
+        "ordenar_por": "entrega_rapida"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"], \"ordenar_por\": \"entrega_rapida\"}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 557.9
+    },
+    {
+      "id": "c020",
+      "texto": "yakisoba de legumes",
+      "gold": {
+        "categorias": [
+          "chinesa"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 325.9
+    },
+    {
+      "id": "c021",
+      "texto": "quero comer um churrasco com a família no domingo, uns 150 reais",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ],
+        "preco_max": 150,
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "churrasco"
+        ],
+        "preco_max": 150,
+        "distancia_max_km": 3
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"churrasco\"], \"preco_max\": 150, \"distancia_max_km\": 3}",
+      "erros": [
+        "atributos",
+        "distancia_max_km"
+      ],
+      "latencia_ms": 773.6
+    },
+    {
+      "id": "c022",
+      "texto": "algo saudável num raio de 2 km",
+      "gold": {
+        "atributos": [
+          "leve"
+        ],
+        "distancia_max_km": 2
+      },
+      "pred": {
+        "atributos": [
+          "leve"
+        ],
+        "distancia_max_km": 2
+      },
+      "valido": true,
+      "bruto": "{\"atributos\": [\"leve\"], \"distancia_max_km\": 2}",
+      "erros": [],
+      "latencia_ms": 516.1
+    },
+    {
+      "id": "c023",
+      "texto": "me vê um poke sem frutos do mar",
+      "gold": {
+        "categorias": [
+          "poke"
+        ],
+        "evitar": [
+          "frutos_do_mar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "poke"
+        ],
+        "evitar": [
+          "frutos_do_mar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"poke\"], \"evitar\": [\"frutos_do_mar\"]}",
+      "erros": [],
+      "latencia_ms": 492.0
+    },
+    {
+      "id": "c024",
+      "texto": "estou com intolerância a lactose e queria pizza",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"], \"restricoes\": [\"sem_lactose\"]}",
+      "erros": [],
+      "latencia_ms": 541.6
+    },
+    {
+      "id": "c025",
+      "texto": "tacos mas sem pimenta pfv",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "mexicana"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"mexicana\"], \"evitar\": [\"pimenta\"]}",
+      "erros": [],
+      "latencia_ms": 518.1
+    },
+    {
+      "id": "c026",
+      "texto": "sobremesa vegana",
+      "gold": {
+        "categorias": [
+          "doces"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "doces"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\"], \"restricoes\": [\"vegano\"]}",
+      "erros": [],
+      "latencia_ms": 546.1
+    },
+    {
+      "id": "c027",
+      "texto": "comida nordestina, tem baião de dois?",
+      "gold": {
+        "categorias": [
+          "nordestina"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "nordestina"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"nordestina\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 573.6
+    },
+    {
+      "id": "c028",
+      "texto": "quero gastar no máximo 25 conto",
+      "gold": {
+        "preco_max": 25
+      },
+      "pred": {
+        "categorias": [
+          "doces"
+        ],
+        "preco_max": 25
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\"], \"preco_max\": 25}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 500.0
+    },
+    {
+      "id": "c029",
+      "texto": "algo leve pro jantar, mas que tenha bastante proteína",
+      "gold": {
+        "atributos": [
+          "leve",
+          "proteico"
+        ]
+      },
+      "pred": {
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"atributos\": [\"leve\"]}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 302.7
+    },
+    {
+      "id": "c030",
+      "texto": "esfiha de carne",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "arabe"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\"]}",
+      "erros": [],
+      "latencia_ms": 277.7
+    },
+    {
+      "id": "c031",
+      "texto": "pastel de queijo bem baratinho",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 563.3
+    },
+    {
+      "id": "c032",
+      "texto": "risoto",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"]}",
+      "erros": [],
+      "latencia_ms": 265.9
+    },
+    {
+      "id": "c033",
+      "texto": "algo com cogumelo, sou vegetariana",
+      "gold": {
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "pred": {
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"restricoes\": [\"vegetariano\"]}",
+      "erros": [],
+      "latencia_ms": 365.3
+    },
+    {
+      "id": "c034",
+      "texto": "almoço caseiro até R$ 30 que chegue em 40 min",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "preco_max": 30,
+        "tempo_max_min": 40
+      },
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ],
+        "preco_max": 30,
+        "tempo_max_min": 40
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"], \"preco_max\": 30, \"tempo_max_min\": 40}",
+      "erros": [],
+      "latencia_ms": 756.9
+    },
+    {
+      "id": "c035",
+      "texto": "hamburguer sem pao",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"hamburguer\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "ordenar_por"
+      ],
+      "latencia_ms": 546.0
+    },
+    {
+      "id": "c036",
+      "texto": "uma pizza grande pra galera, calabresa",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [],
+      "latencia_ms": 502.4
+    },
+    {
+      "id": "c037",
+      "texto": "mexicano vegano",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "mexicana"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"mexicana\"]}",
+      "erros": [
+        "restricoes"
+      ],
+      "latencia_ms": 290.1
+    },
+    {
+      "id": "c038",
+      "texto": "algo pra beliscar enquanto vejo o jogo, pra dividir",
+      "gold": {
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "nordestina"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"nordestina\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 571.0
+    },
+    {
+      "id": "c039",
+      "texto": "frango grelhado com legumes",
+      "gold": {},
+      "pred": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 280.2
+    },
+    {
+      "id": "c040",
+      "texto": "quero o japa mais bem avaliado da região",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "distancia_max_km": 3,
+        "ordenar_por": "avaliacao"
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ],
+        "distancia_max_km": 3,
+        "ordenar_por": "avaliacao"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"], \"distancia_max_km\": 3, \"ordenar_por\": \"avaliacao\"}",
+      "erros": [],
+      "latencia_ms": 803.6
+    },
+    {
+      "id": "c041",
+      "texto": "sem porco e sem frutos do mar, quero algo de churrasco",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ],
+        "evitar": [
+          "frutos_do_mar",
+          "porco"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "churrasco"
+        ],
+        "evitar": [
+          "frutos_do_mar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"churrasco\"], \"evitar\": [\"frutos_do_mar\"]}",
+      "erros": [
+        "evitar"
+      ],
+      "latencia_ms": 592.9
+    },
+    {
+      "id": "c042",
+      "texto": "celíaca aqui 🙋‍♀️ alguma massa sem gluten?",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "restricoes": [
+          "sem_gluten"
+        ]
+      },
+      "pred": {
+        "restricoes": [
+          "sem_gluten"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"restricoes\": [\"sem_gluten\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 378.8
+    },
+    {
+      "id": "c043",
+      "texto": "to afim de um curry",
+      "gold": {},
+      "pred": {
+        "categorias": [
+          "arabe"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 321.2
+    },
+    {
+      "id": "c044",
+      "texto": "bowl vegano",
+      "gold": {
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"], \"restricoes\": [\"vegano\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 574.0
+    },
+    {
+      "id": "c045",
+      "texto": "pão de queijo quentinho",
+      "gold": {},
+      "pred": {
+        "categorias": [
+          "arabe"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "categorias",
+        "ordenar_por"
+      ],
+      "latencia_ms": 533.8
+    },
+    {
+      "id": "c046",
+      "texto": "quero uma tapioca doce",
+      "gold": {
+        "categorias": [
+          "nordestina"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "nordestina"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"nordestina\"]}",
+      "erros": [],
+      "latencia_ms": 282.0
+    },
+    {
+      "id": "c047",
+      "texto": "nada muito pesado, to de dieta",
+      "gold": {
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"atributos\": [\"leve\"]}",
+      "erros": [],
+      "latencia_ms": 283.5
+    },
+    {
+      "id": "c048",
+      "texto": "jantar romântico pra dois, italiano, até 120",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "preco_max": 120,
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "italiana"
+        ],
+        "preco_max": 120,
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"], \"preco_max\": 120, \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [],
+      "latencia_ms": 770.4
+    },
+    {
+      "id": "c049",
+      "texto": "o que tem de bom e barato no bairro?",
+      "gold": {
+        "distancia_max_km": 3,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "distancia_max_km": 3,
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"distancia_max_km\": 3, \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 601.5
+    },
+    {
+      "id": "c050",
+      "texto": "Quero uma moqueca de camarão pra 2",
+      "gold": {
+        "categorias": [
+          "nordestina"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "nordestina"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"nordestina\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [],
+      "latencia_ms": 611.0
+    },
+    {
+      "id": "c051",
+      "texto": "chinês sem fritura",
+      "gold": {
+        "categorias": [
+          "chinesa"
+        ],
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "chinesa"
+        ],
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"chinesa\"], \"evitar\": [\"fritura\"]}",
+      "erros": [],
+      "latencia_ms": 582.2
+    },
+    {
+      "id": "c052",
+      "texto": "me sugere algo picante",
+      "gold": {
+        "atributos": [
+          "apimentado"
+        ]
+      },
+      "pred": {
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"evitar\": [\"pimenta\"]}",
+      "erros": [
+        "evitar",
+        "atributos"
+      ],
+      "latencia_ms": 338.8
+    },
+    {
+      "id": "c053",
+      "texto": "não gosto de pimenta, quero comida tailandesa",
+      "gold": {
+        "categorias": [
+          "tailandesa"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "tailandesa"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"tailandesa\"], \"evitar\": [\"pimenta\"]}",
+      "erros": [],
+      "latencia_ms": 534.1
+    },
+    {
+      "id": "c054",
+      "texto": "um combinado de sushi pra 2 pessoas",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [],
+      "latencia_ms": 586.1
+    },
+    {
+      "id": "c055",
+      "texto": "brownie",
+      "gold": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\"]}",
+      "erros": [],
+      "latencia_ms": 251.6
+    },
+    {
+      "id": "c056",
+      "texto": "quero um x-salada",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"]}",
+      "erros": [],
+      "latencia_ms": 258.9
+    },
+    {
+      "id": "c057",
+      "texto": "qual a opção vegetariana mais barata?",
+      "gold": {
+        "restricoes": [
+          "vegetariano"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "restricoes": [
+          "vegetariano"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"restricoes\": [\"vegetariano\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 623.6
+    },
+    {
+      "id": "c058",
+      "texto": "açaí fit",
+      "gold": {
+        "categorias": [
+          "acai"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\"], \"atributos\": [\"leve\"]}",
+      "erros": [],
+      "latencia_ms": 457.3
+    },
+    {
+      "id": "c059",
+      "texto": "to liso, mas com fome. algo até 20 reais",
+      "gold": {
+        "preco_max": 20,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ],
+        "preco_max": 20,
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"], \"preco_max\": 20, \"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 748.0
+    },
+    {
+      "id": "c060",
+      "texto": "almoço sem glúten perto do trabalho",
+      "gold": {
+        "restricoes": [
+          "sem_gluten"
+        ],
+        "distancia_max_km": 3
+      },
+      "pred": {
+        "restricoes": [
+          "sem_gluten"
+        ],
+        "distancia_max_km": 3
+      },
+      "valido": true,
+      "bruto": "{\"restricoes\": [\"sem_gluten\"], \"distancia_max_km\": 3}",
+      "erros": [],
+      "latencia_ms": 582.9
+    },
+    {
+      "id": "c061",
+      "texto": "quero comer peixe",
+      "gold": {},
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 294.4
+    },
+    {
+      "id": "c062",
+      "texto": "lasanha vegetariana",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"]}",
+      "erros": [
+        "restricoes"
+      ],
+      "latencia_ms": 269.5
+    },
+    {
+      "id": "c063",
+      "texto": "burrito de frango",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "mexicana"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"mexicana\"]}",
+      "erros": [],
+      "latencia_ms": 299.3
+    },
+    {
+      "id": "c064",
+      "texto": "pf com bife",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 127.9
+    },
+    {
+      "id": "c065",
+      "texto": "quero um pad thai",
+      "gold": {
+        "categorias": [
+          "tailandesa"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "tailandesa"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"tailandesa\"]}",
+      "erros": [],
+      "latencia_ms": 357.8
+    },
+    {
+      "id": "c066",
+      "texto": "Algo quente e reconfortante pra um dia frio, tipo sopa ou caldo",
+      "gold": {},
+      "pred": {
+        "categorias": [
+          "arabe",
+          "pizza"
+        ],
+        "evitar": [
+          "fritura"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\", \"pizza\"], \"evitar\": [\"fritura\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [
+        "categorias",
+        "evitar",
+        "atributos"
+      ],
+      "latencia_ms": 934.8
+    },
+    {
+      "id": "c067",
+      "texto": "hot roll",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"]}",
+      "erros": [],
+      "latencia_ms": 312.9
+    },
+    {
+      "id": "c068",
+      "texto": "quero uma salada sem carne nenhuma",
+      "gold": {
+        "categorias": [
+          "saladas"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "saladas"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"saladas\"], \"restricoes\": [\"vegetariano\"]}",
+      "erros": [],
+      "latencia_ms": 544.6
+    },
+    {
+      "id": "c069",
+      "texto": "frango frito não, prefiro grelhado",
+      "gold": {
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "churrasco"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"churrasco\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "categorias",
+        "evitar",
+        "ordenar_por"
+      ],
+      "latencia_ms": 574.3
+    },
+    {
+      "id": "c070",
+      "texto": "manda um açaí de 300 ml puro",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "ordenar_por"
+      ],
+      "latencia_ms": 540.6
+    },
+    {
+      "id": "c071",
+      "texto": "bora de hambúrguer? até 40 conto, entrega em até 35 minutos",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "preco_max": 40,
+        "tempo_max_min": 35
+      },
+      "pred": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "preco_max": 40,
+        "tempo_max_min": 35
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"hamburguer\"], \"preco_max\": 40, \"tempo_max_min\": 35}",
+      "erros": [],
+      "latencia_ms": 777.4
+    },
+    {
+      "id": "c072",
+      "texto": "algo bem avaliado e que não demore",
+      "gold": {
+        "tempo_max_min": 30,
+        "ordenar_por": "avaliacao"
+      },
+      "pred": {
+        "tempo_max_min": 30,
+        "ordenar_por": "avaliacao"
+      },
+      "valido": true,
+      "bruto": "{\"tempo_max_min\": 30, \"ordenar_por\": \"avaliacao\"}",
+      "erros": [],
+      "latencia_ms": 603.4
+    },
+    {
+      "id": "c073",
+      "texto": "quero comida mexicana pra 4 pessoas",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "mexicana"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"mexicana\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [],
+      "latencia_ms": 582.7
+    },
+    {
+      "id": "c074",
+      "texto": "me indica uma esfirra de queijo",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "arabe"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "ordenar_por"
+      ],
+      "latencia_ms": 572.3
+    },
+    {
+      "id": "c075",
+      "texto": "estou de dieta, quero algo light até 35 reais",
+      "gold": {
+        "preco_max": 35,
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "preco_max": 35,
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"preco_max\": 35, \"atributos\": [\"leve\"]}",
+      "erros": [],
+      "latencia_ms": 542.8
+    },
+    {
+      "id": "c076",
+      "texto": "quero algo doce e barato",
+      "gold": {
+        "categorias": [
+          "doces"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "doces"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 571.5
+    },
+    {
+      "id": "c077",
+      "texto": "um prato vegano com bastante proteína",
+      "gold": {
+        "restricoes": [
+          "vegano"
+        ],
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "pred": {
+        "restricoes": [
+          "vegano"
+        ],
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"restricoes\": [\"vegano\"], \"atributos\": [\"proteico\"]}",
+      "erros": [],
+      "latencia_ms": 619.9
+    },
+    {
+      "id": "c078",
+      "texto": "to querendo frutos do mar hoje",
+      "gold": {},
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ],
+        "evitar": [
+          "frutos_do_mar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"], \"evitar\": [\"frutos_do_mar\"]}",
+      "erros": [
+        "categorias",
+        "evitar"
+      ],
+      "latencia_ms": 557.4
+    },
+    {
+      "id": "c079",
+      "texto": "nhoque",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 128.1
+    },
+    {
+      "id": "c080",
+      "texto": "comida de padaria pro café da manhã, sem lactose",
+      "gold": {
+        "categorias": [
+          "cafe"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "cafe"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"cafe\"], \"restricoes\": [\"sem_lactose\"]}",
+      "erros": [],
+      "latencia_ms": 598.9
+    },
+    {
+      "id": "c081",
+      "texto": "me ve uma coxinha",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"]}",
+      "erros": [],
+      "latencia_ms": 279.4
+    },
+    {
+      "id": "c082",
+      "texto": "algo para comer em 20 min no máximo",
+      "gold": {
+        "tempo_max_min": 20
+      },
+      "pred": {
+        "tempo_max_min": 20
+      },
+      "valido": true,
+      "bruto": "{\"tempo_max_min\": 20}",
+      "erros": [],
+      "latencia_ms": 354.4
+    },
+    {
+      "id": "c083",
+      "texto": "kibe",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ]
+      },
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 118.6
+    },
+    {
+      "id": "c084",
+      "texto": "quero um poke de salmão sem glúten",
+      "gold": {
+        "categorias": [
+          "poke"
+        ],
+        "restricoes": [
+          "sem_gluten"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "poke"
+        ],
+        "restricoes": [
+          "sem_gluten"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"poke\"], \"restricoes\": [\"sem_gluten\"]}",
+      "erros": [],
+      "latencia_ms": 525.0
+    },
+    {
+      "id": "c085",
+      "texto": "jantar leve, tipo uma salada ou sopa",
+      "gold": {
+        "categorias": [
+          "saladas"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "arabe",
+          "saladas"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"saladas\", \"arabe\"], \"atributos\": [\"leve\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 575.8
+    },
+    {
+      "id": "c086",
+      "texto": "quero picanha",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "churrasco"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"churrasco\"]}",
+      "erros": [],
+      "latencia_ms": 308.8
+    },
+    {
+      "id": "c087",
+      "texto": "pizza meio a meio, calabresa e quatro queijos, no máximo 70 reais",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "preco_max": 70
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ],
+        "preco_max": 70
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"], \"preco_max\": 70}",
+      "erros": [],
+      "latencia_ms": 510.4
+    },
+    {
+      "id": "c088",
+      "texto": "comida chinesa ou japonesa, tanto faz, o que chegar mais rápido",
+      "gold": {
+        "categorias": [
+          "chinesa",
+          "japonesa"
+        ],
+        "ordenar_por": "entrega_rapida"
+      },
+      "pred": {
+        "categorias": [
+          "japonesa",
+          "nordestina"
+        ],
+        "ordenar_por": "entrega_rapida"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\", \"nordestina\"], \"ordenar_por\": \"entrega_rapida\"}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 911.9
+    },
+    {
+      "id": "c089",
+      "texto": "algum lanche natural",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "pred": {
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "categorias",
+        "ordenar_por"
+      ],
+      "latencia_ms": 369.7
+    },
+    {
+      "id": "c090",
+      "texto": "evito carne vermelha, quero um prato brasileiro",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "evitar": [
+          "carne_vermelha"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\"categorias\": [\"carne_vermelha\"]}",
+      "erros": [
+        "categorias",
+        "evitar"
+      ],
+      "latencia_ms": 340.4
+    },
+    {
+      "id": "c091",
+      "texto": "mousse de maracujá",
+      "gold": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 312.2
+    },
+    {
+      "id": "c092",
+      "texto": "Oi! O que você me recomenda hoje?",
+      "gold": {},
+      "pred": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "ordenar_por": "entrega_rapida"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"hamburguer\"], \"ordenar_por\": \"entrega_rapida\"}",
+      "erros": [
+        "categorias",
+        "ordenar_por"
+      ],
+      "latencia_ms": 591.3
+    },
+    {
+      "id": "c093",
+      "texto": "quero repetir algo parecido com o que pedi semana passada",
+      "gold": {},
+      "pred": {
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"atributos\": [\"para_compartilhar\"]}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 363.0
+    },
+    {
+      "id": "c094",
+      "texto": "bem barato e bem rápido",
+      "gold": {
+        "tempo_max_min": 30,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"ordenar_por\": \"menor_preco\"}",
+      "erros": [
+        "tempo_max_min"
+      ],
+      "latencia_ms": 362.1
+    },
+    {
+      "id": "c095",
+      "texto": "uma marmita fit com batata doce",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"], \"atributos\": [\"leve\"]}",
+      "erros": [],
+      "latencia_ms": 502.9
+    },
+    {
+      "id": "c096",
+      "texto": "quesadilla",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "mexicana"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"mexicana\"]}",
+      "erros": [],
+      "latencia_ms": 290.6
+    },
+    {
+      "id": "c097",
+      "texto": "falafel, sou vegana",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "arabe"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\"], \"restricoes\": [\"vegano\"]}",
+      "erros": [],
+      "latencia_ms": 531.6
+    },
+    {
+      "id": "c098",
+      "texto": "algo com tofu",
+      "gold": {},
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [],
+      "latencia_ms": 117.0
+    },
+    {
+      "id": "c099",
+      "texto": "PRECISO DE UM CHURRASCO PRA 10 PESSOAS ATÉ 300 REAIS",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ],
+        "preco_max": 300,
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "churrasco"
+        ],
+        "preco_max": 30
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"churrasco\"], \"preco_max\": 30}",
+      "erros": [
+        "preco_max",
+        "atributos"
+      ],
+      "latencia_ms": 518.0
+    },
+    {
+      "id": "c100",
+      "texto": "algo sem lactose e sem glúten, de preferência japonês, e que não seja frito",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "restricoes": [
+          "sem_gluten",
+          "sem_lactose"
+        ],
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ],
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"], \"restricoes\": [\"sem_lactose\"], \"evitar\": [\"fritura\"]}",
+      "erros": [
+        "restricoes"
+      ],
+      "latencia_ms": 831.1
+    }
+  ]
+}

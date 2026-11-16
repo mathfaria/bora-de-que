@@ -1,0 +1,80 @@
+{"id": "d001", "usuario_id": "u006", "texto": "mano do ceu preciso de um pratão de pedreiro bem caprichado com muita carne e fritas pra hoje que meu dia foi tenso", "filtros": {"categorias": ["brasileira"]}, "tags": ["ambiguo"]}
+{"id": "d002", "usuario_id": "u010", "texto": "Boa noite, gostaria de solicitar uma pizza grande de calabresa com borda recheada de catupiry, por favor.", "filtros": {"categorias": ["pizza"]}, "tags": []}
+{"id": "d003", "usuario_id": "u011", "texto": "OIEEEE ME MANDA UM AÇAI GIGANTE COM TUDO Q TEM DIREITO LEITE CONDENSADO MORANGO NUTELLA AAAAA", "filtros": {"categorias": ["acai"]}, "tags": []}
+{"id": "d004", "usuario_id": "u012", "texto": "Olha, querido, eu queria ver se acho uma comida caseira bem levinha, sabe? Sem muita gordura porque meu estômago não tá legal.", "filtros": {"categorias": ["brasileira"], "atributos": ["leve"]}, "tags": []}
+{"id": "d005", "usuario_id": "u014", "texto": "pfv me acha um japa barato perto daqui com temaki em dobro to morrendo de fome e sem grana", "filtros": {"categorias": ["japonesa"], "distancia_max_km": 3, "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "d006", "usuario_id": "u015", "texto": "chegando visita aqui em casa daqui a pouco, preciso pedir umas três pizzas grandes de sabores variados, de preferência com entrega rápida", "filtros": {"categorias": ["pizza"], "atributos": ["para_compartilhar"], "tempo_max_min": 30}, "tags": []}
+{"id": "d007", "usuario_id": "u016", "texto": "pós treino pesadão hoje, manda um poke bem proteico com salmão e sem arroz, só mix de folhas, até 40 conto", "filtros": {"categorias": ["poke"], "atributos": ["proteico"], "preco_max": 40}, "tags": []}
+{"id": "d008", "usuario_id": "u018", "texto": "Socorro, ressaca braba, preciso daquele podrão com muito bacon, ovo e cheddar, bem gordo mesmo.", "filtros": {"categorias": ["lanches"]}, "tags": ["ambiguo", "girias"]}
+{"id": "d009", "usuario_id": "u019", "texto": "Alguma sugestão de comida árabe? Queria esfihas fechadas de carne e um kibe frito, mas que não passe de 50 reais a conta toda.", "filtros": {"categorias": ["arabe"], "preco_max": 50}, "tags": []}
+{"id": "d010", "usuario_id": "u020", "texto": "quero comer algo mas nao sei o que", "filtros": {}, "tags": ["aberto"]}
+{"id": "d011", "usuario_id": "u021", "texto": "Mano, mó larica, pede um burgão duplo com bacon e batata rústica, mas tem que ser o mais bem avaliado da região.", "filtros": {"categorias": ["hamburguer"], "distancia_max_km": 3, "ordenar_por": "avaliacao"}, "tags": ["girias"]}
+{"id": "d012", "usuario_id": "u023", "texto": "Prezado estabelecimento, procuro opções de pratos executivos vegetarianos, sem carne vermelha e com bastante salada fresca.", "filtros": {"categorias": ["brasileira"], "restricoes": ["vegetariano"], "evitar": ["carne_vermelha"]}, "tags": []}
+{"id": "d013", "usuario_id": "u025", "texto": "manda um combo de comida chinesa com yakissoba de camarao e Rolinho primavera, urgente!", "filtros": {"categorias": ["chinesa"], "tempo_max_min": 30}, "tags": []}
+{"id": "d014", "usuario_id": "u026", "texto": "Gostaria de encomendar um churrasco misto para duas pessoas, com picanha, mandioca frita e vinagrete, bem passado.", "filtros": {"categorias": ["churrasco"], "atributos": ["para_compartilhar"]}, "tags": []}
+{"id": "d015", "usuario_id": "u027", "texto": "amiga me salva, pede um docinho aí, pode ser um bolo de pote de ninho com morango ou brigadeiro gourmet", "filtros": {"categorias": ["doces"]}, "tags": []}
+{"id": "d016", "usuario_id": "u028", "texto": "Queria pedir uma comida tailandesa, mas tem que ser sem pimenta porque sou muito sensível, com preço camarada.", "filtros": {"categorias": ["tailandesa"], "evitar": ["pimenta"], "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "d017", "usuario_id": "u029", "texto": "pede um açaí pra mim pfv", "filtros": {"categorias": ["acai"]}, "tags": []}
+{"id": "d018", "usuario_id": "u030", "texto": "Boa tarde. Poderia me indicar um restaurante italiano que entregue rápido e tenha massa carbonara autêntica?", "filtros": {"categorias": ["italiana"], "tempo_max_min": 30}, "tags": []}
+{"id": "d019", "usuario_id": "u031", "texto": "mano do ceu to podre de cansado do trampo, so me manda uma marmitex de feijoada bem reforçada", "filtros": {"categorias": ["brasileira"]}, "tags": []}
+{"id": "d020", "usuario_id": "u033", "texto": "Quero pedir umas 4 esfihas de queijo e um guarana, mas so tenho 30 reais na carteira digital", "filtros": {"categorias": ["arabe"], "preco_max": 30}, "tags": []}
+{"id": "d021", "usuario_id": "u006", "texto": "fome", "filtros": {}, "tags": ["aberto"]}
+{"id": "d022", "usuario_id": "u010", "texto": "Meu filho, vê se acha um café da manhã reforçado com pão de queijo, bolo de fubá e um suco natural de laranja.", "filtros": {"categorias": ["cafe"]}, "tags": []}
+{"id": "d023", "usuario_id": "u011", "texto": "Procurando por tacos mexicanos bem apimentados e com opção vegana, se possível.", "filtros": {"categorias": ["mexicana"], "restricoes": ["vegano"], "atributos": ["apimentado"]}, "tags": []}
+{"id": "d024", "usuario_id": "u012", "texto": "manda um lanche natural e um suco verde, dieta ta firme mas hoje mereço", "filtros": {"categorias": ["lanches"], "atributos": ["leve"]}, "tags": []}
+{"id": "d025", "usuario_id": "u014", "texto": "Aquele hambúrguer artesanal de respeito, sabe? Carne vermelha ao ponto, queijo cheddar inglês e cebola caramelizada.", "filtros": {"categorias": ["hamburguer"]}, "tags": []}
+{"id": "d026", "usuario_id": "u015", "texto": "qualquer coisa q nao pese", "filtros": {"atributos": ["leve"]}, "tags": []}
+{"id": "d027", "usuario_id": "u016", "texto": "Socorro, visitas inesperadas! Preciso de duas pizzas grandes, uma calabresa e outra margherita, entregue o mais rápido possível.", "filtros": {"categorias": ["pizza"], "atributos": ["para_compartilhar"], "ordenar_por": "entrega_rapida"}, "tags": []}
+{"id": "d028", "usuario_id": "u018", "texto": "Moço, me traz uma comida nordestina raiz, tipo carne de sol com Mandioca e pirão, bem servido.", "filtros": {"categorias": ["nordestina"]}, "tags": []}
+{"id": "d029", "usuario_id": "u019", "texto": "quero um japa barato so pra matar a vontade, hossomaki e hot holl", "filtros": {"categorias": ["japonesa"], "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "d030", "usuario_id": "u020", "texto": "pós academia monstro, preciso de frango grelhado com batata doce mas bem temperado pra nao ficar chato", "filtros": {"atributos": ["proteico"]}, "tags": ["ambiguo"]}
+{"id": "d031", "usuario_id": "u021", "texto": "Alguém me traz um açaí com granola e banana, por favor, tô sem poder sair de casa.", "filtros": {"categorias": ["acai"]}, "tags": []}
+{"id": "d032", "usuario_id": "u023", "texto": "Pizza de frango com catupiry, por favor. E que seja baratinha.", "filtros": {"categorias": ["pizza"], "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "d033", "usuario_id": "u025", "texto": "mano do ceu to morto de ressaca pede uma pizza de 4 queijos bem gorda pra ca", "filtros": {"categorias": ["pizza"]}, "tags": []}
+{"id": "d034", "usuario_id": "u026", "texto": "Procuro pratos sem glúten e sem lactose, de preferência culinária mediterrânea ou saladas completas.", "filtros": {"categorias": ["saladas"], "restricoes": ["sem_gluten", "sem_lactose"]}, "tags": []}
+{"id": "d035", "usuario_id": "u027", "texto": "fome de leve, so umas batatas fritas", "filtros": {}, "tags": ["armadilha", "ambiguo"]}
+{"id": "d036", "usuario_id": "u028", "texto": "Boa noite, gostaria de pedir um yakissoba misto (carne e frango) para duas pessoas, entrega rápida.", "filtros": {"categorias": ["chinesa"], "atributos": ["para_compartilhar"], "tempo_max_min": 30}, "tags": []}
+{"id": "d037", "usuario_id": "u029", "texto": "pedir o que?", "filtros": {}, "tags": ["aberto"]}
+{"id": "d038", "usuario_id": "u030", "texto": "Mano, me manda um burrito mexicano bem recheado, com bastante guacamole e sem pimenta por favor.", "filtros": {"categorias": ["mexicana"], "evitar": ["pimenta"]}, "tags": []}
+{"id": "d039", "usuario_id": "u031", "texto": "Queria um belo prato de feijão tropeiro com bisteca suína, mas sem fritura excessiva.", "filtros": {"categorias": ["brasileira"], "evitar": ["fritura"]}, "tags": ["ambiguo"]}
+{"id": "d040", "usuario_id": "u033", "texto": "Açaí de um litro com leite em pó, paçoca e creme de ovomaltine. Bem doce!", "filtros": {"categorias": ["acai"]}, "tags": []}
+{"id": "d041", "usuario_id": "u006", "texto": "procuro um lanche vegano saboroso, de preferência bem avaliado pelos clientes", "filtros": {"categorias": ["lanches"], "restricoes": ["vegano"], "ordenar_por": "avaliacao"}, "tags": []}
+{"id": "d042", "usuario_id": "u010", "texto": "Comida de conforto pra hoje: um bom macarrão à bolonhesa bem quentinho.", "filtros": {"categorias": ["italiana"]}, "tags": []}
+{"id": "d043", "usuario_id": "u011", "texto": "Manda aquela marmita fit com patinho moído e purê de mandioquinha, até trinta reais.", "filtros": {"categorias": ["brasileira"], "atributos": ["leve"], "preco_max": 30}, "tags": []}
+{"id": "d044", "usuario_id": "u012", "texto": "tô com visita em casa, pede uma barca de sushi grandona com bastante salmão", "filtros": {"categorias": ["japonesa"], "atributos": ["para_compartilhar"]}, "tags": []}
+{"id": "d045", "usuario_id": "u014", "texto": "Preciso de um café da manhã reforçado: misto quente na chapa, pingado e um pedaço de bolo de cenoura com chocolate.", "filtros": {"categorias": ["cafe"]}, "tags": ["ambiguo"]}
+{"id": "d046", "usuario_id": "u015", "texto": "salada Caesar com frango grelhado, mas com o molho à parte por favor", "filtros": {"categorias": ["saladas"]}, "tags": []}
+{"id": "d047", "usuario_id": "u016", "texto": "Quero comer algo mexicano, mas sou intolerante à lactose, tem opção?", "filtros": {"categorias": ["mexicana"], "restricoes": ["sem_lactose"]}, "tags": []}
+{"id": "d048", "usuario_id": "u018", "texto": "Fome master, me traz um churrasco completo com picanha e fritas, entrega expressa.", "filtros": {"categorias": ["churrasco"], "tempo_max_min": 30}, "tags": []}
+{"id": "d049", "usuario_id": "u019", "texto": "vê um açaí aí", "filtros": {"categorias": ["acai"]}, "tags": []}
+{"id": "d050", "usuario_id": "u020", "texto": "Boa noite! Quero pedir um hambúrguer vegetais, mas que tenha muito queijo e maionese artesanal.", "filtros": {"categorias": ["hamburguer"], "restricoes": ["vegetariano"]}, "tags": ["ambiguo"]}
+{"id": "d051", "usuario_id": "u021", "texto": "Mano, me indica um lugar que venda bolo de pote delicioso e brownie recheado.", "filtros": {"categorias": ["doces"]}, "tags": []}
+{"id": "d052", "usuario_id": "u023", "texto": "Quero pedir comida chinesa, mas só rolinho primavera e frango xadrez, sem frutos do mar.", "filtros": {"categorias": ["chinesa"], "evitar": ["frutos_do_mar"]}, "tags": []}
+{"id": "d053", "usuario_id": "u025", "texto": "procuro algo leve", "filtros": {"atributos": ["leve"]}, "tags": []}
+{"id": "d054", "usuario_id": "u026", "texto": "Almoço de domingo em família: pede uma pizza grande de 4 queijos e uma de frango com catupiry pra dividir em quatro pessoas.", "filtros": {"categorias": ["pizza"], "atributos": ["para_compartilhar"]}, "tags": []}
+{"id": "d055", "usuario_id": "u027", "texto": "Quero um poke havaiano com base de arroz integral, salmão, abacate e molho shoyu tradicional.", "filtros": {"categorias": ["poke"]}, "tags": []}
+{"id": "d056", "usuario_id": "u028", "texto": "socorro quero doce de chocolate urgente", "filtros": {"categorias": ["doces"], "tempo_max_min": 30}, "tags": []}
+{"id": "d057", "usuario_id": "u029", "texto": "Me traz um lanche de metro ou vários salgadinhos fritos para uma festinha surpresa aqui em casa.", "filtros": {"categorias": ["lanches"], "atributos": ["para_compartilhar"]}, "tags": []}
+{"id": "d058", "usuario_id": "u030", "texto": "Queria um prato nordestino, mas sem carne de sol, tem opção com frango?", "filtros": {"categorias": ["nordestina"], "evitar": ["carne_vermelha"]}, "tags": ["ambiguo"]}
+{"id": "d059", "usuario_id": "u031", "texto": "Pedir algo gostoso.", "filtros": {}, "tags": ["aberto"]}
+{"id": "d060", "usuario_id": "u033", "texto": "Mano do céu, um pratão de macarrão carbonara bem cremoso vai salvar meu dia hoje.", "filtros": {"categorias": ["italiana"]}, "tags": []}
+{"id": "d061", "usuario_id": "u006", "texto": "Preciso de uma salada bem colorida e proteica, mas sem folhas verdes amargas, tem?", "filtros": {"categorias": ["saladas"], "atributos": ["proteico"]}, "tags": []}
+{"id": "d062", "usuario_id": "u010", "texto": "Quero pedir comida árabe, mas só esfihas de picanha e kibes, com entrega rápida.", "filtros": {"categorias": ["arabe"], "tempo_max_min": 30}, "tags": []}
+{"id": "d063", "usuario_id": "u011", "texto": "pede um japa pra mim", "filtros": {"categorias": ["japonesa"]}, "tags": []}
+{"id": "d064", "usuario_id": "u012", "texto": "Boa tarde, tem opção de feijoada vegana? Se sim, gostaria de um prato individual.", "filtros": {"categorias": ["brasileira"], "restricoes": ["vegano"]}, "tags": []}
+{"id": "d065", "usuario_id": "u014", "texto": "Mano, meu treino foi insano, manda um burgão com dobro de carne e bacon.", "filtros": {"categorias": ["hamburguer"], "atributos": ["proteico"]}, "tags": ["ambiguo"]}
+{"id": "d066", "usuario_id": "u015", "texto": "Queria um açaí médio com creme de cupuaçu e leite condensado.", "filtros": {"categorias": ["acai"]}, "tags": []}
+{"id": "d067", "usuario_id": "u016", "texto": "Comida caseira bem temperadinha, tipo bife a cavalo com arroz, feijão e batata frita.", "filtros": {"categorias": ["brasileira"]}, "tags": []}
+{"id": "d068", "usuario_id": "u018", "texto": "não sei o que comer", "filtros": {}, "tags": ["aberto"]}
+{"id": "d069", "usuario_id": "u019", "texto": "Pede uma pizza doce de chocolate com morango para a sobremesa, por favor.", "filtros": {"categorias": ["pizza"]}, "tags": ["armadilha_doce"]}
+{"id": "d070", "usuario_id": "u020", "texto": "Quero um lanche rápido e barato, tipo X-Salada com maionese verde.", "filtros": {"categorias": ["lanches"], "tempo_max_min": 30, "ordenar_por": "menor_preco"}, "tags": []}
+{"id": "d071", "usuario_id": "u021", "texto": "Procuro um restaurante italiano que faça nhoque caseiro ao sugo, com entrega em até 40 minutos.", "filtros": {"categorias": ["italiana"], "tempo_max_min": 40}, "tags": []}
+{"id": "d072", "usuario_id": "u023", "texto": "Manda uma barca de sushi só com salmão maçaricado e cream cheese, por favor.", "filtros": {"categorias": ["japonesa"]}, "tags": []}
+{"id": "d073", "usuario_id": "u025", "texto": "fome de rango bom", "filtros": {}, "tags": ["aberto"]}
+{"id": "d074", "usuario_id": "u026", "texto": "Queria pedir comida tailandesa, mas com muito amendoim e molho agridoce, sem pimenta.", "filtros": {"categorias": ["tailandesa"], "evitar": ["pimenta"]}, "tags": []}
+{"id": "d075", "usuario_id": "u027", "texto": "Preciso de um café da manhã reforçado com croissant de frango e cappuccino cremoso.", "filtros": {"categorias": ["cafe"]}, "tags": []}
+{"id": "d076", "usuario_id": "u028", "texto": "Mano, me traz um açaí gigante com morango, banana e creme de avelã.", "filtros": {"categorias": ["acai"]}, "tags": []}
+{"id": "d077", "usuario_id": "u029", "texto": "Quero um prato mexicano bem caprichado, com nachos, cheddar e jalapeños, para duas pessoas.", "filtros": {"categorias": ["mexicana"], "atributos": ["para_compartilhar"]}, "tags": []}
+{"id": "d078", "usuario_id": "u030", "texto": "Alguém me ajuda a escolher um jantar leve e sem glúten?", "filtros": {"restricoes": ["sem_gluten"], "atributos": ["leve"]}, "tags": []}
+{"id": "d079", "usuario_id": "u031", "texto": "Pede uma pizza de pepperoni grande e bem crocante, por favor.", "filtros": {"categorias": ["pizza"]}, "tags": []}
+{"id": "d080", "usuario_id": "u033", "texto": "Mano, to com uma larica monstro, manda qualquer salgado frito que tiver na promoção.", "filtros": {"categorias": ["lanches"], "ordenar_por": "menor_preco"}, "tags": ["ambiguo"]}

@@ -1,0 +1,1665 @@
+{
+  "meta": {
+    "extrator": "rules",
+    "casos": "desafio",
+    "quando": "2026-11-14T03:23:53+00:00",
+    "modelo": null
+  },
+  "metricas": {
+    "n": 80,
+    "acerto_exato": 0.6625,
+    "acerto_por_campo": {
+      "categorias": 0.8375,
+      "preco_max": 1.0,
+      "restricoes": 0.975,
+      "evitar": 0.975,
+      "atributos": 0.875,
+      "distancia_max_km": 0.9875,
+      "tempo_max_min": 0.9875,
+      "ordenar_por": 0.975
+    },
+    "acerto_medio_campos": 0.9515625,
+    "json_valido": 1.0,
+    "latencia_ms": {
+      "p50": 0.6340419986372581,
+      "p95": 2.2070000013627578
+    },
+    "tokens_entrada_medio": 0.0,
+    "tokens_saida_medio": 0.0,
+    "custo_usd_por_1000": 0.0
+  },
+  "casos": [
+    {
+      "id": "d001",
+      "texto": "mano do ceu preciso de um pratão de pedreiro bem caprichado com muita carne e fritas pra hoje que meu dia foi tenso",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 23.5
+    },
+    {
+      "id": "d002",
+      "texto": "Boa noite, gostaria de solicitar uma pizza grande de calabresa com borda recheada de catupiry, por favor.",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"]}",
+      "erros": [],
+      "latencia_ms": 2.3
+    },
+    {
+      "id": "d003",
+      "texto": "OIEEEE ME MANDA UM AÇAI GIGANTE COM TUDO Q TEM DIREITO LEITE CONDENSADO MORANGO NUTELLA AAAAA",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\"]}",
+      "erros": [],
+      "latencia_ms": 1.9
+    },
+    {
+      "id": "d004",
+      "texto": "Olha, querido, eu queria ver se acho uma comida caseira bem levinha, sabe? Sem muita gordura porque meu estômago não tá legal.",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ],
+        "evitar": [
+          "fritura"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"], \"evitar\": [\"fritura\"], \"atributos\": [\"leve\"]}",
+      "erros": [
+        "evitar"
+      ],
+      "latencia_ms": 2.3
+    },
+    {
+      "id": "d005",
+      "texto": "pfv me acha um japa barato perto daqui com temaki em dobro to morrendo de fome e sem grana",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "distancia_max_km": 3,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ],
+        "distancia_max_km": 3,
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"], \"distancia_max_km\": 3, \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 2.2
+    },
+    {
+      "id": "d006",
+      "texto": "chegando visita aqui em casa daqui a pouco, preciso pedir umas três pizzas grandes de sabores variados, de preferência com entrega rápida",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ],
+        "tempo_max_min": 30
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ],
+        "tempo_max_min": 30
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"], \"tempo_max_min\": 30}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 2.2
+    },
+    {
+      "id": "d007",
+      "texto": "pós treino pesadão hoje, manda um poke bem proteico com salmão e sem arroz, só mix de folhas, até 40 conto",
+      "gold": {
+        "categorias": [
+          "poke"
+        ],
+        "preco_max": 40,
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "poke"
+        ],
+        "preco_max": 40,
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"poke\"], \"preco_max\": 40, \"atributos\": [\"proteico\"]}",
+      "erros": [],
+      "latencia_ms": 2.2
+    },
+    {
+      "id": "d008",
+      "texto": "Socorro, ressaca braba, preciso daquele podrão com muito bacon, ovo e cheddar, bem gordo mesmo.",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 1.9
+    },
+    {
+      "id": "d009",
+      "texto": "Alguma sugestão de comida árabe? Queria esfihas fechadas de carne e um kibe frito, mas que não passe de 50 reais a conta toda.",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ],
+        "preco_max": 50
+      },
+      "pred": {
+        "categorias": [
+          "arabe"
+        ],
+        "preco_max": 50
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\"], \"preco_max\": 50}",
+      "erros": [],
+      "latencia_ms": 1.1
+    },
+    {
+      "id": "d010",
+      "texto": "quero comer algo mas nao sei o que",
+      "gold": {},
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d011",
+      "texto": "Mano, mó larica, pede um burgão duplo com bacon e batata rústica, mas tem que ser o mais bem avaliado da região.",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "distancia_max_km": 3,
+        "ordenar_por": "avaliacao"
+      },
+      "pred": {
+        "ordenar_por": "avaliacao"
+      },
+      "valido": true,
+      "bruto": "{\"ordenar_por\": \"avaliacao\"}",
+      "erros": [
+        "categorias",
+        "distancia_max_km"
+      ],
+      "latencia_ms": 1.0
+    },
+    {
+      "id": "d012",
+      "texto": "Prezado estabelecimento, procuro opções de pratos executivos vegetarianos, sem carne vermelha e com bastante salada fresca.",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ],
+        "evitar": [
+          "carne_vermelha"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "saladas"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ],
+        "evitar": [
+          "carne_vermelha"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"saladas\"], \"restricoes\": [\"vegetariano\"], \"evitar\": [\"carne_vermelha\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 1.9
+    },
+    {
+      "id": "d013",
+      "texto": "manda um combo de comida chinesa com yakissoba de camarao e Rolinho primavera, urgente!",
+      "gold": {
+        "categorias": [
+          "chinesa"
+        ],
+        "tempo_max_min": 30
+      },
+      "pred": {
+        "categorias": [
+          "chinesa"
+        ],
+        "tempo_max_min": 30
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"chinesa\"], \"tempo_max_min\": 30}",
+      "erros": [],
+      "latencia_ms": 1.5
+    },
+    {
+      "id": "d014",
+      "texto": "Gostaria de encomendar um churrasco misto para duas pessoas, com picanha, mandioca frita e vinagrete, bem passado.",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "churrasco"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"churrasco\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [],
+      "latencia_ms": 0.8
+    },
+    {
+      "id": "d015",
+      "texto": "amiga me salva, pede um docinho aí, pode ser um bolo de pote de ninho com morango ou brigadeiro gourmet",
+      "gold": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\"]}",
+      "erros": [],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d016",
+      "texto": "Queria pedir uma comida tailandesa, mas tem que ser sem pimenta porque sou muito sensível, com preço camarada.",
+      "gold": {
+        "categorias": [
+          "tailandesa"
+        ],
+        "evitar": [
+          "pimenta"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "tailandesa"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"tailandesa\"], \"evitar\": [\"pimenta\"]}",
+      "erros": [
+        "ordenar_por"
+      ],
+      "latencia_ms": 0.8
+    },
+    {
+      "id": "d017",
+      "texto": "pede um açaí pra mim pfv",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\"]}",
+      "erros": [],
+      "latencia_ms": 0.4
+    },
+    {
+      "id": "d018",
+      "texto": "Boa tarde. Poderia me indicar um restaurante italiano que entregue rápido e tenha massa carbonara autêntica?",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "tempo_max_min": 30
+      },
+      "pred": {
+        "categorias": [
+          "italiana"
+        ],
+        "tempo_max_min": 30
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"], \"tempo_max_min\": 30}",
+      "erros": [],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d019",
+      "texto": "mano do ceu to podre de cansado do trampo, so me manda uma marmitex de feijoada bem reforçada",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"]}",
+      "erros": [],
+      "latencia_ms": 0.9
+    },
+    {
+      "id": "d020",
+      "texto": "Quero pedir umas 4 esfihas de queijo e um guarana, mas so tenho 30 reais na carteira digital",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ],
+        "preco_max": 30
+      },
+      "pred": {
+        "categorias": [
+          "arabe"
+        ],
+        "preco_max": 30
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\"], \"preco_max\": 30}",
+      "erros": [],
+      "latencia_ms": 0.8
+    },
+    {
+      "id": "d021",
+      "texto": "fome",
+      "gold": {},
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [],
+      "latencia_ms": 0.3
+    },
+    {
+      "id": "d022",
+      "texto": "Meu filho, vê se acha um café da manhã reforçado com pão de queijo, bolo de fubá e um suco natural de laranja.",
+      "gold": {
+        "categorias": [
+          "cafe"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "cafe",
+          "doces"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"cafe\", \"doces\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 1.1
+    },
+    {
+      "id": "d023",
+      "texto": "Procurando por tacos mexicanos bem apimentados e com opção vegana, se possível.",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "restricoes": [
+          "vegano"
+        ],
+        "atributos": [
+          "apimentado"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "mexicana"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"mexicana\"], \"restricoes\": [\"vegano\"]}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d024",
+      "texto": "manda um lanche natural e um suco verde, dieta ta firme mas hoje mereço",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"]}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d025",
+      "texto": "Aquele hambúrguer artesanal de respeito, sabe? Carne vermelha ao ponto, queijo cheddar inglês e cebola caramelizada.",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "hamburguer"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"hamburguer\"]}",
+      "erros": [],
+      "latencia_ms": 1.6
+    },
+    {
+      "id": "d026",
+      "texto": "qualquer coisa q nao pese",
+      "gold": {
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 1.3
+    },
+    {
+      "id": "d027",
+      "texto": "Socorro, visitas inesperadas! Preciso de duas pizzas grandes, uma calabresa e outra margherita, entregue o mais rápido possível.",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ],
+        "ordenar_por": "entrega_rapida"
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ],
+        "ordenar_por": "entrega_rapida"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"], \"ordenar_por\": \"entrega_rapida\"}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 1.9
+    },
+    {
+      "id": "d028",
+      "texto": "Moço, me traz uma comida nordestina raiz, tipo carne de sol com Mandioca e pirão, bem servido.",
+      "gold": {
+        "categorias": [
+          "nordestina"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "nordestina"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"nordestina\"]}",
+      "erros": [],
+      "latencia_ms": 1.9
+    },
+    {
+      "id": "d029",
+      "texto": "quero um japa barato so pra matar a vontade, hossomaki e hot holl",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 1.2
+    },
+    {
+      "id": "d030",
+      "texto": "pós academia monstro, preciso de frango grelhado com batata doce mas bem temperado pra nao ficar chato",
+      "gold": {
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\"]}",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 2.0
+    },
+    {
+      "id": "d031",
+      "texto": "Alguém me traz um açaí com granola e banana, por favor, tô sem poder sair de casa.",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\"]}",
+      "erros": [],
+      "latencia_ms": 1.8
+    },
+    {
+      "id": "d032",
+      "texto": "Pizza de frango com catupiry, por favor. E que seja baratinha.",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"], \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 1.3
+    },
+    {
+      "id": "d033",
+      "texto": "mano do ceu to morto de ressaca pede uma pizza de 4 queijos bem gorda pra ca",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"]}",
+      "erros": [],
+      "latencia_ms": 1.7
+    },
+    {
+      "id": "d034",
+      "texto": "Procuro pratos sem glúten e sem lactose, de preferência culinária mediterrânea ou saladas completas.",
+      "gold": {
+        "categorias": [
+          "saladas"
+        ],
+        "restricoes": [
+          "sem_gluten",
+          "sem_lactose"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "saladas"
+        ],
+        "restricoes": [
+          "sem_gluten",
+          "sem_lactose"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"saladas\"], \"restricoes\": [\"sem_gluten\", \"sem_lactose\"]}",
+      "erros": [],
+      "latencia_ms": 0.9
+    },
+    {
+      "id": "d035",
+      "texto": "fome de leve, so umas batatas fritas",
+      "gold": {},
+      "pred": {
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"atributos\": [\"leve\"]}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 0.4
+    },
+    {
+      "id": "d036",
+      "texto": "Boa noite, gostaria de pedir um yakissoba misto (carne e frango) para duas pessoas, entrega rápida.",
+      "gold": {
+        "categorias": [
+          "chinesa"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ],
+        "tempo_max_min": 30
+      },
+      "pred": {
+        "atributos": [
+          "para_compartilhar"
+        ],
+        "tempo_max_min": 30
+      },
+      "valido": true,
+      "bruto": "{\"atributos\": [\"para_compartilhar\"], \"tempo_max_min\": 30}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d037",
+      "texto": "pedir o que?",
+      "gold": {},
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [],
+      "latencia_ms": 0.3
+    },
+    {
+      "id": "d038",
+      "texto": "Mano, me manda um burrito mexicano bem recheado, com bastante guacamole e sem pimenta por favor.",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "mexicana"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"mexicana\"], \"evitar\": [\"pimenta\"]}",
+      "erros": [],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d039",
+      "texto": "Queria um belo prato de feijão tropeiro com bisteca suína, mas sem fritura excessiva.",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "pred": {
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"evitar\": [\"fritura\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d040",
+      "texto": "Açaí de um litro com leite em pó, paçoca e creme de ovomaltine. Bem doce!",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai",
+          "doces"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\", \"doces\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d041",
+      "texto": "procuro um lanche vegano saboroso, de preferência bem avaliado pelos clientes",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ],
+        "restricoes": [
+          "vegano"
+        ],
+        "ordenar_por": "avaliacao"
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ],
+        "restricoes": [
+          "vegano"
+        ],
+        "ordenar_por": "avaliacao"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"], \"restricoes\": [\"vegano\"], \"ordenar_por\": \"avaliacao\"}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d042",
+      "texto": "Comida de conforto pra hoje: um bom macarrão à bolonhesa bem quentinho.",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"]}",
+      "erros": [],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d043",
+      "texto": "Manda aquela marmita fit com patinho moído e purê de mandioquinha, até trinta reais.",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "preco_max": 30,
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ],
+        "preco_max": 30,
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"], \"preco_max\": 30, \"atributos\": [\"leve\"]}",
+      "erros": [],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d044",
+      "texto": "tô com visita em casa, pede uma barca de sushi grandona com bastante salmão",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"]}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d045",
+      "texto": "Preciso de um café da manhã reforçado: misto quente na chapa, pingado e um pedaço de bolo de cenoura com chocolate.",
+      "gold": {
+        "categorias": [
+          "cafe"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "cafe",
+          "doces",
+          "lanches"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"cafe\", \"doces\", \"lanches\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d046",
+      "texto": "salada Caesar com frango grelhado, mas com o molho à parte por favor",
+      "gold": {
+        "categorias": [
+          "saladas"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "saladas"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"saladas\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d047",
+      "texto": "Quero comer algo mexicano, mas sou intolerante à lactose, tem opção?",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "mexicana"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"mexicana\"], \"restricoes\": [\"sem_lactose\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d048",
+      "texto": "Fome master, me traz um churrasco completo com picanha e fritas, entrega expressa.",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ],
+        "tempo_max_min": 30
+      },
+      "pred": {
+        "categorias": [
+          "churrasco"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"churrasco\"]}",
+      "erros": [
+        "tempo_max_min"
+      ],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d049",
+      "texto": "vê um açaí aí",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\"]}",
+      "erros": [],
+      "latencia_ms": 0.3
+    },
+    {
+      "id": "d050",
+      "texto": "Boa noite! Quero pedir um hambúrguer vegetais, mas que tenha muito queijo e maionese artesanal.",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "hamburguer"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"hamburguer\"]}",
+      "erros": [
+        "restricoes"
+      ],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d051",
+      "texto": "Mano, me indica um lugar que venda bolo de pote delicioso e brownie recheado.",
+      "gold": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d052",
+      "texto": "Quero pedir comida chinesa, mas só rolinho primavera e frango xadrez, sem frutos do mar.",
+      "gold": {
+        "categorias": [
+          "chinesa"
+        ],
+        "evitar": [
+          "frutos_do_mar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "chinesa"
+        ],
+        "evitar": [
+          "frutos_do_mar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"chinesa\"], \"evitar\": [\"frutos_do_mar\"]}",
+      "erros": [],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d053",
+      "texto": "procuro algo leve",
+      "gold": {
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"atributos\": [\"leve\"]}",
+      "erros": [],
+      "latencia_ms": 0.3
+    },
+    {
+      "id": "d054",
+      "texto": "Almoço de domingo em família: pede uma pizza grande de 4 queijos e uma de frango com catupiry pra dividir em quatro pessoas.",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d055",
+      "texto": "Quero um poke havaiano com base de arroz integral, salmão, abacate e molho shoyu tradicional.",
+      "gold": {
+        "categorias": [
+          "poke"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "poke"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"poke\"]}",
+      "erros": [],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d056",
+      "texto": "socorro quero doce de chocolate urgente",
+      "gold": {
+        "categorias": [
+          "doces"
+        ],
+        "tempo_max_min": 30
+      },
+      "pred": {
+        "categorias": [
+          "doces"
+        ],
+        "tempo_max_min": 30
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\"], \"tempo_max_min\": 30}",
+      "erros": [],
+      "latencia_ms": 0.4
+    },
+    {
+      "id": "d057",
+      "texto": "Me traz um lanche de metro ou vários salgadinhos fritos para uma festinha surpresa aqui em casa.",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"]}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d058",
+      "texto": "Queria um prato nordestino, mas sem carne de sol, tem opção com frango?",
+      "gold": {
+        "categorias": [
+          "nordestina"
+        ],
+        "evitar": [
+          "carne_vermelha"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "nordestina"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"nordestina\"], \"restricoes\": [\"vegetariano\"]}",
+      "erros": [
+        "restricoes",
+        "evitar"
+      ],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d059",
+      "texto": "Pedir algo gostoso.",
+      "gold": {},
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [],
+      "latencia_ms": 0.4
+    },
+    {
+      "id": "d060",
+      "texto": "Mano do céu, um pratão de macarrão carbonara bem cremoso vai salvar meu dia hoje.",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d061",
+      "texto": "Preciso de uma salada bem colorida e proteica, mas sem folhas verdes amargas, tem?",
+      "gold": {
+        "categorias": [
+          "saladas"
+        ],
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "saladas"
+        ],
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"saladas\"], \"atributos\": [\"proteico\"]}",
+      "erros": [],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d062",
+      "texto": "Quero pedir comida árabe, mas só esfihas de picanha e kibes, com entrega rápida.",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ],
+        "tempo_max_min": 30
+      },
+      "pred": {
+        "categorias": [
+          "arabe",
+          "churrasco"
+        ],
+        "tempo_max_min": 30
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"arabe\", \"churrasco\"], \"tempo_max_min\": 30}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d063",
+      "texto": "pede um japa pra mim",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"]}",
+      "erros": [],
+      "latencia_ms": 0.4
+    },
+    {
+      "id": "d064",
+      "texto": "Boa tarde, tem opção de feijoada vegana? Se sim, gostaria de um prato individual.",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"], \"restricoes\": [\"vegano\"]}",
+      "erros": [],
+      "latencia_ms": 0.7
+    },
+    {
+      "id": "d065",
+      "texto": "Mano, meu treino foi insano, manda um burgão com dobro de carne e bacon.",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d066",
+      "texto": "Queria um açaí médio com creme de cupuaçu e leite condensado.",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d067",
+      "texto": "Comida caseira bem temperadinha, tipo bife a cavalo com arroz, feijão e batata frita.",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"brasileira\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d068",
+      "texto": "não sei o que comer",
+      "gold": {},
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [],
+      "latencia_ms": 0.4
+    },
+    {
+      "id": "d069",
+      "texto": "Pede uma pizza doce de chocolate com morango para a sobremesa, por favor.",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "doces",
+          "pizza"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"doces\", \"pizza\"]}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d070",
+      "texto": "Quero um lanche rápido e barato, tipo X-Salada com maionese verde.",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ],
+        "tempo_max_min": 30,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ],
+        "tempo_max_min": 30,
+        "ordenar_por": "menor_preco"
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"], \"tempo_max_min\": 30, \"ordenar_por\": \"menor_preco\"}",
+      "erros": [],
+      "latencia_ms": 0.4
+    },
+    {
+      "id": "d071",
+      "texto": "Procuro um restaurante italiano que faça nhoque caseiro ao sugo, com entrega em até 40 minutos.",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "tempo_max_min": 40
+      },
+      "pred": {
+        "categorias": [
+          "italiana"
+        ],
+        "tempo_max_min": 40
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"italiana\"], \"tempo_max_min\": 40}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d072",
+      "texto": "Manda uma barca de sushi só com salmão maçaricado e cream cheese, por favor.",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"japonesa\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d073",
+      "texto": "fome de rango bom",
+      "gold": {},
+      "pred": {},
+      "valido": true,
+      "bruto": "{}",
+      "erros": [],
+      "latencia_ms": 0.3
+    },
+    {
+      "id": "d074",
+      "texto": "Queria pedir comida tailandesa, mas com muito amendoim e molho agridoce, sem pimenta.",
+      "gold": {
+        "categorias": [
+          "tailandesa"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "tailandesa"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"tailandesa\"], \"evitar\": [\"pimenta\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d075",
+      "texto": "Preciso de um café da manhã reforçado com croissant de frango e cappuccino cremoso.",
+      "gold": {
+        "categorias": [
+          "cafe"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "cafe"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"cafe\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d076",
+      "texto": "Mano, me traz um açaí gigante com morango, banana e creme de avelã.",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"acai\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d077",
+      "texto": "Quero um prato mexicano bem caprichado, com nachos, cheddar e jalapeños, para duas pessoas.",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "mexicana"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"mexicana\"], \"atributos\": [\"para_compartilhar\"]}",
+      "erros": [],
+      "latencia_ms": 0.6
+    },
+    {
+      "id": "d078",
+      "texto": "Alguém me ajuda a escolher um jantar leve e sem glúten?",
+      "gold": {
+        "restricoes": [
+          "sem_gluten"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {
+        "restricoes": [
+          "sem_gluten"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"restricoes\": [\"sem_gluten\"], \"atributos\": [\"leve\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d079",
+      "texto": "Pede uma pizza de pepperoni grande e bem crocante, por favor.",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ]
+      },
+      "pred": {
+        "categorias": [
+          "pizza"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"pizza\"]}",
+      "erros": [],
+      "latencia_ms": 0.5
+    },
+    {
+      "id": "d080",
+      "texto": "Mano, to com uma larica monstro, manda qualquer salgado frito que tiver na promoção.",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "valido": true,
+      "bruto": "{\"categorias\": [\"lanches\"]}",
+      "erros": [
+        "ordenar_por"
+      ],
+      "latencia_ms": 0.6
+    }
+  ]
+}

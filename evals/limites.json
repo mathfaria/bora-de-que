@@ -1,0 +1,8 @@
+{
+  "_sobre": "Pisos de regressão checados no CI. Ficam um pouco abaixo do resultado atual para tolerar variação numérica entre máquinas.",
+  "extracao_rules_pedidos": {"acerto_exato": 0.88, "acerto_medio_campos": 0.98},
+  "extracao_rules_desafio": {"acerto_exato": 0.64},
+  "busca_gold_pedidos": {"metricas.categoria_ok@3": 1.0, "metricas.restricoes_ok@3": 1.0, "metricas.evitar_ok@3": 1.0, "metricas.alvo@3": 0.88},
+  "busca_rules_pedidos": {"metricas.restricoes_ok@3": 0.95},
+  "extracao_finetuned_pedidos": {"json_valido": 0.95}
+}

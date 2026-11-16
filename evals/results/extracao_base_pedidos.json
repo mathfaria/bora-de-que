@@ -1,0 +1,1760 @@
+{
+  "meta": {
+    "extrator": "base",
+    "casos": "pedidos",
+    "quando": "2026-11-14T02:25:47+00:00",
+    "modelo": "Qwen/Qwen2.5-0.5B-Instruct"
+  },
+  "metricas": {
+    "n": 100,
+    "acerto_exato": 0.1,
+    "acerto_por_campo": {
+      "categorias": 0.33,
+      "preco_max": 0.89,
+      "restricoes": 0.8,
+      "evitar": 0.91,
+      "atributos": 0.79,
+      "distancia_max_km": 0.95,
+      "tempo_max_min": 0.93,
+      "ordenar_por": 0.87
+    },
+    "acerto_medio_campos": 0.80875,
+    "json_valido": 0.010000000000000009,
+    "latencia_ms": {
+      "p50": 2941.0299160008435,
+      "p95": 3778.437124998163
+    },
+    "tokens_entrada_medio": 744.19,
+    "tokens_saida_medio": 87.45,
+    "custo_usd_por_1000": 0.0
+  },
+  "casos": [
+    {
+      "id": "c001",
+      "texto": "quero algo leve e barato, perto de casa, nada de fritura",
+      "gold": {
+        "evitar": [
+          "fritura"
+        ],
+        "atributos": [
+          "leve"
+        ],
+        "distancia_max_km": 3,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"padaria\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"leve\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 3,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"menor_preco\"\n}",
+      "erros": [
+        "evitar",
+        "atributos",
+        "distancia_max_km",
+        "ordenar_por"
+      ],
+      "latencia_ms": 2322.2
+    },
+    {
+      "id": "c002",
+      "texto": "to com vontade de sushi, até 60 reais",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "preco_max": 60
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"sushi\",\n  \"preco_max\": 60,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"sem_glutena\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 1 hora\",\n  \"ordenar_por\": \"valores\"\n}",
+      "erros": [
+        "categorias",
+        "preco_max"
+      ],
+      "latencia_ms": 2398.7
+    },
+    {
+      "id": "c003",
+      "texto": "me indica uma pizza boa pra dividir com minha namorada",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"pizza\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 2431.4
+    },
+    {
+      "id": "c004",
+      "texto": "sou vegano, quero um hambúrguer",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"hamburguer\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 2370.9
+    },
+    {
+      "id": "c005",
+      "texto": "alguma coisa com camarão",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"carnes\"],\n  \"preco_max\": \"uns 10\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"perto\",\n  \"tempo_max_min\": \"medio\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [],
+      "latencia_ms": 2415.1
+    },
+    {
+      "id": "c006",
+      "texto": "qual o lanche mais barato que chega em meia hora?",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ],
+        "tempo_max_min": 30,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"sobremesa\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"doce\",\n  \"avoider\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"menor_preco\"\n}",
+      "erros": [
+        "categorias",
+        "tempo_max_min",
+        "ordenar_por"
+      ],
+      "latencia_ms": 2220.1
+    },
+    {
+      "id": "c007",
+      "texto": "comida árabe bem avaliada",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ],
+        "ordenar_por": "avaliacao"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"arabe\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias",
+        "ordenar_por"
+      ],
+      "latencia_ms": 2267.0
+    },
+    {
+      "id": "c008",
+      "texto": "preciso de um almoço proteico pós treino, sem lactose",
+      "gold": {
+        "restricoes": [
+          "sem_lactose"
+        ],
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"padão de queijo\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"proteico\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "restricoes",
+        "atributos"
+      ],
+      "latencia_ms": 2520.5
+    },
+    {
+      "id": "c009",
+      "texto": "tô com muita pressa, qualquer coisa serve",
+      "gold": {
+        "tempo_max_min": 30
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "tempo_max_min"
+      ],
+      "latencia_ms": 2276.2
+    },
+    {
+      "id": "c010",
+      "texto": "um açaí de 500",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 500,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2217.9
+    },
+    {
+      "id": "c011",
+      "texto": "algo apimentado tailandês",
+      "gold": {
+        "categorias": [
+          "tailandesa"
+        ],
+        "atributos": [
+          "apimentado"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"pad thai\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"apimentado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 2389.8
+    },
+    {
+      "id": "c012",
+      "texto": "sem glúten e sem lactose, algo pra jantar até 45 reais",
+      "gold": {
+        "preco_max": 45,
+        "restricoes": [
+          "sem_gluten",
+          "sem_lactose"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"pad thai\"],\n  \"preco_max\": 150,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"gluten\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"valores\"\n}",
+      "erros": [
+        "preco_max",
+        "restricoes"
+      ],
+      "latencia_ms": 2264.9
+    },
+    {
+      "id": "c013",
+      "texto": "nao como carne, me sugere uma massa",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"massa\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"sem_carne\",\n  \"evitar\": \"carne\",\n  \"atributos\": \"peso\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais_outra\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 2495.5
+    },
+    {
+      "id": "c014",
+      "texto": "quero uma feijoada",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"feijoada\",\n  \"preco_max\": \"mais de 100\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"não como carne\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"longe\",\n  \"tempo_max_min\": \"urgente\",\n  \"ordenar_por\": \"mais rápido\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2793.8
+    },
+    {
+      "id": "c015",
+      "texto": "um ramen bem quentinho",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"ramen\",\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2761.3
+    },
+    {
+      "id": "c016",
+      "texto": "salada com salmão",
+      "gold": {
+        "categorias": [
+          "saladas"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"sobremesa\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3792.3
+    },
+    {
+      "id": "c017",
+      "texto": "doce sem lactose",
+      "gold": {
+        "categorias": [
+          "doces"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": null,\n  \"restricoes\": \"nenhuma\",\n  \"evitar\": \"nenhuma\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"nenhuma\"\n}",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 2414.4
+    },
+    {
+      "id": "c018",
+      "texto": "café da manhã reforçado com ovos",
+      "gold": {
+        "categorias": [
+          "cafe"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"lanches\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2321.5
+    },
+    {
+      "id": "c019",
+      "texto": "o que chega mais rápido aqui? to morrendo de fome",
+      "gold": {
+        "ordenar_por": "entrega_rapida"
+      },
+      "pred": {
+        "ordenar_por": "avaliacao"
+      },
+      "valido": true,
+      "bruto": "{\"ordenar_por\": \"avaliacao\"}",
+      "erros": [
+        "ordenar_por"
+      ],
+      "latencia_ms": 637.9
+    },
+    {
+      "id": "c020",
+      "texto": "yakisoba de legumes",
+      "gold": {
+        "categorias": [
+          "chinesa"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"japonesa\",\n  \"preco_max\": \"uns 30 conto\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"mais longe\",\n  \"tempo_max_min\": \"longe\",\n  \"ordena_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2550.8
+    },
+    {
+      "id": "c021",
+      "texto": "quero comer um churrasco com a família no domingo, uns 150 reais",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ],
+        "preco_max": 150,
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"churrasco\",\n  \"preco_max\": 150,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"mais rápido\"\n}",
+      "erros": [
+        "categorias",
+        "preco_max",
+        "atributos"
+      ],
+      "latencia_ms": 2300.7
+    },
+    {
+      "id": "c022",
+      "texto": "algo saudável num raio de 2 km",
+      "gold": {
+        "atributos": [
+          "leve"
+        ],
+        "distancia_max_km": 2
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"padariano\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 2,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "atributos",
+        "distancia_max_km"
+      ],
+      "latencia_ms": 2491.1
+    },
+    {
+      "id": "c023",
+      "texto": "me vê um poke sem frutos do mar",
+      "gold": {
+        "categorias": [
+          "poke"
+        ],
+        "evitar": [
+          "frutos_do_mar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"frutos do mar\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "categorias",
+        "evitar"
+      ],
+      "latencia_ms": 2521.8
+    },
+    {
+      "id": "c024",
+      "texto": "estou com intolerância a lactose e queria pizza",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"pizza\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"lactose\",\n  \"atributos\": \"peso\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 2448.8
+    },
+    {
+      "id": "c025",
+      "texto": "tacos mas sem pimenta pfv",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"país\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"pimenta\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"mais rápido\"\n}",
+      "erros": [
+        "categorias",
+        "evitar"
+      ],
+      "latencia_ms": 2378.5
+    },
+    {
+      "id": "c026",
+      "texto": "sobremesa vegana",
+      "gold": {
+        "categorias": [
+          "doces"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\"categoria\": \"sobremesa\", \"preco_max\": 10, \"restricoes\": \"vegetariano\", \"evitar\": \"não como carne\", \"atributos\": \"peso baixo\", \"distancia_max_km\": null, \"tempo_max_min\": \"mais longe\", \"ordenar_por\": \"avaliacao\"}",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 2182.1
+    },
+    {
+      "id": "c027",
+      "texto": "comida nordestina, tem baião de dois?",
+      "gold": {
+        "categorias": [
+          "nordestina"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\"categorias\": \"baião\", \"preco_max\": 100, \"restricoes\": \"vegetariano\", \"evitar\": \"não como carne\", \"atributos\": \"pesado\", \"distancia_max_km\": 10, \"tempo_max_min\": null, \"ordenar_por\": \"bem avaliado\"}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2142.3
+    },
+    {
+      "id": "c028",
+      "texto": "quero gastar no máximo 25 conto",
+      "gold": {
+        "preco_max": 25
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"japonesa\"],\n  \"preco_max\": 25,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}",
+      "erros": [
+        "preco_max"
+      ],
+      "latencia_ms": 2352.1
+    },
+    {
+      "id": "c029",
+      "texto": "algo leve pro jantar, mas que tenha bastante proteína",
+      "gold": {
+        "atributos": [
+          "leve",
+          "proteico"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"pad thai\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"valores\"\n}",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 2418.4
+    },
+    {
+      "id": "c030",
+      "texto": "esfiha de carne",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"carnes\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": 30,\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2519.0
+    },
+    {
+      "id": "c031",
+      "texto": "pastel de queijo bem baratinho",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"país\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}",
+      "erros": [
+        "categorias",
+        "ordenar_por"
+      ],
+      "latencia_ms": 3282.4
+    },
+    {
+      "id": "c032",
+      "texto": "risoto",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"risoto\",\n  \"preco_max\": \"uns 30\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"não como carne\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"mais longe\",\n  \"tempo_max_min\": \"longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2796.5
+    },
+    {
+      "id": "c033",
+      "texto": "algo com cogumelo, sou vegetariana",
+      "gold": {
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"cogumelo\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "restricoes"
+      ],
+      "latencia_ms": 2948.0
+    },
+    {
+      "id": "c034",
+      "texto": "almoço caseiro até R$ 30 que chegue em 40 min",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "preco_max": 30,
+        "tempo_max_min": 40
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"almoço\",\n  \"preco_max\": \"30\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"não como carne\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"40\",\n  \"tempo_max_min\": \"30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias",
+        "preco_max",
+        "tempo_max_min"
+      ],
+      "latencia_ms": 2834.2
+    },
+    {
+      "id": "c035",
+      "texto": "hamburguer sem pao",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"sushi\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"pão\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3042.3
+    },
+    {
+      "id": "c036",
+      "texto": "uma pizza grande pra galera, calabresa",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"pizza\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 2762.0
+    },
+    {
+      "id": "c037",
+      "texto": "mexicano vegano",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"Mexicano\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"no gluten\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 2873.1
+    },
+    {
+      "id": "c038",
+      "texto": "algo pra beliscar enquanto vejo o jogo, pra dividir",
+      "gold": {
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"bolinho\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 2856.5
+    },
+    {
+      "id": "c039",
+      "texto": "frango grelhado com legumes",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"japonesa\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [],
+      "latencia_ms": 3032.7
+    },
+    {
+      "id": "c040",
+      "texto": "quero o japa mais bem avaliado da região",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "distancia_max_km": 3,
+        "ordenar_por": "avaliacao"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"japonesa\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"porco\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}",
+      "erros": [
+        "categorias",
+        "distancia_max_km",
+        "ordenar_por"
+      ],
+      "latencia_ms": 3049.3
+    },
+    {
+      "id": "c041",
+      "texto": "sem porco e sem frutos do mar, quero algo de churrasco",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ],
+        "evitar": [
+          "frutos_do_mar",
+          "porco"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"churrasco\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"porco\",\n  \"atributos\": \"peixe\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"mesmo\"\n}\n```",
+      "erros": [
+        "categorias",
+        "evitar"
+      ],
+      "latencia_ms": 2876.6
+    },
+    {
+      "id": "c042",
+      "texto": "celíaca aqui 🙋‍♀️ alguma massa sem gluten?",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "restricoes": [
+          "sem_gluten"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"massa\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"glutena\",\n  \"atributos\": \"peso baixo\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"aleatório\"\n}\n```",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 3024.8
+    },
+    {
+      "id": "c043",
+      "texto": "to afim de um curry",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"curry\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"sem_gluten\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": 30,\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [],
+      "latencia_ms": 3027.9
+    },
+    {
+      "id": "c044",
+      "texto": "bowl vegano",
+      "gold": {
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"não como carne\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "restricoes"
+      ],
+      "latencia_ms": 2847.4
+    },
+    {
+      "id": "c045",
+      "texto": "pão de queijo quentinho",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"país\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [],
+      "latencia_ms": 2974.8
+    },
+    {
+      "id": "c046",
+      "texto": "quero uma tapioca doce",
+      "gold": {
+        "categorias": [
+          "nordestina"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2934.1
+    },
+    {
+      "id": "c047",
+      "texto": "nada muito pesado, to de dieta",
+      "gold": {
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"nenhuma\"\n}\n```",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 3225.9
+    },
+    {
+      "id": "c048",
+      "texto": "jantar romântico pra dois, italiano, até 120",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "preco_max": 120,
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"jantar\",\n  \"preco_max\": \"120\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"não como carne\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"30\",\n  \"tempo_max_min\": \"30\",\n  \"ordener_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias",
+        "preco_max",
+        "atributos"
+      ],
+      "latencia_ms": 2908.8
+    },
+    {
+      "id": "c049",
+      "texto": "o que tem de bom e barato no bairro?",
+      "gold": {
+        "distancia_max_km": 3,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"barato\"\n}",
+      "erros": [
+        "distancia_max_km",
+        "ordenar_por"
+      ],
+      "latencia_ms": 2790.8
+    },
+    {
+      "id": "c050",
+      "texto": "Quero uma moqueca de camarão pra 2",
+      "gold": {
+        "categorias": [
+          "nordestina"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"sanduíche\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"sem_glactose\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"para_compartilhar\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"maior_preco\"\n}\n```",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 3043.0
+    },
+    {
+      "id": "c051",
+      "texto": "chinês sem fritura",
+      "gold": {
+        "categorias": [
+          "chinesa"
+        ],
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"japonesa\"],\n  \"preco_max\": 50,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "categorias",
+        "evitar"
+      ],
+      "latencia_ms": 3048.3
+    },
+    {
+      "id": "c052",
+      "texto": "me sugere algo picante",
+      "gold": {
+        "atributos": [
+          "apimentado"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"peixe\"],\n  \"preco_max\": \"uns 10\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"apimentado\",\n  \"distancia_max_km\": \"no bairro\",\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"bem avaliado\"\n}\n```",
+      "erros": [
+        "atributos"
+      ],
+      "latencia_ms": 3296.1
+    },
+    {
+      "id": "c053",
+      "texto": "não gosto de pimenta, quero comida tailandesa",
+      "gold": {
+        "categorias": [
+          "tailandesa"
+        ],
+        "evitar": [
+          "pimenta"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"japonesa\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"pimenta\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "categorias",
+        "evitar"
+      ],
+      "latencia_ms": 3891.3
+    },
+    {
+      "id": "c054",
+      "texto": "um combinado de sushi pra 2 pessoas",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"sushi\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 3487.9
+    },
+    {
+      "id": "c055",
+      "texto": "brownie",
+      "gold": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"nenhuma\",\n  \"evitar\": \"nenhuma\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"nenhuma\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3795.6
+    },
+    {
+      "id": "c056",
+      "texto": "quero um x-salada",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"sanduíche\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"para_compartilhar\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3362.4
+    },
+    {
+      "id": "c057",
+      "texto": "qual a opção vegetariana mais barata?",
+      "gold": {
+        "restricoes": [
+          "vegetariano"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"vegetariano\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"sem carne\",\n  \"evitar\": \"sem_fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"barato\"\n}\n```",
+      "erros": [
+        "restricoes",
+        "ordenar_por"
+      ],
+      "latencia_ms": 3155.5
+    },
+    {
+      "id": "c058",
+      "texto": "açaí fit",
+      "gold": {
+        "categorias": [
+          "acai"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 3133.3
+    },
+    {
+      "id": "c059",
+      "texto": "to liso, mas com fome. algo até 20 reais",
+      "gold": {
+        "preco_max": 20,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 20,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"religiosa\"\n}",
+      "erros": [
+        "preco_max",
+        "ordenar_por"
+      ],
+      "latencia_ms": 3155.9
+    },
+    {
+      "id": "c060",
+      "texto": "almoço sem glúten perto do trabalho",
+      "gold": {
+        "restricoes": [
+          "sem_gluten"
+        ],
+        "distancia_max_km": 3
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"lanches\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"gluten\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": 30,\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "restricoes",
+        "distancia_max_km"
+      ],
+      "latencia_ms": 3291.1
+    },
+    {
+      "id": "c061",
+      "texto": "quero comer peixe",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"peixe\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"porco\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [],
+      "latencia_ms": 3540.6
+    },
+    {
+      "id": "c062",
+      "texto": "lasanha vegetariana",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"pad thai\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 3821.7
+    },
+    {
+      "id": "c063",
+      "texto": "burrito de frango",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"brasileira\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"frutos_do_mar\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3205.6
+    },
+    {
+      "id": "c064",
+      "texto": "pf com bife",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"padão\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"com carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3547.5
+    },
+    {
+      "id": "c065",
+      "texto": "quero um pad thai",
+      "gold": {
+        "categorias": [
+          "tailandesa"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"pad thai\",\n  \"preco_max\": \"uns 30 conto\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"não como carne\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"mais longe\",\n  \"tempo_max_min\": \"longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 4358.5
+    },
+    {
+      "id": "c066",
+      "texto": "Algo quente e reconfortante pra um dia frio, tipo sopa ou caldo",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"caldo\",\n  \"preco_max\": 10,\n  \"restricoes\": \"nenhuma\",\n  \"evitar\": \"nenhuma\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"temperatura\"\n}",
+      "erros": [],
+      "latencia_ms": 3623.1
+    },
+    {
+      "id": "c067",
+      "texto": "hot roll",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"relevancia\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3275.3
+    },
+    {
+      "id": "c068",
+      "texto": "quero uma salada sem carne nenhuma",
+      "gold": {
+        "categorias": [
+          "saladas"
+        ],
+        "restricoes": [
+          "vegetariano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"sanduíche\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"sem_carne\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"peso\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais_outra\",\n  \"ordenar_por\": \"valores\"\n}",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 3256.9
+    },
+    {
+      "id": "c069",
+      "texto": "frango frito não, prefiro grelhado",
+      "gold": {
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"fogo\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [
+        "evitar"
+      ],
+      "latencia_ms": 3484.4
+    },
+    {
+      "id": "c070",
+      "texto": "manda um açaí de 300 ml puro",
+      "gold": {
+        "categorias": [
+          "acai"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"acarajé\"],\n  \"preco_max\": 500,\n  \"restricoes\": \"sem_glut\",\n  \"evitar\": \"não como carne\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 1 hora\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3445.4
+    },
+    {
+      "id": "c071",
+      "texto": "bora de hambúrguer? até 40 conto, entrega em até 35 minutos",
+      "gold": {
+        "categorias": [
+          "hamburguer"
+        ],
+        "preco_max": 40,
+        "tempo_max_min": 35
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"hamburguer\"],\n  \"preco_max\": \"atas 40\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"perto\",\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"entrega\"\n}",
+      "erros": [
+        "categorias",
+        "preco_max",
+        "tempo_max_min"
+      ],
+      "latencia_ms": 3425.1
+    },
+    {
+      "id": "c072",
+      "texto": "algo bem avaliado e que não demore",
+      "gold": {
+        "tempo_max_min": 30,
+        "ordenar_por": "avaliacao"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "tempo_max_min",
+        "ordenar_por"
+      ],
+      "latencia_ms": 2988.8
+    },
+    {
+      "id": "c073",
+      "texto": "quero comida mexicana pra 4 pessoas",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ],
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"mexicana\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"mais rápido\"\n}\n```",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 3335.4
+    },
+    {
+      "id": "c074",
+      "texto": "me indica uma esfirra de queijo",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"pad thai\",\n  \"preco_max\": \"uns 30 conto\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"não como carne\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"mais longe\",\n  \"tempo_max_min\": \"urgente\",\n  \"ordenar_por\": \"menor_preco\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3778.4
+    },
+    {
+      "id": "c075",
+      "texto": "estou de dieta, quero algo light até 35 reais",
+      "gold": {
+        "preco_max": 35,
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"padão de queijo\"],\n  \"preco_max\": 35,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "preco_max",
+        "atributos"
+      ],
+      "latencia_ms": 3417.5
+    },
+    {
+      "id": "c076",
+      "texto": "quero algo doce e barato",
+      "gold": {
+        "categorias": [
+          "doces"
+        ],
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"menor_preco\"\n}",
+      "erros": [
+        "categorias",
+        "ordenar_por"
+      ],
+      "latencia_ms": 2962.6
+    },
+    {
+      "id": "c077",
+      "texto": "um prato vegano com bastante proteína",
+      "gold": {
+        "restricoes": [
+          "vegano"
+        ],
+        "atributos": [
+          "proteico"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"vegano\"],\n  \"preco_max\": 100,\n  \"estruturas\": \"pequeno\",\n  \"evitar\": \"vegetariano\",\n  \"atributos\": \"proteico\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "restricoes",
+        "atributos"
+      ],
+      "latencia_ms": 3088.9
+    },
+    {
+      "id": "c078",
+      "texto": "to querendo frutos do mar hoje",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"frutas\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 10,\n  \"tempo_max_min\": null,\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [],
+      "latencia_ms": 2696.0
+    },
+    {
+      "id": "c079",
+      "texto": "nhoque",
+      "gold": {
+        "categorias": [
+          "italiana"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"nhoque\",\n  \"preco_max\": \"uns 10\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"não como carne\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"mais de 30\",\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordena_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3593.8
+    },
+    {
+      "id": "c080",
+      "texto": "comida de padaria pro café da manhã, sem lactose",
+      "gold": {
+        "categorias": [
+          "cafe"
+        ],
+        "restricoes": [
+          "sem_lactose"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"padaria\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 3199.2
+    },
+    {
+      "id": "c081",
+      "texto": "me ve uma coxinha",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"coxinha\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"peso baixo\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3320.8
+    },
+    {
+      "id": "c082",
+      "texto": "algo para comer em 20 min no máximo",
+      "gold": {
+        "tempo_max_min": 20
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"pad thai\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 20,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "tempo_max_min"
+      ],
+      "latencia_ms": 3253.0
+    },
+    {
+      "id": "c083",
+      "texto": "kibe",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"falafel\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3195.4
+    },
+    {
+      "id": "c084",
+      "texto": "quero um poke de salmão sem glúten",
+      "gold": {
+        "categorias": [
+          "poke"
+        ],
+        "restricoes": [
+          "sem_gluten"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"ponteiro\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"gluten\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 3012.4
+    },
+    {
+      "id": "c085",
+      "texto": "jantar leve, tipo uma salada ou sopa",
+      "gold": {
+        "categorias": [
+          "saladas"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"salada\", \"sopa\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"peso baixo\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 2900.2
+    },
+    {
+      "id": "c086",
+      "texto": "quero picanha",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"picanha\"],\n  \"preco_max\": 150,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"peixe\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2951.2
+    },
+    {
+      "id": "c087",
+      "texto": "pizza meio a meio, calabresa e quatro queijos, no máximo 70 reais",
+      "gold": {
+        "categorias": [
+          "pizza"
+        ],
+        "preco_max": 70
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": \"calabresa\",\n  \"preco_max\": 70,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"quatro queijos\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 1 hora\",\n  \"ordenar_por\": \"valores\"\n}",
+      "erros": [
+        "categorias",
+        "preco_max"
+      ],
+      "latencia_ms": 2755.1
+    },
+    {
+      "id": "c088",
+      "texto": "comida chinesa ou japonesa, tanto faz, o que chegar mais rápido",
+      "gold": {
+        "categorias": [
+          "chinesa",
+          "japonesa"
+        ],
+        "ordenar_por": "entrega_rapida"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"chinese\", \"japanese\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": 30,\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias",
+        "ordenar_por"
+      ],
+      "latencia_ms": 2898.1
+    },
+    {
+      "id": "c089",
+      "texto": "algum lanche natural",
+      "gold": {
+        "categorias": [
+          "lanches"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"sanduíche\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"doce\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2673.1
+    },
+    {
+      "id": "c090",
+      "texto": "evito carne vermelha, quero um prato brasileiro",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "evitar": [
+          "carne_vermelha"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"pad thai\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"avoid\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "categorias",
+        "evitar"
+      ],
+      "latencia_ms": 3166.7
+    },
+    {
+      "id": "c091",
+      "texto": "mousse de maracujá",
+      "gold": {
+        "categorias": [
+          "doces"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"bebidas\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne vermelha\",\n  \"atributos\": \"pesada\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 3351.9
+    },
+    {
+      "id": "c092",
+      "texto": "Oi! O que você me recomenda hoje?",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": \"uns 10\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"30\",\n  \"tempo_max_min\": \"30\",\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [],
+      "latencia_ms": 3412.2
+    },
+    {
+      "id": "c093",
+      "texto": "quero repetir algo parecido com o que pedi semana passada",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": \"uns 10\",\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": \"30\",\n  \"tempo_max_min\": \"30\",\n  \"ordenar_por\": \"avaliacao\"\n}\n```",
+      "erros": [],
+      "latencia_ms": 2992.6
+    },
+    {
+      "id": "c094",
+      "texto": "bem barato e bem rápido",
+      "gold": {
+        "tempo_max_min": 30,
+        "ordenar_por": "menor_preco"
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"doce\"],\n  \"preco_max\": 50,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"bem barato\"\n}",
+      "erros": [
+        "tempo_max_min",
+        "ordenar_por"
+      ],
+      "latencia_ms": 2826.2
+    },
+    {
+      "id": "c095",
+      "texto": "uma marmita fit com batata doce",
+      "gold": {
+        "categorias": [
+          "brasileira"
+        ],
+        "atributos": [
+          "leve"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"marmita\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"fit\"\n}",
+      "erros": [
+        "categorias",
+        "atributos"
+      ],
+      "latencia_ms": 2877.4
+    },
+    {
+      "id": "c096",
+      "texto": "quesadilla",
+      "gold": {
+        "categorias": [
+          "mexicana"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"lanches\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [
+        "categorias"
+      ],
+      "latencia_ms": 2768.3
+    },
+    {
+      "id": "c097",
+      "texto": "falafel, sou vegana",
+      "gold": {
+        "categorias": [
+          "arabe"
+        ],
+        "restricoes": [
+          "vegano"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"lanches\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "categorias",
+        "restricoes"
+      ],
+      "latencia_ms": 2872.0
+    },
+    {
+      "id": "c098",
+      "texto": "algo com tofu",
+      "gold": {},
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"ferrugapo\"],\n  \"preco_max\": 10,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"porco\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais de 30\",\n  \"ordenar_por\": \"avaliacao\"\n}",
+      "erros": [],
+      "latencia_ms": 2857.9
+    },
+    {
+      "id": "c099",
+      "texto": "PRECISO DE UM CHURRASCO PRA 10 PESSOAS ATÉ 300 REAIS",
+      "gold": {
+        "categorias": [
+          "churrasco"
+        ],
+        "preco_max": 300,
+        "atributos": [
+          "para_compartilhar"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "```json\n{\n  \"categorias\": [\"churrasco\"],\n  \"preco_max\": 300,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"carne_vermelha\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": 30,\n  \"tempo_max_min\": \"mais rápido\",\n  \"ordenar_por\": \"valores\"\n}\n```",
+      "erros": [
+        "categorias",
+        "preco_max",
+        "atributos"
+      ],
+      "latencia_ms": 2976.7
+    },
+    {
+      "id": "c100",
+      "texto": "algo sem lactose e sem glúten, de preferência japonês, e que não seja frito",
+      "gold": {
+        "categorias": [
+          "japonesa"
+        ],
+        "restricoes": [
+          "sem_gluten",
+          "sem_lactose"
+        ],
+        "evitar": [
+          "fritura"
+        ]
+      },
+      "pred": {},
+      "valido": false,
+      "bruto": "{\n  \"categorias\": [\"japonês\"],\n  \"preco_max\": 100,\n  \"restricoes\": \"vegetariano\",\n  \"evitar\": \"fritura\",\n  \"atributos\": \"pesado\",\n  \"distancia_max_km\": null,\n  \"tempo_max_min\": \"mais longe\",\n  \"ordenar_por\": \"menor_preco\"\n}",
+      "erros": [
+        "categorias",
+        "restricoes",
+        "evitar"
+      ],
+      "latencia_ms": 2864.0
+    }
+  ]
+}

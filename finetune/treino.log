@@ -1,0 +1,62 @@
+Loading configuration file finetune/lora.yaml
+Loading pretrained model
+
+Fetching 7 files:   0%|          | 0/7 [00:00<?, ?it/s]
+Fetching 7 files: 100%|██████████| 7/7 [00:00<00:00, 2744.19it/s]
+Loading datasets
+Training
+Loading fine-tuned weights from finetune/adapters_v1/adapters.safetensors
+╭─ mlx_lm.lora ────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│    model           Qwen/Qwen2.5-0.5B-Instruct                                                                        │
+│    type            lora · -1 layers · rank 16                                                                        │
+│    dataset         finetune/data                                                                                     │
+│    optimizer       adam · lr 3.0e-05                                                                                 │
+│    batch · iters   16 · 700                                                                                          │
+│    max seq         256                                                                                               │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Trainable parameters: 1.781% (8.798M/494.033M)
+  iter   train_loss     tok/s     tokens
+     1    val 0.048    17.46s
+    25    0.427 ▼      122     11.4k
+    50    0.159 ▼      121     22.6k
+    75    0.110 ▼      121     33.8k
+   100    val 0.067    19.39s
+   100    0.084 ▼      109     45.1k
+  save  0000100_adapters.safetensors
+   125    0.072 ▼      123     56.0k
+   150    0.059 ▼      147     67.2k
+   175    0.046 ▼      144     78.9k
+   200    val 0.032    17.36s
+   200    0.029 ▼      132     90.0k
+  save  0000200_adapters.safetensors
+   225    0.028 ▼      113    101.3k
+   250    0.032 ▲      118    112.5k
+   275    0.020 ▼      119    123.6k
+   300    val 0.029    18.23s
+   300    0.023 ▲      137    135.4k
+  save  0000300_adapters.safetensors
+   325    0.026 ▲      129    146.4k
+   350    0.013 ▼      123    157.5k
+   375    0.011 ▼      130    169.2k
+   400    val 0.021    22.14s
+   400    0.010 ▼      107    180.1k
+  save  0000400_adapters.safetensors
+   425    0.010 ▼      114    191.6k
+   450    0.012 ▲      121    202.8k
+   475    0.013 ▲      123    213.9k
+   500    val 0.018    18.10s
+   500    0.010 ▼      114    225.0k
+  save  0000500_adapters.safetensors
+   525    0.007 ▼      104    236.5k
+   550    0.005 ▼      113    247.8k
+   575    0.007 ▲      110    258.9k
+   600    val 0.019    21.54s
+   600    0.007 ▲      115    270.1k
+  save  0000600_adapters.safetensors
+   625    0.006 ▼      116    281.4k
+   650    0.006 ▼      125    292.7k
+   675    0.003 ▼      117    303.8k
+   700    val 0.011    18.52s
+   700    0.003 ▼      125    315.5k
+  save  0000700_adapters.safetensors
+train ██████████████████████████████ 100% ·   700/700

@@ -1,0 +1,45 @@
+name: avaliacoes-llm
+
+# Avaliações que chamam a API do Gemini. Manual, para respeitar a cota gratuita.
+on:
+  workflow_dispatch:
+    inputs:
+      limite:
+        description: "quantos casos do agente rodar"
+        default: "30"
+
+permissions:
+  contents: read
+
+jobs:
+  llm:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: bocado init-db
+      - run: python evals/run_extracao.py --extrator llm --pausa 4.5
+      - env:
+          LIMITE: ${{ inputs.limite }}
+        run: python evals/run_agente.py --limite "$LIMITE" --pausa 14
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: resultados-llm
+          path: evals/results/

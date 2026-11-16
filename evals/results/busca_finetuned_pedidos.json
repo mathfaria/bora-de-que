@@ -1,0 +1,3447 @@
+{
+  "meta": {
+    "filtros": "finetuned",
+    "casos": "pedidos",
+    "embedding": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "quando": "2026-11-14T03:24:10+00:00"
+  },
+  "metricas": {
+    "categoria_ok@3": 0.9341317365269461,
+    "restricoes_ok@3": 0.7053140096618358,
+    "evitar_ok@3": 0.7654320987654321,
+    "alvo@3": 0.7916666666666666,
+    "sem_resultado": 0.0475,
+    "buscas": 400,
+    "regioes": [
+      "sao-paulo-paulista",
+      "belo-horizonte-savassi",
+      "salvador-barra",
+      "recife-centro"
+    ]
+  },
+  "casos": [
+    {
+      "id": "c001",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Ragazzo (lanches) -> Sanduíche natural de frango",
+        "Pastel da Augusta (pastéis) -> Sanduíche natural de frango",
+        "Look Lanches (lanches) -> Sanduíche natural de frango"
+      ]
+    },
+    {
+      "id": "c001",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Quase Nada (brasileira) -> Frango grelhado com legumes",
+        "Nossa Casa (comida regional) -> Frango grelhado com legumes",
+        "Rapidogs (cachorro-quente, hamburgueria, sorveteria) -> Sanduíche natural de frango"
+      ]
+    },
+    {
+      "id": "c001",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Stalo Restaurante (comida a kilo) -> Frango grelhado com legumes",
+        "Empório Coisas de Minas (comida regional) -> Omelete com salada",
+        "Poleirão (lanches) -> Sanduíche natural de frango"
+      ]
+    },
+    {
+      "id": "c001",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Sansa (lanches) -> Sanduíche natural de frango",
+        "Seu Boteco (comida regional) -> Frango grelhado com legumes",
+        "Bois voador (lanches) -> Sanduíche natural de frango"
+      ]
+    },
+    {
+      "id": "c002",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Living Lounge Bar & Sushi (sushi) -> Combinado tradicional 20 peças",
+        "Toro Sushi (sushi) -> Combinado tradicional 20 peças",
+        "Flying Sushi (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c002",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Amadeus (brasileira, sushi) -> Combinado tradicional 20 peças",
+        "Sushi Naka (sushi, japonesa) -> Combinado tradicional 20 peças",
+        "Yo (sushi, japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c002",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Sushi Bar (japonesa) -> Combinado tradicional 20 peças",
+        "Barra Sushi (japonesa) -> Combinado tradicional 20 peças",
+        "Yokoyama (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c002",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Just Kone (sushi) -> Combinado tradicional 20 peças",
+        "Orha Marina (sushi) -> Combinado tradicional 20 peças",
+        "restaurante self-service (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c003",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "O pedaço da pizza (pizzaria) -> Pizza paulistana",
+        "Pizzaria Ruberto's (pizzaria) -> Pizza paulistana",
+        "Forneria Maia (pizzaria) -> Pizza paulistana"
+      ]
+    },
+    {
+      "id": "c003",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Fatia da Pizza (pizzaria) -> Pizza margherita",
+        "Pizza Pezzi (pizzaria) -> Pizza margherita",
+        "Mustache Pizzaria (pizzaria) -> Pizza margherita"
+      ]
+    },
+    {
+      "id": "c003",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Pizza Marini (pizzaria) -> Pizza margherita",
+        "Pizza Hut (pizzaria) -> Pizza margherita",
+        "Kobo 12 Pizza (pizzaria) -> Pizza margherita"
+      ]
+    },
+    {
+      "id": "c003",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c004",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Hamburgueria 162 (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Its Vegan (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Pop Vegan Food (hamburgueria, pizzaria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c004",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Xodó (hamburgueria, diner, cachorro-quente, sorveteria) -> Burger vegano de grão-de-bico",
+        "Home Burger (hamburgueria) -> Burger vegano de grão-de-bico",
+        "McDonald's (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c004",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "McDonald's (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Varanda Burger (hamburgueria) -> Burger vegano de grão-de-bico",
+        "BTS Burger (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c004",
+      "regiao": "recife-centro",
+      "lugares": [
+        "McDonald's (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Bob's (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Fã Burger & Self-Service sem Balança (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c005",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Ragazzo (italiana) -> Risoto de camarão",
+        "3 Brasseurs (hamburgueria, pizzaria, frutos do mar) -> Camarão na moranga",
+        "Thaitai Brasil Gastronomia Tailandesa (tailandesa) -> Pad thai de camarão"
+      ]
+    },
+    {
+      "id": "c005",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Donna Margherita (pizzaria) -> Pizza de camarão",
+        "Chinna Food (chinesa) -> Camarão ao molho agridoce",
+        "Getúlio (brasileira, frutos do mar) -> Camarão na moranga"
+      ]
+    },
+    {
+      "id": "c005",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Tapiocaria do Farol (nordestina) -> Acarajé",
+        "Silva (frutos do mar, churrascaria) -> Camarão na moranga",
+        "Pizza Hut (pizzaria) -> Pizza de camarão"
+      ]
+    },
+    {
+      "id": "c005",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Emporio boido sertao (nordestina) -> Moqueca de camarão",
+        "Poké Hawaï food (poke) -> Poke de camarão",
+        "Nom Jesus (café e padaria) -> Bolo de rolo"
+      ]
+    },
+    {
+      "id": "c006",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Look Lanches (lanches) -> Sanduíche de mortadela",
+        "Bar e Lanchonete Petite (lanches) -> Sanduíche de mortadela",
+        "Bonono Split (lanches) -> Sanduíche de mortadela"
+      ]
+    },
+    {
+      "id": "c006",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Lanches Primos (lanches) -> Pão de queijo",
+        "Subway (lanchonete) -> Pão de queijo",
+        "Tentação Lanches (Renato) (lanches) -> Pão de queijo"
+      ]
+    },
+    {
+      "id": "c006",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Visual Lanches (lanches) -> Acarajé",
+        "Point Galera do Abará (lanches) -> Acarajé",
+        "Speed (fast food, peixes) -> Acarajé"
+      ]
+    },
+    {
+      "id": "c006",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Brahmâ bar resto (lanches) -> X-salada",
+        "Bois voador (lanches) -> X-salada",
+        "Paladar Lanches (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c007",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Arabia Express (árabe, tea, cafeteria) -> Prato árabe misto para dois",
+        "Marla Cozinha Árabe (árabe) -> Prato árabe misto para dois",
+        "Arabia (árabe, libanesa, moroccan, persian) -> Prato árabe misto para dois"
+      ]
+    },
+    {
+      "id": "c007",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Empório Vila Árabe (árabe) -> Prato árabe misto para dois",
+        "Vila Árabe (libanesa) -> Prato árabe misto para dois",
+        "Tenda Vila Árabe (árabe) -> Prato árabe misto para dois"
+      ]
+    },
+    {
+      "id": "c007",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Bazbina (árabe) -> Prato árabe misto para dois",
+        "Califa (árabe) -> Prato árabe misto para dois",
+        "Mr Sheik (árabe) -> Prato árabe misto para dois"
+      ]
+    },
+    {
+      "id": "c007",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Habib's (árabe) -> Prato árabe misto para dois"
+      ]
+    },
+    {
+      "id": "c008",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Guna Vegan (doces, salgados, saudável) -> Feijoada vegana",
+        "Gocoffee (cafeteria) -> Omelete de claras com espinafre",
+        "Starbucks (cafeteria) -> Omelete de claras com espinafre"
+      ]
+    },
+    {
+      "id": "c008",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Espetinho do Eugênio (comida regional) -> Feijoada completa",
+        "Bruxa Pastéis (comida regional) -> Feijoada completa",
+        "YoShake (cafeteria) -> Omelete de claras com espinafre"
+      ]
+    },
+    {
+      "id": "c008",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Stalo Restaurante (comida a kilo) -> Feijoada completa",
+        "Degustar (comida regional) -> Feijoada completa",
+        "McDonald's (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c008",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Na Venda (café e padaria) -> Omelete de claras com espinafre",
+        "restaurante self-service (japonesa) -> Salmão grelhado com gohan",
+        "Seu Boteco (comida regional) -> Feijoada completa"
+      ]
+    },
+    {
+      "id": "c009",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Gocoffee (cafeteria) -> Pão na chapa com café com leite",
+        "Fran's Café (cafeteria) -> Pão na chapa com café com leite",
+        "Look Lanches (lanches) -> Sanduíche de mortadela"
+      ]
+    },
+    {
+      "id": "c009",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Nossa Casa (comida regional) -> Feijão tropeiro",
+        "Bolo na Hora (doces) -> Brigadeiros",
+        "Lanches Primos (lanches) -> Pão de queijo"
+      ]
+    },
+    {
+      "id": "c009",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Eny Confeitaria (café e padaria) -> Pão na chapa com café com leite",
+        "Pão Amado (café e padaria) -> Pão na chapa com café com leite",
+        "Alfredo'Ro Ristorante (italiana) -> Penne all'arrabbiata"
+      ]
+    },
+    {
+      "id": "c009",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Café Libéral (café e padaria) -> Bolo de rolo",
+        "Nom Jesus (café e padaria) -> Bolo de rolo",
+        "Na Venda (café e padaria) -> Bolo de rolo"
+      ]
+    },
+    {
+      "id": "c010",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Açaí Club (açaí) -> Açaí 500 ml com banana e granola",
+        "Oakberry Açaí bowls (açaí) -> Açaí 500 ml com banana e granola",
+        "Nova Ilha do Açai (açaí) -> Açaí 500 ml com banana e granola"
+      ]
+    },
+    {
+      "id": "c010",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Toca do Açaí (açaí) -> Açaí 500 ml com banana e granola",
+        "Praçaí Sucos (açaí) -> Açaí 500 ml com banana e granola"
+      ]
+    },
+    {
+      "id": "c010",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cometa Açaí (açaí) -> Açaí 500 ml com banana e granola",
+        "Ondina Açaí (açaí) -> Açaí 500 ml com banana e granola",
+        "Açaí do Monstro (açaí) -> Açaí 500 ml com banana e granola"
+      ]
+    },
+    {
+      "id": "c010",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Açaí concept (açaí) -> Açaí 500 ml com banana e granola",
+        "Casa de Sucos Naturais (açaí) -> Açaí 500 ml com banana e granola",
+        "Gelatto's Sucos e Lanches (juices and snacks) -> Açaí 500 ml com banana e granola"
+      ]
+    },
+    {
+      "id": "c011",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Thaitai Brasil Gastronomia Tailandesa (tailandesa) -> Curry verde de frango",
+        "Mestiço (tailandesa) -> Curry verde de frango",
+        "Krapook Khao (tailandesa) -> Curry verde de frango"
+      ]
+    },
+    {
+      "id": "c011",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bangkok Royal Thai Cuisine (tailandesa) -> Curry verde de frango"
+      ]
+    },
+    {
+      "id": "c011",
+      "regiao": "salvador-barra",
+      "lugares": []
+    },
+    {
+      "id": "c011",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c012",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Guna Vegan (doces, salgados, saudável) -> Bowl de frutas com aveia",
+        "La Dolce Soft (doces) -> Salada de frutas",
+        "Toni Doces (doces) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c012",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bolo na Hora (doces) -> Salada de frutas",
+        "Viva Brasil (sorveteria) -> Salada de frutas",
+        "Nevada (doces) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c012",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cantina Volpi (italiana) -> Espaguete sem glúten ao pomodoro",
+        "Crema (doces) -> Salada de frutas",
+        "Alfredo'Ro Ristorante (italiana) -> Espaguete sem glúten ao pomodoro"
+      ]
+    },
+    {
+      "id": "c012",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Poké Hawaï food (poke) -> Poke de salmão sem glúten",
+        "Frisabor (sorveteria) -> Salada de frutas",
+        "Salgado da Hora (sorveteria) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c013",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "O Gato Que Ri (brasileira, italiana, internacional) -> Espaguete à bolonhesa",
+        "Godere Restaurante (hamburgueria, lanchonete, cafeteria, japonesa, massas, donuts, italiana, pizzaria, brasileira) -> Pizza paulistana",
+        "Restaurante Marajá (brasileira, italiana) -> Espaguete à bolonhesa"
+      ]
+    },
+    {
+      "id": "c013",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Butecando (brasileira, italiana) -> Espaguete à bolonhesa",
+        "Boiadeiro (brasileira, italiana) -> Espaguete à bolonhesa",
+        "Spoleto (italiana) -> Espaguete à bolonhesa"
+      ]
+    },
+    {
+      "id": "c013",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cantina Volpi (italiana) -> Espaguete sem glúten ao pomodoro",
+        "Marinata (italiana) -> Espaguete à bolonhesa",
+        "Spoleto (italiana) -> Espaguete à bolonhesa"
+      ]
+    },
+    {
+      "id": "c013",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Cantina Vegetariana (italiana) -> Espaguete sem glúten ao pomodoro"
+      ]
+    },
+    {
+      "id": "c014",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Jiquitaia (brasileira) -> Feijoada completa",
+        "Bovinu's (brasileira) -> Feijoada completa",
+        "Rotisserie Santa Gema (brasileira) -> Feijoada completa"
+      ]
+    },
+    {
+      "id": "c014",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Camaradería (brasileira) -> Feijoada vegana",
+        "Casa dos Contos (brasileira) -> Feijoada vegana",
+        "Cozinha da Roça (local) -> Feijoada completa"
+      ]
+    },
+    {
+      "id": "c014",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Empório Coisas de Minas (comida regional) -> Feijoada vegana",
+        "Caranguejo do Farol (comida regional) -> Feijoada completa",
+        "Bar e Restaurante da Ana (brasileira) -> Feijoada completa"
+      ]
+    },
+    {
+      "id": "c014",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Seu Boteco (comida regional) -> Feijoada completa",
+        "Xxx self service (brasileira) -> Feijoada completa",
+        "Comedoria da Praça (comida regional, chinesa) -> Feijoada completa"
+      ]
+    },
+    {
+      "id": "c015",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Jojo Ramen - Santa Cecília (japonesa) -> Ramen tonkotsu",
+        "Ikemen Ramen (lámen) -> Ramen tonkotsu",
+        "Jojo Ramen (japonesa, lámen) -> Ramen tonkotsu"
+      ]
+    },
+    {
+      "id": "c015",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Chop Stick / Vinnil Cultura Bar (japonesa) -> Ramen tonkotsu",
+        "Quintal japa e bowls (japonesa) -> Ramen tonkotsu",
+        "Yo (sushi, japonesa) -> Ramen tonkotsu"
+      ]
+    },
+    {
+      "id": "c015",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Barra Sushi (japonesa) -> Ramen tonkotsu",
+        "Y-Akio (japonesa) -> Ramen tonkotsu",
+        "Ainá Lamen (lámen) -> Ramen tonkotsu"
+      ]
+    },
+    {
+      "id": "c015",
+      "regiao": "recife-centro",
+      "lugares": [
+        "restaurante self-service (japonesa) -> Ramen tonkotsu",
+        "Just Kone (sushi) -> Ramen tonkotsu",
+        "Orha Marina (sushi) -> Ramen tonkotsu"
+      ]
+    },
+    {
+      "id": "c016",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "A Figueira Rubaiyat (mediterranean, grelhados, frutos do mar, peixes, saladas, sobremesas) -> Salada com salmão grelhado",
+        "Vita Natural (saladas e saudável) -> Salada com salmão grelhado",
+        "Z Deli Sandwich Shop (hamburgueria, lanchonete, saladas, bagel, fries, sausage, pastrami, pickle, coleslaw, lox, cheesecake, sobremesas) -> Salada com salmão grelhado"
+      ]
+    },
+    {
+      "id": "c016",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bem Natural (saladas e saudável) -> Salada com salmão grelhado"
+      ]
+    },
+    {
+      "id": "c016",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Raiz Natural (saladas e saudável) -> Salada com salmão grelhado",
+        "Boali (saladas) -> Salada com salmão grelhado",
+        "DNA Natural (saladas e saudável) -> Salada com salmão grelhado"
+      ]
+    },
+    {
+      "id": "c016",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Vegetariano (saladas e saudável) -> Salada com salmão grelhado",
+        "é o bule vegetariano (saladas e saudável) -> Salada com salmão grelhado"
+      ]
+    },
+    {
+      "id": "c017",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Emporio dos Doces (doces) -> Salada de frutas",
+        "Super ice cream (doces) -> Salada de frutas",
+        "Cool doce (doces) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c017",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Sodiê Doces (doces) -> Salada de frutas",
+        "Nevada (doces) -> Salada de frutas",
+        "Sol Neve (doces) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c017",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Crema (doces) -> Salada de frutas",
+        "Torta Delírio (doces) -> Salada de frutas",
+        "Doce Gelato (doces) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c017",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Gellatos (doces) -> Salada de frutas",
+        "Frisabor (sorveteria) -> Salada de frutas",
+        "Adriana Bomboniere (doces) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c018",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Pão (café da manhã, cafeteria) -> Pão na chapa com café com leite",
+        "Nonno Ruggero (café da manhã) -> Pão na chapa com café com leite",
+        "Critallo Oscar Freire (café da manhã, bolos, cafeteria, diner) -> Pão na chapa com café com leite"
+      ]
+    },
+    {
+      "id": "c018",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Eggs Café da Manhã & Brunch (café da manhã) -> Pão na chapa com café com leite",
+        "Cantinho da Pamonha (café e padaria) -> Pão na chapa com café com leite",
+        "Café com Anjos (café e padaria) -> Pão na chapa com café com leite"
+      ]
+    },
+    {
+      "id": "c018",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Casa Castanho - Barra (café da manhã, cafeteria) -> Pão na chapa com café com leite",
+        "Fátima (café e padaria) -> Pão na chapa com café com leite",
+        "Acqua Café (café e padaria) -> Pão na chapa com café com leite"
+      ]
+    },
+    {
+      "id": "c018",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Café nom jesus (café e padaria) -> Pão na chapa com café com leite",
+        "Café Libéral (café e padaria) -> Pão na chapa com café com leite",
+        "Delicias da dantas (café e padaria) -> Pão na chapa com café com leite"
+      ]
+    },
+    {
+      "id": "c019",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Cantina de Piero (italiana) -> Espaguete à bolonhesa",
+        "Tappo Trattoria (italiana) -> Espaguete à bolonhesa",
+        "Ragazzo (italiana) -> Espaguete à bolonhesa"
+      ]
+    },
+    {
+      "id": "c019",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Butecando (brasileira, italiana) -> Feijão tropeiro",
+        "Cantina do Lucas (mineira and italiana) -> Espaguete à bolonhesa",
+        "Spoleto (italiana) -> Espaguete à bolonhesa"
+      ]
+    },
+    {
+      "id": "c019",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cantina Volpi (italiana) -> Fettuccine Alfredo",
+        "Alfredo'Ro Ristorante (italiana) -> Penne all'arrabbiata",
+        "La Lupa (italiana) -> Espaguete à bolonhesa"
+      ]
+    },
+    {
+      "id": "c019",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Cantina Vegetariana (italiana) -> Penne all'arrabbiata"
+      ]
+    },
+    {
+      "id": "c020",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Sukiya | すき家 (japonesa) -> Ramen de missô com legumes",
+        "Yakitori Mizusaka (japonesa) -> Ramen de missô com legumes",
+        "Restaurante Kayomix (japonesa) -> Ramen de missô com legumes"
+      ]
+    },
+    {
+      "id": "c020",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Chop Stick / Vinnil Cultura Bar (japonesa) -> Ramen de missô com legumes",
+        "Quintal japa e bowls (japonesa) -> Ramen de missô com legumes",
+        "Nazo Japanese Food - Savassi (japonesa, sushi) -> Ramen de missô com legumes"
+      ]
+    },
+    {
+      "id": "c020",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Barra Sushi (japonesa) -> Ramen de missô com legumes",
+        "Umai Lamen (japonesa) -> Ramen de missô com legumes",
+        "Y-Akio (japonesa) -> Ramen de missô com legumes"
+      ]
+    },
+    {
+      "id": "c020",
+      "regiao": "recife-centro",
+      "lugares": [
+        "restaurante self-service (japonesa) -> Ramen de missô com legumes",
+        "Just Kone (sushi) -> Ramen de missô com legumes",
+        "Orha Marina (sushi) -> Ramen de missô com legumes"
+      ]
+    },
+    {
+      "id": "c021",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Degas Restaurante e Churascaria (churrascaria) -> Combo churrasco família",
+        "Espetão Grill (churrascaria) -> Combo churrasco família",
+        "Balança do Meio Dia Grill (churrasco) -> Combo churrasco família"
+      ]
+    },
+    {
+      "id": "c021",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Brasano Grill (churrasco) -> Combo churrasco família",
+        "Paiol Grill (churrasco) -> Combo churrasco família",
+        "Chxico do Churrasco (churrasco) -> Combo churrasco família"
+      ]
+    },
+    {
+      "id": "c021",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Rabbund Grill (churrasco) -> Combo churrasco família",
+        "Barra Grill (churrasco) -> Combo churrasco família",
+        "Morena Grill (churrasco) -> Combo churrasco família"
+      ]
+    },
+    {
+      "id": "c021",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Churrascaria Gregos e Troianos (churrascaria) -> Combo churrasco família"
+      ]
+    },
+    {
+      "id": "c022",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Guna Vegan (doces, salgados, saudável) -> Bowl de frutas com aveia",
+        "Vita Natural (saladas e saudável) -> Salada de quinoa e grão-de-bico",
+        "A Figueira Rubaiyat (mediterranean, grelhados, frutos do mar, peixes, saladas, sobremesas) -> Marmita vegana de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c022",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bem Natural (saladas e saudável) -> Salada Caesar com frango",
+        "Casa Amarela (comida regional) -> Feijão tropeiro",
+        "Nossa Casa (comida regional) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c022",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Corpo Saudável (None) -> -",
+        "Puro Saudável (None) -> Marmita vegana de grão-de-bico",
+        "Raiz Natural (saladas e saudável) -> Salada Caesar com frango"
+      ]
+    },
+    {
+      "id": "c022",
+      "regiao": "recife-centro",
+      "lugares": [
+        "é o bule vegetariano (saladas e saudável) -> Salada de quinoa e grão-de-bico",
+        "Vegetariano (saladas e saudável) -> Salada Caesar com frango",
+        "Emporio boido sertao (nordestina) -> Tapioca"
+      ]
+    },
+    {
+      "id": "c023",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Poke Me Up Jardins (havaiana, sobremesas) -> Poke vegano de tofu",
+        "Let's Poke (havaiana, sobremesas) -> Poke vegano de tofu",
+        "Poke Garden (havaiana, raw fish, vegetable, rice, sobremesas) -> Poke vegano de tofu"
+      ]
+    },
+    {
+      "id": "c023",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": []
+    },
+    {
+      "id": "c023",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Wiki Poke (poke) -> Poke vegano de tofu"
+      ]
+    },
+    {
+      "id": "c023",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Poké Hawaï food (poke) -> Poke vegano de tofu"
+      ]
+    },
+    {
+      "id": "c024",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "La Braciera Pizza Napoletana - Jardins (pizzaria, italiana, comida regional, brasileiro) -> Pizza vegana de legumes",
+        "Pizzaría Brasil (pizzaria, massas, italiana, lanchonete) -> Pizza vegana de legumes",
+        "Pateo Sabor Paulista (pizzaria, grelhados) -> Pizza vegana de legumes"
+      ]
+    },
+    {
+      "id": "c024",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Pitza 1780 (pizzaria) -> Pizza vegana de legumes",
+        "Pizzaria Olegário (Lourdes) (pizzaria, italiana) -> Pizza vegana de legumes",
+        "Aromi Restaurante (pizzaria, comida regional) -> Pizza vegana de legumes"
+      ]
+    },
+    {
+      "id": "c024",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Oliva Gourmet (internacional, pizzaria, italiana, saladas) -> Pizza vegana de legumes",
+        "Pizza da Chapada (pizzaria) -> Pizza vegana de legumes"
+      ]
+    },
+    {
+      "id": "c024",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c025",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Tollocos (mexicana) -> Quesadilla de queijo",
+        "Carrito Organic Food (mexicana) -> Tacos de cogumelos",
+        "Chicano (mexicana) -> Quesadilla de queijo"
+      ]
+    },
+    {
+      "id": "c025",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Takos (mexicana) -> Quesadilla de queijo"
+      ]
+    },
+    {
+      "id": "c025",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cien Fuegos (mexicana) -> Quesadilla de queijo"
+      ]
+    },
+    {
+      "id": "c025",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c026",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Bacio di Latte (doces) -> Feijoada vegana",
+        "Let's Poke (havaiana, sobremesas) -> Feijoada vegana",
+        "Toni Doces (doces) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c026",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Nevada (doces) -> Salada de frutas",
+        "Bolo na Hora (doces) -> Salada de frutas",
+        "Sorveteria São Domingos (doces) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c026",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Torta Delírio (doces) -> Salada de frutas",
+        "Sorveteria da Barra (doces) -> Salada de frutas",
+        "Crema (doces) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c026",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Frisabor (sorveteria) -> Salada de frutas",
+        "Gellatos (doces) -> Salada de frutas",
+        "Salgado da Hora (sorveteria) -> Salada de frutas"
+      ]
+    },
+    {
+      "id": "c027",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Tabuleiro do Acarajé (baiana) -> Baião de dois com carne de sol",
+        "Baião Brasil (nordestina) -> Baião de dois com carne de sol"
+      ]
+    },
+    {
+      "id": "c027",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Baiana do Acarajé (nordestina) -> Baião de dois com carne de sol"
+      ]
+    },
+    {
+      "id": "c027",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Tapiocaria do Farol (nordestina) -> Baião de dois com carne de sol",
+        "Acarajé (nordestina) -> Baião de dois com carne de sol",
+        "Tempero baiana (nordestina) -> Baião de dois com carne de sol"
+      ]
+    },
+    {
+      "id": "c027",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Emporio boido sertao (nordestina) -> Baião de dois com carne de sol"
+      ]
+    },
+    {
+      "id": "c028",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "casa de bolos (doces) -> Brigadeiros",
+        "Toni Doces (doces) -> Brigadeiros",
+        "Nanica (doces) -> Brigadeiros"
+      ]
+    },
+    {
+      "id": "c028",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bolo na Hora (doces) -> Brigadeiros",
+        "Viva Brasil (sorveteria) -> Brigadeiros",
+        "Nevada (doces) -> Brigadeiros"
+      ]
+    },
+    {
+      "id": "c028",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Sorvetaria da Ribeira (doces) -> Brigadeiros",
+        "Monterrey (doces) -> Brigadeiros",
+        "Freddo (sorveteria) -> Brigadeiros"
+      ]
+    },
+    {
+      "id": "c028",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Frisabor (sorveteria) -> Bolo de rolo",
+        "Salgado da Hora (sorveteria) -> Bolo de rolo",
+        "Gellatos (doces) -> Bolo de rolo"
+      ]
+    },
+    {
+      "id": "c029",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Guna Vegan (doces, salgados, saudável) -> Bowl de frutas com aveia",
+        "Ragazzo (lanches) -> Sanduíche de mortadela",
+        "BH Lanches (lanchonete, hamburgueria) -> Sanduíche de mortadela"
+      ]
+    },
+    {
+      "id": "c029",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Nossa Casa (comida regional) -> Feijão tropeiro",
+        "Espetinho do Eugênio (comida regional) -> Feijão tropeiro",
+        "Agua na boca (lanches) -> Pão de queijo"
+      ]
+    },
+    {
+      "id": "c029",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Stalo Restaurante (comida a kilo) -> Moqueca baiana",
+        "Empório Coisas de Minas (comida regional) -> Moqueca baiana",
+        "Calzoneria 23 (lanches) -> Acarajé"
+      ]
+    },
+    {
+      "id": "c029",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Seu Boteco (comida regional) -> Carne de sol com macaxeira",
+        "Sansa (lanches) -> Sanduíche natural de frango",
+        "Delícia do Suco (lanches) -> Sanduíche natural de frango"
+      ]
+    },
+    {
+      "id": "c030",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de carne",
+        "Esfiha Chic (árabe) -> Esfiha de carne",
+        "Firin Salonu (turca) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c030",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Empório Vila Árabe (árabe) -> Esfiha de carne",
+        "Tenda Vila Árabe (árabe) -> Esfiha de carne",
+        "Falafel (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c030",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Califa (árabe) -> Esfiha de carne",
+        "Bazbina (árabe) -> Esfiha de carne",
+        "Mr Sheik (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c030",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c031",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Pastel do Juca (pastelaria) -> Pastel de feira",
+        "Pastel da Augusta (pastéis) -> Pastel de feira",
+        "Pão Queijo Mineira (mineira, pao de queijo) -> Pastel de queijo"
+      ]
+    },
+    {
+      "id": "c031",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "King pastel (lanches) -> Pastel de queijo",
+        "Rei do Pastel (pastelaria) -> Pastel de queijo",
+        "Galeria do Pastel (pastelaria) -> Pastel de queijo"
+      ]
+    },
+    {
+      "id": "c031",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Pastel do Robson (lanches) -> Pastel de queijo",
+        "Delícias da Del (lanches) -> Pastel de queijo",
+        "Pastelaria do Paulista (lanches) -> Pastel de queijo"
+      ]
+    },
+    {
+      "id": "c031",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Cong pastelaria (lanches) -> Pastel de queijo",
+        "Brahmâ bar resto (lanches) -> Pastel de queijo",
+        "Salve Jorge (lanches) -> Pastel de queijo"
+      ]
+    },
+    {
+      "id": "c032",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Ragazzo (italiana) -> Risoto de cogumelos",
+        "Tappo Trattoria (italiana) -> Risoto de cogumelos",
+        "Pappagallo (italiana) -> Risoto de cogumelos"
+      ]
+    },
+    {
+      "id": "c032",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Pichita Lanna (italiana) -> Risoto de cogumelos",
+        "Armazém do Sabor (italiana, brasileira) -> Risoto de cogumelos",
+        "Cantina do Lucas (mineira and italiana) -> Risoto de cogumelos"
+      ]
+    },
+    {
+      "id": "c032",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Repieno (italiana) -> Risoto de cogumelos",
+        "Marinata (italiana) -> Risoto de cogumelos",
+        "Passione Italiana (italiana) -> Risoto de cogumelos"
+      ]
+    },
+    {
+      "id": "c032",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Cantina Vegetariana (italiana) -> Risoto de cogumelos"
+      ]
+    },
+    {
+      "id": "c033",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Guna Vegan (doces, salgados, saudável) -> Feijoada vegana",
+        "Bovinu's (brasileira) -> Prato vegetariano do dia",
+        "Baronesa (comida regional) -> Prato vegetariano do dia"
+      ]
+    },
+    {
+      "id": "c033",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Casa dos Contos (brasileira) -> Prato vegetariano do dia",
+        "Cozinha da Roça (local) -> Prato vegetariano do dia",
+        "Espetinho do Pirata (comida regional) -> Prato vegetariano do dia"
+      ]
+    },
+    {
+      "id": "c033",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Empório Coisas de Minas (comida regional) -> Prato vegetariano do dia",
+        "Caranguejo do Farol (comida regional) -> Prato vegetariano do dia",
+        "Cantina Volpi (italiana) -> Risoto de cogumelos"
+      ]
+    },
+    {
+      "id": "c033",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Seu Boteco (comida regional) -> Prato vegetariano do dia",
+        "restaurante self-service (japonesa) -> Combinado vegetariano 16 peças",
+        "Cantina Vegetariana (italiana) -> Feijoada vegana"
+      ]
+    },
+    {
+      "id": "c034",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Buteco de Minas (comida regional) -> Virado à paulista",
+        "All Day (comida regional) -> Virado à paulista",
+        "Belas Artes (comida regional) -> Virado à paulista"
+      ]
+    },
+    {
+      "id": "c034",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Nossa Casa (comida regional) -> Feijão tropeiro",
+        "Casa Amarela (comida regional) -> Feijão tropeiro",
+        "Bruxa Pastéis (comida regional) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c034",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Empório Coisas de Minas (comida regional) -> Moqueca baiana",
+        "Comida Caseira (brasileira) -> Moqueca baiana",
+        "Degustar (comida regional) -> Moqueca baiana"
+      ]
+    },
+    {
+      "id": "c034",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Seu Boteco (comida regional) -> Carne de sol com macaxeira",
+        "Comedoria da Praça (comida regional, chinesa) -> Carne de sol com macaxeira",
+        "Restaurante Imperador (brasileira) -> Carne de sol com macaxeira"
+      ]
+    },
+    {
+      "id": "c035",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Hamburgueria 162 (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Hamburgueria do Sujinho (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Burger King (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c035",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Xodó (hamburgueria, diner, cachorro-quente, sorveteria) -> Burger vegano de grão-de-bico",
+        "Home Burger (hamburgueria) -> Burger vegano de grão-de-bico",
+        "BH Burguer (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c035",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Burger King (hamburgueria) -> Burger vegano de grão-de-bico",
+        "BTS Burger (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Cupim (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c035",
+      "regiao": "recife-centro",
+      "lugares": [
+        "McDonald's (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Burger King (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Bob's (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c036",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "O pedaço da pizza (pizzaria) -> Pizza calabresa",
+        "Nona d'Amore (pizzaria) -> Pizza calabresa",
+        "Forneria Maia (pizzaria) -> Pizza calabresa"
+      ]
+    },
+    {
+      "id": "c036",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Fatia da Pizza (pizzaria) -> Pizza calabresa",
+        "Mustache Pizzaria (pizzaria) -> Pizza calabresa",
+        "Pizza F*da (pizzaria) -> Pizza calabresa"
+      ]
+    },
+    {
+      "id": "c036",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Pizza Hut (pizzaria) -> Pizza calabresa",
+        "Kobo 12 Pizza (pizzaria) -> Pizza calabresa",
+        "Papa Pizza Bar e Restaurante (pizzaria) -> Pizza calabresa"
+      ]
+    },
+    {
+      "id": "c036",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c037",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Carrito Organic Food (mexicana) -> Bowl mexicano vegano",
+        "Tollocos (mexicana) -> Bowl mexicano vegano",
+        "Chicano (mexicana) -> Bowl mexicano vegano"
+      ]
+    },
+    {
+      "id": "c037",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Takos (mexicana) -> Bowl mexicano vegano"
+      ]
+    },
+    {
+      "id": "c037",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cien Fuegos (mexicana) -> Bowl mexicano vegano"
+      ]
+    },
+    {
+      "id": "c037",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c038",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Tabuleiro do Acarajé (baiana) -> Baião de dois com carne de sol",
+        "Baião Brasil (nordestina) -> Baião de dois com carne de sol"
+      ]
+    },
+    {
+      "id": "c038",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Baiana do Acarajé (nordestina) -> Baião de dois com carne de sol"
+      ]
+    },
+    {
+      "id": "c038",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Tapiocaria do Farol (nordestina) -> Acarajé",
+        "Acarajé (nordestina) -> Acarajé",
+        "Tempero baiana (nordestina) -> Acarajé"
+      ]
+    },
+    {
+      "id": "c038",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Emporio boido sertao (nordestina) -> Tapioca"
+      ]
+    },
+    {
+      "id": "c039",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "La Braciera Pizza Napoletana - Jardins (pizzaria, italiana, comida regional, brasileiro) -> Frango grelhado com legumes",
+        "Pappagallo (italiana) -> Penne integral com legumes",
+        "Pizzaría Brasil (pizzaria, massas, italiana, lanchonete) -> Wrap integral de frango"
+      ]
+    },
+    {
+      "id": "c039",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Butecando (brasileira, italiana) -> Frango grelhado com legumes",
+        "Boiadeiro (brasileira, italiana) -> Frango grelhado com legumes",
+        "Pizzaria Olegário (Lourdes) (pizzaria, italiana) -> Penne integral com legumes"
+      ]
+    },
+    {
+      "id": "c039",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Oliva Gourmet (internacional, pizzaria, italiana, saladas) -> Salada Caesar com frango",
+        "Cantina Volpi (italiana) -> Penne integral com legumes",
+        "Alfredo'Ro Ristorante (italiana) -> Penne integral com legumes"
+      ]
+    },
+    {
+      "id": "c039",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Cantina Vegetariana (italiana) -> Penne integral com legumes"
+      ]
+    },
+    {
+      "id": "c040",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Kaisho (japonesa) -> Combinado tradicional 20 peças",
+        "Sukiya | すき家 (japonesa) -> Combinado tradicional 20 peças",
+        "Geiko San (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c040",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Quintal japa e bowls (japonesa) -> Combinado tradicional 20 peças",
+        "Bendito Japa (japonesa) -> Combinado tradicional 20 peças",
+        "Amadeus (brasileira, sushi) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c040",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Y-Akio (japonesa) -> Combinado tradicional 20 peças",
+        "Yokoyama (japonesa) -> Combinado tradicional 20 peças",
+        "Gattai (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c040",
+      "regiao": "recife-centro",
+      "lugares": [
+        "restaurante self-service (japonesa) -> Combinado tradicional 20 peças",
+        "Just Kone (sushi) -> Combinado tradicional 20 peças",
+        "Orha Marina (sushi) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c041",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Tendall Grill (churrasco) -> Linguiça toscana na brasa",
+        "Grill Haddock (grelhados) -> Linguiça toscana na brasa",
+        "Balança do Meio Dia Grill (churrasco) -> Linguiça toscana na brasa"
+      ]
+    },
+    {
+      "id": "c041",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Brasano Grill (churrasco) -> Linguiça toscana na brasa",
+        "Chxico do Churrasco (churrasco) -> Linguiça toscana na brasa",
+        "Paiol Grill (churrasco) -> Linguiça toscana na brasa"
+      ]
+    },
+    {
+      "id": "c041",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Rabbund Grill (churrasco) -> Linguiça toscana na brasa",
+        "Barra Grill (churrasco) -> Linguiça toscana na brasa",
+        "Morena Grill (churrasco) -> Linguiça toscana na brasa"
+      ]
+    },
+    {
+      "id": "c041",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Churrascaria Gregos e Troianos (churrascaria) -> Linguiça toscana na brasa"
+      ]
+    },
+    {
+      "id": "c042",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Toni Doces (doces) -> Bolo de chocolate sem glúten",
+        "La Dolce Soft (doces) -> Bolo de chocolate sem glúten",
+        "Athena Gelados (doces) -> Bolo de chocolate sem glúten"
+      ]
+    },
+    {
+      "id": "c042",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bolo na Hora (doces) -> Bolo de chocolate sem glúten",
+        "Espetinho do Eugênio (comida regional) -> Feijoada completa",
+        "Nossa Casa (comida regional) -> Feijoada completa"
+      ]
+    },
+    {
+      "id": "c042",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cantina Volpi (italiana) -> Espaguete sem glúten ao pomodoro",
+        "Crema (doces) -> Bolo de chocolate sem glúten",
+        "Alfredo'Ro Ristorante (italiana) -> Espaguete sem glúten ao pomodoro"
+      ]
+    },
+    {
+      "id": "c042",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Frisabor (sorveteria) -> Bolo de chocolate sem glúten",
+        "Salgado da Hora (sorveteria) -> Bolo de chocolate sem glúten",
+        "Gellatos (doces) -> Bolo de chocolate sem glúten"
+      ]
+    },
+    {
+      "id": "c043",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de carne",
+        "Marla Cozinha Árabe (árabe) -> Esfiha de carne",
+        "Miski (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c043",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de carne",
+        "Tenda Vila Árabe (árabe) -> Esfiha de carne",
+        "Empório Vila Árabe (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c043",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Califa (árabe) -> Esfiha de carne",
+        "Bazbina (árabe) -> Esfiha de carne",
+        "Mr Sheik (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c043",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c044",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Lanchonete Da Cidade (lanches) -> Wrap vegano de falafel",
+        "El Guatón (chilean, empanadas, sobremesas) -> Wrap vegano de falafel",
+        "Hot Dog Company (hamburgueria, cachorro-quente) -> Wrap vegano de falafel"
+      ]
+    },
+    {
+      "id": "c044",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Vegan Burgueria (lanchonete) -> Wrap vegano de falafel",
+        "Xodó (hamburgueria, diner, cachorro-quente, sorveteria) -> Wrap vegano de falafel",
+        "Catoon's (hamburgueria, lanchonete) -> Wrap vegano de falafel"
+      ]
+    },
+    {
+      "id": "c044",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Coffeetown (lanchonete, american, cafeteria) -> Wrap vegano de falafel"
+      ]
+    },
+    {
+      "id": "c044",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c045",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de queijo",
+        "Arabia Express (árabe, tea, cafeteria) -> Pão de queijo com café",
+        "Esfiha Chic (árabe) -> Esfiha de queijo"
+      ]
+    },
+    {
+      "id": "c045",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Falafel (árabe) -> Esfiha de queijo",
+        "Tenda Vila Árabe (árabe) -> Esfiha de queijo",
+        "Empório Vila Árabe (árabe) -> Esfiha de queijo"
+      ]
+    },
+    {
+      "id": "c045",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Califa (árabe) -> Esfiha de queijo",
+        "Bazbina (árabe) -> Esfiha de queijo",
+        "Mr Sheik (árabe) -> Esfiha de queijo"
+      ]
+    },
+    {
+      "id": "c045",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de queijo"
+      ]
+    },
+    {
+      "id": "c046",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Tabuleiro do Acarajé (baiana) -> Tapioca de coco com leite condensado",
+        "Baião Brasil (nordestina) -> Tapioca de coco com leite condensado"
+      ]
+    },
+    {
+      "id": "c046",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Baiana do Acarajé (nordestina) -> Tapioca de coco com leite condensado"
+      ]
+    },
+    {
+      "id": "c046",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Tapiocaria do Farol (nordestina) -> Tapioca de coco com leite condensado",
+        "Acarajé (nordestina) -> Tapioca de coco com leite condensado",
+        "Tempero baiana (nordestina) -> Tapioca de coco com leite condensado"
+      ]
+    },
+    {
+      "id": "c046",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Emporio boido sertao (nordestina) -> Tapioca"
+      ]
+    },
+    {
+      "id": "c047",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Bovinu's (brasileira) -> Virado à paulista",
+        "Buteco de Minas (comida regional) -> Virado à paulista",
+        "Belas Artes (comida regional) -> Virado à paulista"
+      ]
+    },
+    {
+      "id": "c047",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Quase Nada (brasileira) -> Feijão tropeiro",
+        "Nossa Casa (comida regional) -> Feijão tropeiro",
+        "Espetinho do Eugênio (comida regional) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c047",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Empório Coisas de Minas (comida regional) -> Moqueca baiana",
+        "Degustar (comida regional) -> Moqueca baiana",
+        "Stalo Restaurante (comida a kilo) -> Moqueca baiana"
+      ]
+    },
+    {
+      "id": "c047",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Seu Boteco (comida regional) -> Carne de sol com macaxeira",
+        "Sansa (lanches) -> Sanduíche natural de frango",
+        "Comedoria da Praça (comida regional, chinesa) -> Carne de sol com macaxeira"
+      ]
+    },
+    {
+      "id": "c048",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Rizzo Italian Gourmet (italiana) -> Espaguete sem glúten ao pomodoro",
+        "Ragazzo (italiana) -> Espaguete sem glúten ao pomodoro",
+        "Pappagallo (italiana) -> Espaguete sem glúten ao pomodoro"
+      ]
+    },
+    {
+      "id": "c048",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Butecando (brasileira, italiana) -> Espaguete sem glúten ao pomodoro",
+        "Pichita Lanna (italiana) -> Espaguete sem glúten ao pomodoro",
+        "Cantina dos Amigos (italiana) -> Espaguete sem glúten ao pomodoro"
+      ]
+    },
+    {
+      "id": "c048",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cantina Volpi (italiana) -> Espaguete sem glúten ao pomodoro",
+        "Marinata (italiana) -> Espaguete sem glúten ao pomodoro",
+        "Repieno (italiana) -> Espaguete sem glúten ao pomodoro"
+      ]
+    },
+    {
+      "id": "c048",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Cantina Vegetariana (italiana) -> Espaguete sem glúten ao pomodoro"
+      ]
+    },
+    {
+      "id": "c049",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Bom Bom (comida regional) -> Virado à paulista",
+        "Belas Artes (comida regional) -> Virado à paulista",
+        "Bom Braz (lanches) -> Sanduíche de mortadela"
+      ]
+    },
+    {
+      "id": "c049",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bar Aqui Tudo é Bom - Lourdes (comida regional) -> Feijão tropeiro",
+        "Nossa Casa (comida regional) -> Feijão tropeiro",
+        "Casa Amarela (comida regional) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c049",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Restaurante bom gosto (comida regional) -> Moqueca baiana",
+        "Bom Aroma (None) -> -",
+        "Degustar (comida regional) -> Moqueca baiana"
+      ]
+    },
+    {
+      "id": "c049",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Bom de Gosto (None) -> -",
+        "Seu Boteco (comida regional) -> Carne de sol com macaxeira",
+        "Subway (lanchonete) -> X-salada"
+      ]
+    },
+    {
+      "id": "c050",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Tabuleiro do Acarajé (baiana) -> Moqueca de camarão",
+        "Baião Brasil (nordestina) -> Moqueca de camarão"
+      ]
+    },
+    {
+      "id": "c050",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Baiana do Acarajé (nordestina) -> Moqueca de camarão"
+      ]
+    },
+    {
+      "id": "c050",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Tapiocaria do Farol (nordestina) -> Moqueca baiana",
+        "Acarajé (nordestina) -> Moqueca baiana",
+        "Tempero baiana (nordestina) -> Moqueca baiana"
+      ]
+    },
+    {
+      "id": "c050",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Emporio boido sertao (nordestina) -> Moqueca de camarão"
+      ]
+    },
+    {
+      "id": "c051",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Restaurante Hong Re (chinesa) -> Frango xadrez",
+        "Wei Lai (chinesa) -> Frango xadrez",
+        "1908 Coffee Station (cafeteria, japonesa, asiática) -> Frango xadrez"
+      ]
+    },
+    {
+      "id": "c051",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "China in Box (chinesa) -> Frango xadrez",
+        "Restaurante Casa da China (chinesa) -> Frango xadrez",
+        "Golden China (chinesa) -> Frango xadrez"
+      ]
+    },
+    {
+      "id": "c051",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Suan Loun (chinesa) -> Frango xadrez",
+        "Mao Tai (asiática) -> Frango xadrez",
+        "Kuei Ling (chinesa) -> Frango xadrez"
+      ]
+    },
+    {
+      "id": "c051",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Comedoria da Praça (comida regional, chinesa) -> Frango xadrez",
+        "Yong Li (brasileira, chinesa) -> Frango xadrez"
+      ]
+    },
+    {
+      "id": "c052",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "York grill (grelhados, shawarma) -> Legumes na brasa",
+        "Guna Vegan (doces, salgados, saudável) -> Bowl de frutas com aveia",
+        "Pastel da Augusta (pastéis) -> X-salada"
+      ]
+    },
+    {
+      "id": "c052",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Agua na boca (lanches) -> X-salada",
+        "Rapidogs (cachorro-quente, hamburgueria, sorveteria) -> X-salada",
+        "Lanches Primos (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c052",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Point Galera do Abará (lanches) -> X-salada",
+        "Hot churros (lanches) -> X-salada",
+        "Sorvetaria da Ribeira (doces) -> Brigadeiros"
+      ]
+    },
+    {
+      "id": "c052",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Emporio boido sertao (nordestina) -> Baião de dois com carne de sol",
+        "Bois voador (lanches) -> X-salada",
+        "Sansa (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c053",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Thaitai Brasil Gastronomia Tailandesa (tailandesa) -> Arroz frito tailandês com frango",
+        "Mestiço (tailandesa) -> Arroz frito tailandês com frango",
+        "Krapook Khao (tailandesa) -> Moqueca de banana-da-terra"
+      ]
+    },
+    {
+      "id": "c053",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bangkok Royal Thai Cuisine (tailandesa) -> Arroz frito tailandês com frango"
+      ]
+    },
+    {
+      "id": "c053",
+      "regiao": "salvador-barra",
+      "lugares": []
+    },
+    {
+      "id": "c053",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c054",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Living Lounge Bar & Sushi (sushi) -> Combinado tradicional 20 peças",
+        "Toro Sushi (sushi) -> Combinado tradicional 20 peças",
+        "Flying Sushi (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c054",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Yo (sushi, japonesa) -> Combinado tradicional 20 peças",
+        "Sushi Naka (sushi, japonesa) -> Combinado tradicional 20 peças",
+        "Sakanã Sushi (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c054",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Sushi Bar (japonesa) -> Combinado tradicional 20 peças",
+        "Barra Sushi (japonesa) -> Combinado tradicional 20 peças",
+        "Chans Sushibar (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c054",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Just Kone (sushi) -> Combinado tradicional 20 peças",
+        "Orha Marina (sushi) -> Combinado tradicional 20 peças",
+        "restaurante self-service (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c055",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Ben & Jerry's (sorveteria) -> Brownie de chocolate",
+        "Cool doce (doces) -> Brownie de chocolate",
+        "Augusta Doces e Confeitos (doces) -> Brownie de chocolate"
+      ]
+    },
+    {
+      "id": "c055",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bolo na Hora (doces) -> Brownie de chocolate",
+        "Nevada (doces) -> Brownie de chocolate",
+        "Sol Neve (doces) -> Brownie de chocolate"
+      ]
+    },
+    {
+      "id": "c055",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Crema (doces) -> Brownie de chocolate",
+        "Oxequedoce! (doces) -> Brownie de chocolate",
+        "Sorveteria da Barra (doces) -> Brownie de chocolate"
+      ]
+    },
+    {
+      "id": "c055",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Frisabor (sorveteria) -> Brownie de chocolate",
+        "Salgado da Hora (sorveteria) -> Brownie de chocolate",
+        "Adriana Bomboniere (doces) -> Brownie de chocolate"
+      ]
+    },
+    {
+      "id": "c056",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Lanchonete (lanches) -> Sanduíche de mortadela",
+        "Pastel da Rose (lanches) -> Pastel de feira",
+        "Ttj (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c056",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Subway (lanchonete) -> X-salada",
+        "Pastelandia (lanches) -> X-salada",
+        "Agua na boca (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c056",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Poleirão (lanches) -> X-salada",
+        "Graçaí (lanchonete) -> X-salada",
+        "Delícias da Del (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c056",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Xxx (lanches) -> X-salada",
+        "Gelattos (lanches) -> X-salada",
+        "Sansa (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c057",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Maní (comida regional) -> Prato vegetariano do dia",
+        "Baronesa (comida regional) -> Prato vegetariano do dia",
+        "Tête à Tête Restaurante (comida regional) -> Prato vegetariano do dia"
+      ]
+    },
+    {
+      "id": "c057",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Nossa Casa (comida regional) -> Prato vegetariano do dia",
+        "Cozinha da Roça (local) -> Prato vegetariano do dia",
+        "Sallute (brasileira) -> Prato vegetariano do dia"
+      ]
+    },
+    {
+      "id": "c057",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Empório Coisas de Minas (comida regional) -> Prato vegetariano do dia",
+        "Jacarandá (comida regional) -> Prato vegetariano do dia",
+        "Degustar (comida regional) -> Prato vegetariano do dia"
+      ]
+    },
+    {
+      "id": "c057",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Seu Boteco (comida regional) -> Prato vegetariano do dia",
+        "restaurante self-service (japonesa) -> Combinado vegetariano 16 peças",
+        "Bargaço (brasileira) -> Prato vegetariano do dia"
+      ]
+    },
+    {
+      "id": "c058",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Açaí Club (açaí) -> Açaí 500 ml fit",
+        "Oakberry Açaí bowls (açaí) -> Açaí 500 ml fit",
+        "The best açai (açaí) -> Açaí 500 ml fit"
+      ]
+    },
+    {
+      "id": "c058",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Toca do Açaí (açaí) -> Açaí 500 ml fit",
+        "Praçaí Sucos (açaí) -> Açaí 500 ml fit"
+      ]
+    },
+    {
+      "id": "c058",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Toca do Açaí (açaí) -> Açaí 500 ml fit",
+        "Ondina Açaí (açaí) -> Açaí 500 ml fit",
+        "Fast Açaí (açaí) -> Açaí 500 ml fit"
+      ]
+    },
+    {
+      "id": "c058",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Açaí concept (açaí) -> Açaí 500 ml fit",
+        "Casa de Sucos Naturais (açaí) -> Açaí 500 ml fit",
+        "Gelatto's Sucos e Lanches (juices and snacks) -> Açaí 500 ml fit"
+      ]
+    },
+    {
+      "id": "c059",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Juanita (batata, empanadas) -> Sanduíche de mortadela",
+        "Pastel da Augusta (pastéis) -> Pastel de feira",
+        "Lanchonete Ministro (lanches) -> Sanduíche de mortadela"
+      ]
+    },
+    {
+      "id": "c059",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Agua na boca (lanches) -> Pão de queijo",
+        "Subway (lanchonete) -> Pão de queijo",
+        "King pastel (lanches) -> Pão de queijo"
+      ]
+    },
+    {
+      "id": "c059",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Point Galera do Abará (lanches) -> Acarajé",
+        "Calzoneria 23 (lanches) -> Acarajé",
+        "Subway (lanchonete) -> Acarajé"
+      ]
+    },
+    {
+      "id": "c059",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Mister Gula (lanches) -> X-salada",
+        "Salve Jorge (lanches) -> X-salada",
+        "Recanto dos amigos bar retau (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c060",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Fran's Café (cafeteria) -> Tapioca de queijo com presunto",
+        "La Dolce Soft (doces) -> Bolo de chocolate sem glúten",
+        "Toni Doces (doces) -> Bolo de chocolate sem glúten"
+      ]
+    },
+    {
+      "id": "c060",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bolo na Hora (doces) -> Bolo de chocolate sem glúten",
+        "Nevada (doces) -> Bolo de chocolate sem glúten",
+        "Viva Brasil (sorveteria) -> Bolo de chocolate sem glúten"
+      ]
+    },
+    {
+      "id": "c060",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Crema (doces) -> Bolo de chocolate sem glúten",
+        "Cantina Volpi (italiana) -> Espaguete sem glúten ao pomodoro",
+        "Alfredo'Ro Ristorante (italiana) -> Espaguete sem glúten ao pomodoro"
+      ]
+    },
+    {
+      "id": "c060",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Frisabor (sorveteria) -> Bolo de chocolate sem glúten",
+        "Salgado da Hora (sorveteria) -> Bolo de chocolate sem glúten",
+        "Gellatos (doces) -> Bolo de chocolate sem glúten"
+      ]
+    },
+    {
+      "id": "c061",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "O Mineiro (comida regional) -> Virado à paulista",
+        "Fogão Paulista (comida regional) -> Virado à paulista",
+        "Coqueiro VII (comida regional) -> Virado à paulista"
+      ]
+    },
+    {
+      "id": "c061",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Getúlio (brasileira, frutos do mar) -> Feijão tropeiro",
+        "Espetinho do Pirata (comida regional) -> Feijão tropeiro",
+        "Nossa Casa (comida regional) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c061",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Mahi Mahi Bar e Restaurante (peixes) -> Moqueca baiana",
+        "Degustar (comida regional) -> Moqueca baiana",
+        "Sertão e Mar (comida regional) -> Moqueca baiana"
+      ]
+    },
+    {
+      "id": "c061",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Seu Boteco (comida regional) -> Carne de sol com macaxeira",
+        "Comedoria da Praça (comida regional, chinesa) -> Carne de sol com macaxeira",
+        "Bargaço (brasileira) -> Carne de sol com macaxeira"
+      ]
+    },
+    {
+      "id": "c062",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Zucco (italiana) -> Lasanha à bolonhesa",
+        "Pappagallo (italiana) -> Lasanha à bolonhesa",
+        "Ragazzo (italiana) -> Lasanha à bolonhesa"
+      ]
+    },
+    {
+      "id": "c062",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Pichita Lanna (italiana) -> Lasanha à bolonhesa",
+        "Rullus Cacio Pepe (italiana) -> Lasanha à bolonhesa",
+        "Spoleto (italiana) -> Lasanha à bolonhesa"
+      ]
+    },
+    {
+      "id": "c062",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Marinata (italiana) -> Lasanha à bolonhesa",
+        "La Lupa (italiana) -> Lasanha à bolonhesa",
+        "Cantina Volpi (italiana) -> Lasanha de berinjela"
+      ]
+    },
+    {
+      "id": "c062",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Cantina Vegetariana (italiana) -> Lasanha vegana de berinjela"
+      ]
+    },
+    {
+      "id": "c063",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Carrito Organic Food (mexicana) -> Burrito de frango",
+        "Chicano (mexicana) -> Burrito de frango",
+        "Tollocos (mexicana) -> Burrito de frango"
+      ]
+    },
+    {
+      "id": "c063",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Takos (mexicana) -> Burrito de frango"
+      ]
+    },
+    {
+      "id": "c063",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cien Fuegos (mexicana) -> Burrito de frango"
+      ]
+    },
+    {
+      "id": "c063",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c064",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Baronesa (comida regional) -> Bife acebolado com arroz e feijão",
+        "Maní (comida regional) -> Bife acebolado com arroz e feijão",
+        "Nosso Ranchinho (comida regional) -> Bife acebolado com arroz e feijão"
+      ]
+    },
+    {
+      "id": "c064",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Roast (comida regional) -> Bife acebolado com arroz e feijão",
+        "Nossa Casa (comida regional) -> Bife acebolado com arroz e feijão",
+        "Cozinha da Roça (local) -> Bife acebolado com arroz e feijão"
+      ]
+    },
+    {
+      "id": "c064",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Bar e Restaurante da Ana (brasileira) -> Bife acebolado com arroz e feijão",
+        "Stalo Restaurante (comida a kilo) -> Bife acebolado com arroz e feijão",
+        "Degustar (comida regional) -> Bife acebolado com arroz e feijão"
+      ]
+    },
+    {
+      "id": "c064",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Seu Boteco (comida regional) -> Bife acebolado com arroz e feijão",
+        "Bargaço (brasileira) -> Bife acebolado com arroz e feijão",
+        "Comedoria da Praça (comida regional, chinesa) -> Bife acebolado com arroz e feijão"
+      ]
+    },
+    {
+      "id": "c065",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Thaitai Brasil Gastronomia Tailandesa (tailandesa) -> Pad thai de camarão",
+        "Mestiço (tailandesa) -> Pad thai de camarão",
+        "Miss Saigon (vietnamita) -> Pad thai de tofu"
+      ]
+    },
+    {
+      "id": "c065",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bangkok Royal Thai Cuisine (tailandesa) -> Pad thai de camarão"
+      ]
+    },
+    {
+      "id": "c065",
+      "regiao": "salvador-barra",
+      "lugares": []
+    },
+    {
+      "id": "c065",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c066",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Bella Napoli Lanchonete e Pizzaria (comida regional, pizzaria) -> Prato vegetariano do dia",
+        "Habib's (árabe) -> Esfiha de carne",
+        "Marla Cozinha Árabe (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c066",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Empório Vila Árabe (árabe) -> Esfiha de carne",
+        "Habib's (árabe) -> Esfiha de carne",
+        "Vila Árabe (libanesa) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c066",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Bazbina (árabe) -> Esfiha de carne",
+        "Califa (árabe) -> Esfiha de carne",
+        "Mr Sheik (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c066",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de carne"
+      ]
+    },
+    {
+      "id": "c067",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Living Lounge Bar & Sushi (sushi) -> Hot roll",
+        "Nakrô (japonesa) -> Hot roll",
+        "El Kabong Grill (japonesa) -> Hot roll"
+      ]
+    },
+    {
+      "id": "c067",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Chop Stick / Vinnil Cultura Bar (japonesa) -> Hot roll",
+        "Takê (japonesa) -> Hot roll",
+        "Yo (sushi, japonesa) -> Hot roll"
+      ]
+    },
+    {
+      "id": "c067",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Gattai (japonesa) -> Hot roll",
+        "Sushi Bar (japonesa) -> Hot roll",
+        "Toko Temakeria (japonesa) -> Hot roll"
+      ]
+    },
+    {
+      "id": "c067",
+      "regiao": "recife-centro",
+      "lugares": [
+        "restaurante self-service (japonesa) -> Hot roll",
+        "Just Kone (sushi) -> Hot roll",
+        "Orha Marina (sushi) -> Hot roll"
+      ]
+    },
+    {
+      "id": "c068",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Vita Natural (saladas e saudável) -> Salada de quinoa e grão-de-bico",
+        "A Figueira Rubaiyat (mediterranean, grelhados, frutos do mar, peixes, saladas, sobremesas) -> Salada de quinoa e grão-de-bico",
+        "La Barbara Lounge (cafeteria, pizzaria, lanchonete, comida regional, internacional, saladas) -> Salada de quinoa e grão-de-bico"
+      ]
+    },
+    {
+      "id": "c068",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bem Natural (saladas e saudável) -> Salada de quinoa e grão-de-bico"
+      ]
+    },
+    {
+      "id": "c068",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Raiz Natural (saladas e saudável) -> Salada de quinoa e grão-de-bico",
+        "Boali (saladas) -> Salada de quinoa e grão-de-bico",
+        "DNA Natural (saladas e saudável) -> Salada de quinoa e grão-de-bico"
+      ]
+    },
+    {
+      "id": "c068",
+      "regiao": "recife-centro",
+      "lugares": [
+        "é o bule vegetariano (saladas e saudável) -> Salada de quinoa e grão-de-bico",
+        "Vegetariano (saladas e saudável) -> Salada de quinoa e grão-de-bico"
+      ]
+    },
+    {
+      "id": "c069",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Grill Haddock (grelhados) -> Fraldinha na brasa",
+        "Kilove Grill (grelhados) -> Fraldinha na brasa",
+        "Liberdade Grill (comida regional, grelhados) -> Frango grelhado com legumes"
+      ]
+    },
+    {
+      "id": "c069",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "OssO (hamburgueria, churrascaria) -> Fraldinha na brasa",
+        "Brasano Grill (churrasco) -> Fraldinha na brasa",
+        "Paiol Grill (churrasco) -> Fraldinha na brasa"
+      ]
+    },
+    {
+      "id": "c069",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Rabbund Grill (churrasco) -> Fraldinha na brasa",
+        "Barra Grill (churrasco) -> Fraldinha na brasa",
+        "Morena Grill (churrasco) -> Fraldinha na brasa"
+      ]
+    },
+    {
+      "id": "c069",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Churrascaria Gregos e Troianos (churrascaria) -> Fraldinha na brasa"
+      ]
+    },
+    {
+      "id": "c070",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Açaí Club (açaí) -> Açaí 300 ml puro",
+        "Oakberry Açaí bowls (açaí) -> Açaí 300 ml puro",
+        "The best açai (açaí) -> Açaí 300 ml puro"
+      ]
+    },
+    {
+      "id": "c070",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Toca do Açaí (açaí) -> Açaí 300 ml puro",
+        "Praçaí Sucos (açaí) -> Açaí 300 ml puro"
+      ]
+    },
+    {
+      "id": "c070",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Açaí 73 Barra (açaí) -> Açaí 300 ml puro",
+        "Ondina Açaí (açaí) -> Açaí 300 ml puro",
+        "Fast Açaí (açaí) -> Açaí 300 ml puro"
+      ]
+    },
+    {
+      "id": "c070",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Açaí concept (açaí) -> Açaí 300 ml puro",
+        "Casa de Sucos Naturais (açaí) -> Açaí 300 ml puro",
+        "Gelatto's Sucos e Lanches (juices and snacks) -> Açaí 300 ml puro"
+      ]
+    },
+    {
+      "id": "c071",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Hamburgueria 162 (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Hamburgueria do Sujinho (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Burger King (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c071",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Xodó (hamburgueria, diner, cachorro-quente, sorveteria) -> Burger vegano de grão-de-bico",
+        "Tosco Burguer (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Home Burger (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c071",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Burger King (hamburgueria) -> Burger vegano de grão-de-bico",
+        "BTS Burger (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Cupim (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c071",
+      "regiao": "recife-centro",
+      "lugares": [
+        "McDonald's (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Fã Burger & Self-Service sem Balança (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Burger King (hamburgueria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c072",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Gocoffee (cafeteria) -> Pão na chapa com café com leite",
+        "Fran's Café (cafeteria) -> Pão na chapa com café com leite",
+        "Look Lanches (lanches) -> Sanduíche de mortadela"
+      ]
+    },
+    {
+      "id": "c072",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Nossa Casa (comida regional) -> Feijão tropeiro",
+        "Bolo na Hora (doces) -> Brigadeiros",
+        "Casa Amarela (comida regional) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c072",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Eny Confeitaria (café e padaria) -> Pão na chapa com café com leite",
+        "Pão Amado (café e padaria) -> Pão na chapa com café com leite",
+        "Alfredo'Ro Ristorante (italiana) -> Penne all'arrabbiata"
+      ]
+    },
+    {
+      "id": "c072",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Café Libéral (café e padaria) -> Bolo de rolo",
+        "restaurante self-service (japonesa) -> Combinado tradicional 20 peças",
+        "Nom Jesus (café e padaria) -> Bolo de rolo"
+      ]
+    },
+    {
+      "id": "c073",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Chicano (mexicana) -> Bowl mexicano vegano",
+        "Carrito Organic Food (mexicana) -> Bowl mexicano vegano",
+        "Tollocos (mexicana) -> Bowl mexicano vegano"
+      ]
+    },
+    {
+      "id": "c073",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Takos (mexicana) -> Bowl mexicano vegano"
+      ]
+    },
+    {
+      "id": "c073",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cien Fuegos (mexicana) -> Bowl mexicano vegano"
+      ]
+    },
+    {
+      "id": "c073",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c074",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de queijo",
+        "Firin Salonu (turca) -> Esfiha de queijo",
+        "Arabia Express (árabe, tea, cafeteria) -> Esfiha de queijo"
+      ]
+    },
+    {
+      "id": "c074",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Empório Vila Árabe (árabe) -> Esfiha de queijo",
+        "Falafel (árabe) -> Esfiha de queijo",
+        "Tenda Vila Árabe (árabe) -> Esfiha de queijo"
+      ]
+    },
+    {
+      "id": "c074",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Califa (árabe) -> Esfiha de queijo",
+        "Mr Sheik (árabe) -> Esfiha de queijo",
+        "Bazbina (árabe) -> Esfiha de queijo"
+      ]
+    },
+    {
+      "id": "c074",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Habib's (árabe) -> Esfiha de queijo"
+      ]
+    },
+    {
+      "id": "c075",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Guna Vegan (doces, salgados, saudável) -> Bowl de frutas com aveia",
+        "Buteco de Minas (comida regional) -> Virado à paulista",
+        "Misoya (lámen) -> Sashimi de salmão"
+      ]
+    },
+    {
+      "id": "c075",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Manjar Light (comida regional) -> Feijão tropeiro",
+        "Quase Light (brasileira) -> Feijão tropeiro",
+        "Casa Amarela (comida regional) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c075",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Smoov (sucos) -> Açaí 300 ml puro",
+        "Stalo Restaurante (comida a kilo) -> Moqueca baiana",
+        "Empório Coisas de Minas (comida regional) -> Moqueca baiana"
+      ]
+    },
+    {
+      "id": "c075",
+      "regiao": "recife-centro",
+      "lugares": [
+        "restaurante self-service (japonesa) -> Sashimi de salmão",
+        "Poké Hawaï food (poke) -> Poke de salmão",
+        "Emporio boido sertao (nordestina) -> Tapioca"
+      ]
+    },
+    {
+      "id": "c076",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Toni Doces (doces) -> Churros com doce de leite",
+        "Cool doce (doces) -> Churros com doce de leite",
+        "La Dolce Soft (doces) -> Churros com doce de leite"
+      ]
+    },
+    {
+      "id": "c076",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Sodiê Doces (doces) -> Churros com doce de leite",
+        "Nevada (doces) -> Churros com doce de leite",
+        "Easy Ice (doces) -> Churros com doce de leite"
+      ]
+    },
+    {
+      "id": "c076",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Crema (doces) -> Churros com doce de leite",
+        "Bolos das Meninas (doces) -> Churros com doce de leite",
+        "Chiquinho (doces) -> Churros com doce de leite"
+      ]
+    },
+    {
+      "id": "c076",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Gellatos (doces) -> Churros com doce de leite",
+        "Adriana Bomboniere (doces) -> Churros com doce de leite",
+        "Frisabor (sorveteria) -> Churros com doce de leite"
+      ]
+    },
+    {
+      "id": "c077",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Guna Vegan (doces, salgados, saudável) -> Brownie vegano",
+        "Its Vegan (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Pop Vegan Food (hamburgueria, pizzaria) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c077",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Camaradería (brasileira) -> Brownie vegano",
+        "Casa dos Contos (brasileira) -> Brownie vegano",
+        "Las Chicas Vegan (None) -> Brownie vegano"
+      ]
+    },
+    {
+      "id": "c077",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Empório Coisas de Minas (comida regional) -> Brownie vegano",
+        "Varanda Burger (hamburgueria) -> Burger vegano de grão-de-bico",
+        "B Vegan Gastronomia (hamburgueria, falafel) -> Burger vegano de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c077",
+      "regiao": "recife-centro",
+      "lugares": [
+        "é o bule vegetariano (saladas e saudável) -> Brownie vegano",
+        "Comedoria da Praça (comida regional, chinesa) -> Yakisoba de legumes",
+        "Frisabor (sorveteria) -> Sorvete vegano de coco"
+      ]
+    },
+    {
+      "id": "c078",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Café Bistrô Paraná (cafeteria, comida regional) -> Marmita fit de patinho",
+        "Taste and See (brasileira, cafeteria) -> Marmita vegana de grão-de-bico",
+        "Beach Beer (brasileira) -> Marmita fit de patinho"
+      ]
+    },
+    {
+      "id": "c078",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Espetinho do Pirata (comida regional) -> Marmita fit de patinho",
+        "Roça Grande (brasileira, local) -> Marmita fit de patinho",
+        "Casa Amarela (comida regional) -> Marmita fit de patinho"
+      ]
+    },
+    {
+      "id": "c078",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Sertão e Mar (comida regional) -> Marmita fit de patinho",
+        "Café do Museu Geológico (sobremesas, comida regional) -> Marmita fit de patinho",
+        "Empório Coisas de Minas (comida regional) -> Marmita vegana de grão-de-bico"
+      ]
+    },
+    {
+      "id": "c078",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Comedoria da Praça (comida regional, chinesa) -> Marmita fit de patinho",
+        "Seu Boteco (comida regional) -> Marmita fit de patinho",
+        "Cardápio Belas Artes Self Service Sem Balança (brasileira) -> Marmita fit de patinho"
+      ]
+    },
+    {
+      "id": "c079",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Ragazzo (italiana) -> Nhoque ao sugo",
+        "Pappagallo (italiana) -> Nhoque ao sugo",
+        "Cantina de Piero (italiana) -> Nhoque ao sugo"
+      ]
+    },
+    {
+      "id": "c079",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Cantina do Lucas (mineira and italiana) -> Nhoque ao sugo",
+        "Buona Tavola (italiana) -> Nhoque ao sugo",
+        "Pichita Lanna (italiana) -> Nhoque ao sugo"
+      ]
+    },
+    {
+      "id": "c079",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cantina Volpi (italiana) -> Nhoque ao sugo",
+        "Repieno (italiana) -> Nhoque ao sugo",
+        "La Lupa (italiana) -> Nhoque ao sugo"
+      ]
+    },
+    {
+      "id": "c079",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Café Libéral 1817 (café e padaria) -> Bolo de rolo",
+        "Babylon Station (café e padaria) -> Bolo de rolo",
+        "Café Libéral (café e padaria) -> Bolo de rolo"
+      ]
+    },
+    {
+      "id": "c080",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Pão (café da manhã, cafeteria) -> Bowl de frutas com aveia",
+        "Nonno Ruggero (café da manhã) -> Bowl de frutas com aveia",
+        "Manteiga Bakehouse (pastry, café da manhã, cafeteria, sobremesas) -> Bowl de frutas com aveia"
+      ]
+    },
+    {
+      "id": "c080",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Eggs Café da Manhã & Brunch (café da manhã) -> Bowl de frutas com aveia",
+        "Cantinho da Pamonha (café e padaria) -> Bowl de frutas com aveia",
+        "Padaria Boa Viagem (café e padaria) -> Bowl de frutas com aveia"
+      ]
+    },
+    {
+      "id": "c080",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Padó (café e padaria) -> Bowl de frutas com aveia",
+        "Casa Castanho - Barra (café da manhã, cafeteria) -> Bowl de frutas com aveia",
+        "Padaria (café e padaria) -> Bowl de frutas com aveia"
+      ]
+    },
+    {
+      "id": "c080",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Padaria imperatriz snack (café e padaria) -> Bowl de frutas com aveia",
+        "Padeiria (café e padaria) -> Bowl de frutas com aveia",
+        "Café nom jesus (café e padaria) -> Bowl de frutas com aveia"
+      ]
+    },
+    {
+      "id": "c081",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Pollo Loko (frango) -> Coxinha de frango",
+        "Look Lanches (lanches) -> Coxinha de frango",
+        "Pastel da Augusta (pastéis) -> Pastel de feira"
+      ]
+    },
+    {
+      "id": "c081",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Agua na boca (lanches) -> Coxinha de frango",
+        "Rei do Pastel (lanches) -> Coxinha de frango",
+        "King pastel (lanches) -> Coxinha de frango"
+      ]
+    },
+    {
+      "id": "c081",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Coxa Coxinha (lanches) -> Coxinha de frango",
+        "Aladdin (lanches) -> Coxinha de frango",
+        "Alô Pãozinho (lanches) -> Coxinha de frango"
+      ]
+    },
+    {
+      "id": "c081",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Rei da Coxinha (lanches) -> Coxinha de frango",
+        "Império dos salgados (lanches) -> Coxinha de frango",
+        "Bois voador (lanches) -> Coxinha de frango"
+      ]
+    },
+    {
+      "id": "c082",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Buteco de Minas (comida regional) -> Virado à paulista",
+        "Segredo de Minas (mineira) -> -",
+        "Bovinu's (brasileira) -> Virado à paulista"
+      ]
+    },
+    {
+      "id": "c082",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Mina Café (café e padaria) -> Pão de queijo",
+        "Nossa Casa (comida regional) -> Feijão tropeiro",
+        "Espetinho do Eugênio (comida regional) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c082",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Empório Coisas de Minas (café e padaria) -> Pão na chapa com café com leite",
+        "Speed (fast food, peixes) -> Acarajé",
+        "Degustar (comida regional) -> Moqueca baiana"
+      ]
+    },
+    {
+      "id": "c082",
+      "regiao": "recife-centro",
+      "lugares": [
+        "restaurante self-service (japonesa) -> Combinado tradicional 20 peças",
+        "Na Venda (café e padaria) -> Bolo de rolo",
+        "Café Libéral (café e padaria) -> Bolo de rolo"
+      ]
+    },
+    {
+      "id": "c083",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Habib's (árabe) -> Kibe frito",
+        "Esfiharia Hayek (árabe, sfiha) -> Kibe frito",
+        "Arabek (árabe) -> Kibe frito"
+      ]
+    },
+    {
+      "id": "c083",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Vila Árabe (libanesa) -> Kibe frito",
+        "Empório Vila Árabe (árabe) -> Kibe frito",
+        "Empório Sírio Libanês (kebab) -> Kibe frito"
+      ]
+    },
+    {
+      "id": "c083",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Mr Sheik (árabe) -> Kibe frito",
+        "Bazbina (árabe) -> Kibe frito",
+        "Califa (árabe) -> Kibe frito"
+      ]
+    },
+    {
+      "id": "c083",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Habib's (árabe) -> Kibe frito",
+        "Just Kone (sushi) -> Combinado tradicional 20 peças",
+        "restaurante self-service (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c084",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Let's Poke (havaiana, sobremesas) -> Poke de salmão sem glúten",
+        "Poke Me Up Jardins (havaiana, sobremesas) -> Poke de salmão sem glúten",
+        "Poke Garden (havaiana, raw fish, vegetable, rice, sobremesas) -> Poke de salmão sem glúten"
+      ]
+    },
+    {
+      "id": "c084",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": []
+    },
+    {
+      "id": "c084",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Wiki Poke (poke) -> Poke de salmão sem glúten"
+      ]
+    },
+    {
+      "id": "c084",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c085",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Vita Natural (saladas e saudável) -> Salada de quinoa e grão-de-bico",
+        "Restaurante Natural (saladas e saudável) -> Salada Caesar com frango",
+        "A Figueira Rubaiyat (mediterranean, grelhados, frutos do mar, peixes, saladas, sobremesas) -> Salada de quinoa e grão-de-bico"
+      ]
+    },
+    {
+      "id": "c085",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bem Natural (saladas e saudável) -> Salada Caesar com frango",
+        "Habib's (árabe) -> Tabule",
+        "Empório Vila Árabe (árabe) -> Tabule"
+      ]
+    },
+    {
+      "id": "c085",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Raiz Natural (saladas e saudável) -> Salada Caesar com frango",
+        "Boali (saladas) -> Salada Caesar com frango",
+        "DNA Natural (saladas e saudável) -> Salada Caesar com frango"
+      ]
+    },
+    {
+      "id": "c085",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Vegetariano (saladas e saudável) -> Salada Caesar com frango",
+        "é o bule vegetariano (saladas e saudável) -> Salada de quinoa e grão-de-bico",
+        "Habib's (árabe) -> Tabule"
+      ]
+    },
+    {
+      "id": "c086",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "York grill (grelhados, shawarma) -> Picanha fatiada para dois",
+        "Bovinus (grelhados) -> Picanha fatiada para dois",
+        "Kilove Grill (grelhados) -> Picanha fatiada para dois"
+      ]
+    },
+    {
+      "id": "c086",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Brasano Grill (churrasco) -> Picanha fatiada para dois",
+        "Baiúca (churrasco) -> Picanha fatiada para dois",
+        "Farroupilha Grill (churrasco) -> Picanha fatiada para dois"
+      ]
+    },
+    {
+      "id": "c086",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Rabbund Grill (churrasco) -> Picanha fatiada para dois",
+        "Barra Grill (churrasco) -> Picanha fatiada para dois",
+        "Morena Grill (churrasco) -> Picanha fatiada para dois"
+      ]
+    },
+    {
+      "id": "c086",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Churrascaria Gregos e Troianos (churrascaria) -> Picanha fatiada para dois"
+      ]
+    },
+    {
+      "id": "c087",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "O pedaço da pizza (pizzaria) -> Pizza quatro queijos",
+        "Pizzaría Brasil (pizzaria, massas, italiana, lanchonete) -> Pizza quatro queijos",
+        "La Braciera Pizza Napoletana - Jardins (pizzaria, italiana, comida regional, brasileiro) -> Pizza quatro queijos"
+      ]
+    },
+    {
+      "id": "c087",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Fatia da Pizza (pizzaria) -> Pizza quatro queijos",
+        "Pizza F*da (pizzaria) -> Pizza quatro queijos",
+        "Pizza Pezzi (pizzaria) -> Pizza quatro queijos"
+      ]
+    },
+    {
+      "id": "c087",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Pizza Hut (pizzaria) -> Pizza quatro queijos",
+        "Pizza Marini (pizzaria) -> Pizza quatro queijos",
+        "Kobo 12 Pizza (pizzaria) -> Pizza quatro queijos"
+      ]
+    },
+    {
+      "id": "c087",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c088",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Flying Sushi (japonesa) -> Guioza de porco",
+        "MAKOTO Shops (japonesa, sushi, asiática) -> Guioza de porco",
+        "Hakka Sushi (japonesa) -> Guioza de porco"
+      ]
+    },
+    {
+      "id": "c088",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Yo (sushi, japonesa) -> Guioza de porco",
+        "Quintal japa e bowls (japonesa) -> Guioza de porco",
+        "Chop Stick / Vinnil Cultura Bar (japonesa) -> Guioza de porco"
+      ]
+    },
+    {
+      "id": "c088",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Sushi Bar (japonesa) -> Guioza de porco",
+        "Barra Sushi (japonesa) -> Guioza de porco",
+        "Toko Temakeria (japonesa) -> Guioza de porco"
+      ]
+    },
+    {
+      "id": "c088",
+      "regiao": "recife-centro",
+      "lugares": [
+        "restaurante self-service (japonesa) -> Guioza de porco",
+        "Just Kone (sushi) -> Guioza de porco",
+        "Orha Marina (sushi) -> Guioza de porco"
+      ]
+    },
+    {
+      "id": "c089",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Look Lanches (lanches) -> Sanduíche natural de frango",
+        "Bovinus (grelhados) -> Picanha fatiada para dois",
+        "Taloá (lanches) -> Sanduíche natural de frango"
+      ]
+    },
+    {
+      "id": "c089",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Tentação Lanches (Renato) (lanches) -> Sanduíche natural de frango",
+        "Lanches Primos (lanches) -> Sanduíche natural de frango",
+        "Tentação Lanches (lanches) -> Sanduíche natural de frango"
+      ]
+    },
+    {
+      "id": "c089",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Visual Lanches (lanches) -> Sanduíche natural de frango",
+        "Point Galera do Abará (lanches) -> Sanduíche natural de frango",
+        "Delícias da Del (lanches) -> Sanduíche natural de frango"
+      ]
+    },
+    {
+      "id": "c089",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Brahmâ bar resto (lanches) -> Sanduíche natural de frango",
+        "Bois voador (lanches) -> Sanduíche natural de frango",
+        "Paladar Lanches (lanches) -> Sanduíche natural de frango"
+      ]
+    },
+    {
+      "id": "c090",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Beach Beer (brasileira) -> Feijoada completa",
+        "Bar e Cozinha Bela Santos (brasileira) -> Feijoada completa",
+        "Jiquitaia (brasileira) -> Feijoada completa"
+      ]
+    },
+    {
+      "id": "c090",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Restaurante Kidelicia (brasileira) -> Feijoada completa",
+        "Butecando (brasileira, italiana) -> Feijoada completa",
+        "Restaurante Mineirinho (brasileira) -> Feijão tropeiro"
+      ]
+    },
+    {
+      "id": "c090",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Bar e Restaurante da Ana (brasileira) -> Feijoada completa",
+        "Restaurante do Porto (brasileira) -> Feijoada completa",
+        "Bar Restaurante do Carioca (brasileira) -> Feijoada completa"
+      ]
+    },
+    {
+      "id": "c090",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Restaurante Imperador (brasileira) -> Carne de sol com macaxeira",
+        "Restaurante Dom Pedro (brasileira) -> Carne de sol com macaxeira",
+        "Brahmâ bar resto (lanches) -> Pastel de carne"
+      ]
+    },
+    {
+      "id": "c091",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Sukiya | すき家 (japonesa) -> Combinado tradicional 20 peças",
+        "Yakitori Mizusaka (japonesa) -> Combinado tradicional 20 peças",
+        "Geiko San (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c091",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Amadeus (brasileira, sushi) -> Feijão tropeiro",
+        "Quintal japa e bowls (japonesa) -> Combinado tradicional 20 peças",
+        "Chop Stick / Vinnil Cultura Bar (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c091",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Yokoyama (japonesa) -> Combinado tradicional 20 peças",
+        "Toko Temakeria (japonesa) -> Combinado tradicional 20 peças",
+        "Y-Akio (japonesa) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c091",
+      "regiao": "recife-centro",
+      "lugares": [
+        "restaurante self-service (japonesa) -> Combinado tradicional 20 peças",
+        "Orha Marina (sushi) -> Combinado tradicional 20 peças",
+        "Just Kone (sushi) -> Combinado tradicional 20 peças"
+      ]
+    },
+    {
+      "id": "c092",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "BH Lanches (lanchonete, hamburgueria) -> Sanduíche de mortadela",
+        "McDonald's (hamburgueria) -> Cheeseburger clássico com fritas",
+        "Hamburgueria 162 (hamburgueria) -> Cheeseburger clássico com fritas"
+      ]
+    },
+    {
+      "id": "c092",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Rapidogs (cachorro-quente, hamburgueria, sorveteria) -> Pão de queijo",
+        "Home Burger (hamburgueria) -> Cheeseburger clássico com fritas",
+        "Xodó (hamburgueria, diner, cachorro-quente, sorveteria) -> Pão de queijo"
+      ]
+    },
+    {
+      "id": "c092",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Varanda Burger (hamburgueria) -> Burger vegano de grão-de-bico",
+        "Cupim (hamburgueria) -> Cheeseburger clássico com fritas",
+        "McDonald's (hamburgueria) -> Cheeseburger clássico com fritas"
+      ]
+    },
+    {
+      "id": "c092",
+      "regiao": "recife-centro",
+      "lugares": [
+        "McDonald's (hamburgueria) -> Cheeseburger clássico com fritas",
+        "Bob's (hamburgueria) -> Cheeseburger clássico com fritas",
+        "Fã Burger & Self-Service sem Balança (hamburgueria) -> Cheeseburger clássico com fritas"
+      ]
+    },
+    {
+      "id": "c093",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Seven Guys Burger (hamburgueria) -> Cheeseburger clássico com fritas",
+        "Bella Paulista Casa dos Pães (café e padaria) -> Pão na chapa com café com leite",
+        "Bovinu's (brasileira) -> Virado à paulista"
+      ]
+    },
+    {
+      "id": "c093",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Bolo na Hora (doces) -> Brigadeiros",
+        "Nossa Casa (comida regional) -> Feijão tropeiro",
+        "Rapidogs (cachorro-quente, hamburgueria, sorveteria) -> Pão de queijo"
+      ]
+    },
+    {
+      "id": "c093",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Seven Wonders (café e padaria) -> Pão na chapa com café com leite",
+        "McDonald's (hamburgueria) -> Cheeseburger clássico com fritas",
+        "Red (american) -> Acarajé"
+      ]
+    },
+    {
+      "id": "c093",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Brahmâ bar resto (lanches) -> X-salada",
+        "Salve Jorge (lanches) -> X-salada",
+        "Bois voador (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c094",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Rap burguer (hamburgueria) -> Cheeseburger clássico com fritas",
+        "Fran's Café (cafeteria) -> Pão na chapa com café com leite",
+        "Starbucks (cafeteria) -> Pão na chapa com café com leite"
+      ]
+    },
+    {
+      "id": "c094",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Viva Brasil (sorveteria) -> Brigadeiros",
+        "Rapidogs (cachorro-quente, hamburgueria, sorveteria) -> Pão de queijo",
+        "Bolo na Hora (doces) -> Brigadeiros"
+      ]
+    },
+    {
+      "id": "c094",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Speed (fast food, peixes) -> Acarajé",
+        "Ondina Açaí (açaí) -> Açaí 300 ml puro",
+        "Smoov (sucos) -> Açaí 300 ml puro"
+      ]
+    },
+    {
+      "id": "c094",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Emporio boido sertao (nordestina) -> Tapioca",
+        "Frisabor (sorveteria) -> Bolo de rolo",
+        "Bois voador (lanches) -> X-salada"
+      ]
+    },
+    {
+      "id": "c095",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Villa Imperial (comida regional) -> Marmita fit de patinho",
+        "Nattu Restaurante Jardins (brasileira) -> Marmita fit de patinho",
+        "Taste and See (brasileira, cafeteria) -> Marmita fit de patinho"
+      ]
+    },
+    {
+      "id": "c095",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Casa dos Contos (brasileira) -> Marmita fit de patinho",
+        "Camaradería (brasileira) -> Marmita fit de patinho",
+        "Florestal (comida regional) -> Marmita fit de patinho"
+      ]
+    },
+    {
+      "id": "c095",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Empório Coisas de Minas (comida regional) -> Marmita fit de patinho",
+        "Recôncavo (comida regional) -> Marmita fit de patinho",
+        "PARCO (comida regional, brasileira) -> Marmita fit de patinho"
+      ]
+    },
+    {
+      "id": "c095",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Comedoria da Praça (comida regional, chinesa) -> Marmita fit de patinho",
+        "Bargaço (brasileira) -> Marmita fit de patinho",
+        "Seu Boteco (comida regional) -> Marmita fit de patinho"
+      ]
+    },
+    {
+      "id": "c096",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Tollocos (mexicana) -> Quesadilla de queijo",
+        "Chicano (mexicana) -> Quesadilla de queijo",
+        "Carrito Organic Food (mexicana) -> Quesadilla de queijo"
+      ]
+    },
+    {
+      "id": "c096",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Takos (mexicana) -> Quesadilla de queijo"
+      ]
+    },
+    {
+      "id": "c096",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Cien Fuegos (mexicana) -> Quesadilla de queijo"
+      ]
+    },
+    {
+      "id": "c096",
+      "regiao": "recife-centro",
+      "lugares": []
+    },
+    {
+      "id": "c097",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Habib's (árabe) -> Falafel com homus",
+        "Frevo (árabe, brasileira) -> Falafel com homus",
+        "Bubbeleh Traditional Israeli Food (israeli, árabe, kebab, shawarma, gyro, homo, kafta, aral, falafel, brunch, sobremesas) -> Falafel com homus"
+      ]
+    },
+    {
+      "id": "c097",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Falafel (árabe) -> Falafel com homus",
+        "Empório Árabe d'Hana (árabe) -> Falafel com homus",
+        "Empório Vila Árabe (árabe) -> Falafel com homus"
+      ]
+    },
+    {
+      "id": "c097",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Baladna (libanesa) -> Falafel com homus",
+        "Califa (árabe) -> Falafel com homus",
+        "Bazbina (árabe) -> Falafel com homus"
+      ]
+    },
+    {
+      "id": "c097",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Habib's (árabe) -> Falafel com homus"
+      ]
+    },
+    {
+      "id": "c098",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Let's Poke (havaiana, sobremesas) -> Poke vegano de tofu",
+        "Guna Vegan (doces, salgados, saudável) -> Feijoada vegana",
+        "Poke Me Up Jardins (havaiana, sobremesas) -> Poke vegano de tofu"
+      ]
+    },
+    {
+      "id": "c098",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Chinna Food (chinesa) -> Tofu mapo apimentado",
+        "Bem Natural (saladas e saudável) -> Salada com tofu grelhado",
+        "Cantinho da Pamonha (café e padaria) -> Pão de queijo"
+      ]
+    },
+    {
+      "id": "c098",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Tokai (asiática) -> Tofu mapo apimentado",
+        "Toko Temakeria (japonesa) -> Combinado vegetariano 16 peças",
+        "Eny Confeitaria (café e padaria) -> Pão na chapa com café com leite"
+      ]
+    },
+    {
+      "id": "c098",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Poké Hawaï food (poke) -> Poke vegano de tofu",
+        "Vegetariano (saladas e saudável) -> Salada com tofu grelhado",
+        "é o bule vegetariano (saladas e saudável) -> Salada com tofu grelhado"
+      ]
+    },
+    {
+      "id": "c099",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Banca Farah;Rodeio (churrascaria) -> Combo churrasco família",
+        "Corrientes 348 (churrascaria, argentina) -> Combo churrasco família",
+        "Boi na Brasa (churrascaria) -> Combo churrasco família"
+      ]
+    },
+    {
+      "id": "c099",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Chxico do Churrasco (churrasco) -> Combo churrasco família",
+        "Brasano Grill (churrasco) -> Combo churrasco família",
+        "Storica Grill (churrasco) -> Combo churrasco família"
+      ]
+    },
+    {
+      "id": "c099",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Rabbund Grill (churrasco) -> Combo churrasco família",
+        "Barra Grill (churrasco) -> Combo churrasco família",
+        "Brasil Legal (churrasco, buffet) -> Combo churrasco família"
+      ]
+    },
+    {
+      "id": "c099",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Churrascaria Gregos e Troianos (churrascaria) -> Combo churrasco família"
+      ]
+    },
+    {
+      "id": "c100",
+      "regiao": "sao-paulo-paulista",
+      "lugares": [
+        "Godere Restaurante (hamburgueria, lanchonete, cafeteria, japonesa, massas, donuts, italiana, pizzaria, brasileira) -> Guioza de porco",
+        "Nakka Jardim (japonesa, sushi) -> Guioza de porco",
+        "Mori Sushi (japonesa) -> Guioza de porco"
+      ]
+    },
+    {
+      "id": "c100",
+      "regiao": "belo-horizonte-savassi",
+      "lugares": [
+        "Quintal japa e bowls (japonesa) -> Guioza de porco",
+        "Nazo Japanese Food - Savassi (japonesa, sushi) -> Guioza de porco",
+        "Yo (sushi, japonesa) -> Guioza de porco"
+      ]
+    },
+    {
+      "id": "c100",
+      "regiao": "salvador-barra",
+      "lugares": [
+        "Yokoyama (japonesa) -> Guioza de porco",
+        "Y-Akio (japonesa) -> Guioza de porco",
+        "Sushi Bar (japonesa) -> Guioza de porco"
+      ]
+    },
+    {
+      "id": "c100",
+      "regiao": "recife-centro",
+      "lugares": [
+        "Just Kone (sushi) -> Guioza de porco",
+        "restaurante self-service (japonesa) -> Guioza de porco",
+        "Orha Marina (sushi) -> Guioza de porco"
+      ]
+    }
+  ]
+}

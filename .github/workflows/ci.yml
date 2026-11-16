@@ -1,0 +1,111 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      TEST_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - run: pip install -e ".[dev]"
+      - run: ruff check src tests evals finetune scripts
+      - run: ruff format --check src tests evals finetune scripts
+      - run: pytest
+
+  avaliacoes:
+    # Regressão offline a cada push: extrator por regras + busca com embeddings reais.
+    # As avaliações que usam LLM ficam em evals-llm.yml (manual), para não gastar cota.
+    needs: testes
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: pgvector/pgvector:pg17
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 12
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
+      LLM_PROVIDER: none
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: .cache/fastembed
+          key: fastembed-paraphrase-multilingual-MiniLM-L12-v2
+      - run: pip install -e ".[dev]"
+      - run: bocado init-db
+      - run: python evals/run_extracao.py --extrator rules
+      - run: python evals/run_busca.py --filtros gold
+      - run: python evals/run_busca.py --filtros rules
+      - name: Extrator ajustado (se o modelo estiver publicado)
+        if: ${{ vars.FINETUNED_MODEL != '' }}
+        env:
+          FINETUNED_MODEL: ${{ vars.FINETUNED_MODEL }}
+        run: |
+          pip install --index-url https://download.pytorch.org/whl/cpu torch
+          pip install -e ".[modelo]"
+          python evals/run_extracao.py --extrator finetuned
+          python evals/run_busca.py --filtros finetuned
+      - run: python evals/checar_regressao.py --exigir extracao_rules_pedidos busca_gold_pedidos
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: resultados-avaliacao
+          path: evals/results/
+
+  docker:
+    needs: testes
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t bocado .
+      - name: Teste de fumaça do contêiner
+        run: |
+          docker network create rede
+          docker run -d --name pg --network rede -e POSTGRES_PASSWORD=postgres pgvector/pgvector:pg17
+          for i in $(seq 1 30); do docker exec pg pg_isready -U postgres && break; sleep 2; done
+          docker run -d --name app --network rede -p 7860:7860 \
+            -e DATABASE_URL=postgresql://postgres:postgres@pg:5432/postgres -e LLM_PROVIDER=none bocado
+          for i in $(seq 1 60); do curl -sf localhost:7860/api/saude && break; sleep 3; done
+          # espera o carregamento dos recortes salvos (primeira subida)
+          for i in $(seq 1 60); do
+            n=$(curl -sf localhost:7860/api/saude | python3 -c "import json,sys; print(json.load(sys.stdin)['lugares_em_cache'])")
+            [ "$n" -gt 5000 ] && break; sleep 5
+          done
+          vid=$(curl -sf -X POST localhost:7860/api/local -H 'content-type: application/json' \
+            -d '{"nome":"CI","cep":"01310-100"}' | python3 -c "import json,sys; print(json.load(sys.stdin)['visitante_id'])")
+          prato=$(curl -sf -X POST localhost:7860/api/chat -H 'content-type: application/json' \
+            -d "{\"visitante_id\":\"$vid\",\"mensagem\":\"quero algo vegano\"}" | python3 -c \
+            "import json,sys; r=json.load(sys.stdin); assert r['pratos'], r; print(r['pratos'][0]['id'])")
+          curl -sf "localhost:7860/api/onde-comer?visitante_id=$vid&prato_id=$prato" | python3 -c \
+            "import json,sys; r=json.load(sys.stdin); assert r['recomendacoes'], r; print(len(r['recomendacoes']), 'lugares')"
+      - if: failure()
+        run: docker logs app || true
