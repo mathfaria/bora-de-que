@@ -130,7 +130,7 @@ a { color: inherit; }
 .entrada-sub b { color: var(--ameixa); background: linear-gradient(transparent 62%, var(--limao) 0); }
 
 .cartao-form {
-  display: grid; gap: 12px; padding: 16px; max-width: 500px; border-radius: var(--r-xl);
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; padding: 16px; max-width: 500px; border-radius: var(--r-xl);
   background: rgba(255, 255, 255, .78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
   box-shadow: var(--sombra-3); border: 1px solid rgba(255, 255, 255, .9);
   animation: surgir .9s var(--suave-saida) both .95s;
@@ -152,7 +152,7 @@ a { color: inherit; }
 .campo-flutuante input:focus + span, .campo-flutuante input:not(:placeholder-shown) + span {
   top: 15px; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--rosa);
 }
-.campo-cep { flex: 1; padding-left: 14px; }
+.campo-cep { flex: 1; min-width: 0; padding-left: 14px; }
 .campo-cep svg { width: 22px; height: 22px; color: var(--rosa); flex: none; }
 .campo-cep > span { left: 46px; }
 .campo-cep input { letter-spacing: .06em; font-family: var(--display); font-weight: 800; font-size: 20px; }
@@ -496,7 +496,7 @@ details.trace[open] .passos { animation: surgir .35s var(--suave-saida) both; }
 
 /* ------------------------------------------------------------------ responsivo */
 @media (max-width: 980px) {
-  .entrada { grid-template-columns: 1fr; padding: 20px 18px 0; gap: 8px; }
+  .entrada { grid-template-columns: minmax(0, 1fr); padding: 20px 18px 0; gap: 8px; }
   .entrada-arte { display: none; }
   .faixa { margin: 18px -18px 0; }
 }
